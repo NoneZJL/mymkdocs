@@ -2186,6 +2186,14 @@
 </div>
 <p><strong>实例</strong></p>
 <p><img alt="a" class="width-and-center" src="../images/20241030003.png" /></p>
+<blockquote>
+<p>在P中，为什么要使用while()而非if()?</p>
+<p>这与block()和wakeup()内部的实现有关。</p>
+<p>首先要明确，block()函数内部存储了该进程的PCB，即当前的PC、状态等；</p>
+<p>在发现资源被占用后，这个进程会直接被挂起（放入等待队列），挂起的含义就是将这个进程卡死在P状态中。</p>
+<p>在wakeup()函数中，会遍历等待队列，找到第一个满足条件的进程，将其唤醒，唤醒的含义就是将这个进程从挂起状态中唤醒，让它重新进入P状态。此时，需要重新判定s是否有资源可用，如果有，则跳出while循环，否则重新将该进程插入挂起队列中。</p>
+<p>（但其实事实上，if也可以做且逻辑没有问题，但不够安全）</p>
+</blockquote>
 <div class="admonition danger">
 <p class="admonition-title">lost wakeup 问题</p>
 <p>当wakeup()在212行与213行之间执行时，会导致wakeup的丢失。</p>
@@ -2195,7 +2203,7 @@
 <p><img alt="a" src="../images/20241030004.png" /></p>
 <div class="admonition danger">
 <p class="admonition-title">新的问题</p>
-<p>此时p会陷入死循环</p>
+<p>进程1首先执行一轮P()，此时进程2也进入了P()并且已经获得了锁，此时进程1会因为获得不到锁而无法执行V()，进程2会因为 s-&gt;count == 0 而一直在循环中，总体进入一种死循环状态。</p>
 <div class="admonition success">
 <p class="admonition-title">解决方式</p>
 <p><img alt="a" src="../images/20241030005.png" /></p>
@@ -2204,8 +2212,11 @@
 </div>
 </div>
 <details class="abstract">
-<summary>Busy waiting 和 No busy waiting</summary>
-<p>待完成...</p>
+<summary>Busy waiting 和 No busy waiting 分析比较</summary>
+<ul>
+<li>busy waiting: 当单个CPU时，无法使用busy waiting；且如果临界区执行时间较长，busy waiting会导致CPU效率降低。</li>
+<li>no busy waiting: 由于引入了进程链表，这意味着需要频繁使用进程调度，因此上下文切换的Overhead较大。当这个Overhead甚至大于临界区执行时间时，busy waiting的效率更高</li>
+</ul>
 </details>
 <h3 id="_16">死锁问题和饥饿问题</h3>
 <ul>
