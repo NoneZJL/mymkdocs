@@ -1,0 +1,2815 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://example.com/Lessons/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter04/">
+      
+      
+        <link rel="prev" href="../chapter03/">
+      
+      
+        <link rel="next" href="../chapter05/">
+      
+      
+      <link rel="icon" href="../../../images/nothing.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>介质访问子层 - NoneZJL的个人笔记</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+
+      
+    
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+    };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mac" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="NoneZJL的个人笔记" class="md-header__button md-logo" aria-label="NoneZJL的个人笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NoneZJL的个人笔记
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              介质访问子层
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/NoneZJL/mymkdocs" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    NoneZJL's notebook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  主页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D/" class="md-tabs__link">
+          
+  
+  课程
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Tools/mkdocs%E4%BD%BF%E7%94%A8/" class="md-tabs__link">
+          
+  
+  工具
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  关于我
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="NoneZJL的个人笔记" class="md-nav__button md-logo" aria-label="NoneZJL的个人笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    NoneZJL的个人笔记
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/NoneZJL/mymkdocs" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    NoneZJL's notebook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    主页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    课程
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            课程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机系统原理
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            计算机系统原理
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    课程介绍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/chapter1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter 1 计算机抽象及相关技术
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/chapter2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter 2 指令——计算机的语言
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/chapter3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter 3 计算机的算数运算
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/chapter4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter 4 处理器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/chapter5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter 5 大容量和高速度——开发存储器层次结构
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/chapter6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter 6 输入输出系统
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机网络
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            计算机网络
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%86%85%E5%AE%B9%E4%BB%8B%E7%BB%8D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    内容介绍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据链路层
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    介质访问子层
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    介质访问子层
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      信道分配问题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="信道分配问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见的接入情形
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见的局域网拓扑
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      存在的一些问题
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      静态分配
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      多路访问协议
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多路访问协议">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      三大类多路访问协议及小分类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      随机访问协议
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="随机访问协议">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aloha" class="md-nav__link">
+    <span class="md-ellipsis">
+      ALOHA协议
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csma" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSMA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      受控访问协议
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      有限竞争协议
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      以太网
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="以太网">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      经典以太网
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      交换式以太网
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      快速以太网
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      千兆以太网
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      万兆以太网
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#40g-100g" class="md-nav__link">
+    <span class="md-ellipsis">
+      40G-100G以太网
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据链路层交换
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据链路层交换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据链路层交换原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      链路层交换机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      生成树协议
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      虚拟局域网
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      无线局域网
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="无线局域网">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      组网模式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ieee-80211" class="md-nav__link">
+    <span class="md-ellipsis">
+      IEEE 802.11介质访问控制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ieee-80211_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      IEEE 802.11帧格式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      无线局域网的构建与管理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wifi-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      WiFi 6 核心技术概览
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    网络层
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    操作系统
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            操作系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter5 | 进程调度
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter6 | 进程同步
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter8 | 主存
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    工具
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            工具
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tools/mkdocs%E4%BD%BF%E7%94%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    mkdocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tools/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tools/elasticsearch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ElasticSearch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    关于我
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      信道分配问题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="信道分配问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见的接入情形
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见的局域网拓扑
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      存在的一些问题
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      静态分配
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      多路访问协议
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多路访问协议">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      三大类多路访问协议及小分类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      随机访问协议
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="随机访问协议">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aloha" class="md-nav__link">
+    <span class="md-ellipsis">
+      ALOHA协议
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csma" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSMA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      受控访问协议
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      有限竞争协议
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      以太网
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="以太网">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      经典以太网
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      交换式以太网
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      快速以太网
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      千兆以太网
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      万兆以太网
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#40g-100g" class="md-nav__link">
+    <span class="md-ellipsis">
+      40G-100G以太网
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据链路层交换
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据链路层交换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据链路层交换原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      链路层交换机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      生成树协议
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      虚拟局域网
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      无线局域网
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="无线局域网">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      组网模式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ieee-80211" class="md-nav__link">
+    <span class="md-ellipsis">
+      IEEE 802.11介质访问控制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ieee-80211_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      IEEE 802.11帧格式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      无线局域网的构建与管理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wifi-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      WiFi 6 核心技术概览
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="mac">介质访问子层 MAC</h1>
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 7157 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11l-3.54-4.71Z"/></svg></span> 41 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 48 分钟</p>
+</div>
+<details class="question">
+<summary>MAC 子层在哪里？</summary>
+<p>数据链路层分为两个子层：</p>
+<p>• MAC子层：介质访问</p>
+<p>• LLC子层：承上启下（弱层）</p>
+<p><img alt="a" src="../photos/image2024102402.png" /></p>
+</details>
+<h2 id="_1">信道分配问题</h2>
+<p>信道：信号的通道</p>
+<h3 id="_2">常见的接入情形</h3>
+<ol>
+<li>点到点信道：信道<font color="red">直接连接</font>两个端点<ul>
+<li>比如：家中计算机通过modem连接到电信公司端局
+<img alt="alt text" class="center-image" src="../photos/image2024102403.png" /></li>
+</ul>
+</li>
+<li>多点访问信道： 多用户共享一根信道<ul>
+<li>比如：右图是以太网的典型拓扑，早期星型拓扑是<font color="red">集线器</font>，现在几乎都是<font color="red">交换机</font>，当使用集线器或交换机工作在半双工模式的时候，它的逻辑拓扑是总线式的，信道是共享的
+<img alt="alt text" class="center-image" src="../photos/image2024102405.png" /></li>
+</ul>
+</li>
+</ol>
+<h3 id="_3">常见的局域网拓扑</h3>
+<ul>
+<li>
+<p>总线拓扑、星型拓扑、环型拓扑</p>
+</li>
+<li>
+<p>共同点：共享一根信道（别称：广播信道、多路访问信道、随机访问信道）</p>
+</li>
+</ul>
+<p><img alt="alt text" src="../photos/20241024150230.png" /></p>
+<h3 id="_4">存在的一些问题</h3>
+<p>广播信道存在的问题</p>
+<ul>
+<li>可能两个（或更多）站点同时请求占用信道</li>
+</ul>
+<p>解决办法：介质的多路访问控制</p>
+<ul>
+<li>在多路访问信道上确定下一个使用者（信道分配）</li>
+</ul>
+<div class="admonition question">
+<p class="admonition-title">新的问题</p>
+<p>怎么介质访问控制（分配信道）？</p>
+<ul>
+<li>
+<p>静态分配</p>
+</li>
+<li>
+<p>动态分配</p>
+</li>
+</ul>
+</div>
+<h3 id="_5">静态分配</h3>
+<ol>
+<li>静态分配方法：TDM、FDM</li>
+<li>静态分配的排队论分析（ <font color="blue">M</font>/<font color="red">M</font>/<font color="green"">1</font>排队系统模型）<ul>
+<li><font color="blue">M</font>（顾客到达时间间隔分布）<ul>
+<li>帧到达时间间隔服从指数分布</li>
+<li>平均到达率（输入率）：λ 帧/秒</li>
+</ul>
+</li>
+<li><font color="red">M</font>（服务时间分布）<ul>
+<li>帧长度服从指数分布，平均长度1/µ 位/帧</li>
+<li>信道容量为C 位/秒，则信道服务率为µC 帧/秒</li>
+</ul>
+</li>
+<li><font color="green">1</font>（并列服务台个数）
+<img alt="alt text" class="center-image" src="../photos/20241024151345.png" /></li>
+</ul>
+</li>
+<li>子信道的平均延迟
+$$
+T_{FDM}=\frac{1}{\mu (C/N)-(\lambda/N)}=\frac{N}{\mu C-\lambda}=NT
+$$</li>
+<li>静态分配的特点<ul>
+<li>问题<ul>
+<li><font color="red">资源分配不合理</font>，不满足用户对资源占用的不同需求</li>
+<li>有资源<font color="red">浪费</font>，效率低</li>
+<li><font color="red">延迟</font>时间增大<font color="red">N</font>倍</li>
+</ul>
+</li>
+<li>适用情况<ul>
+<li>适于用户<font color="red">数量少</font>且用户数目<font color="red">固定</font>的情况</li>
+<li>适于通信量大且<font color="red">流量稳定</font>的情况</li>
+<li><font color="red">不适用</font>于突发性业务的情况</li>
+</ul>
+</li>
+<li>设计动态分配的方法<ul>
+<li>目的1：更好地满足需求</li>
+<li>目的2：提高信道利用率</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="_6">多路访问协议</h2>
+<h3 id="_7">三大类多路访问协议及小分类</h3>
+<ul>
+<li>随机访问协议<ul>
+<li>特点：冲突不可避免</li>
+</ul>
+</li>
+<li>受控访问协议<ul>
+<li>特点：克服了冲突</li>
+</ul>
+</li>
+<li>有限竞争协议<ul>
+<li>利用上述二者的优势</li>
+</ul>
+</li>
+</ul>
+<p><img alt="a" class="center-image" src="../photos/20241024152831.png" /></p>
+<h3 id="_8">随机访问协议</h3>
+<h4 id="aloha">ALOHA协议</h4>
+<p><strong>纯ALOHA协议</strong></p>
+<ul>
+<li>原理：<font color="red">想发就发</font>！</li>
+<li>特点<ul>
+<li><font color="red">冲突</font>：两个或以上的帧</li>
+<li><font color="red">随时</font>可能冲突</li>
+<li>冲突的帧完全<font color="red">破坏</font></li>
+<li>破坏了的帧要<font color="red">重传</font></li>
+</ul>
+</li>
+</ul>
+<p><img alt="a" class="center-image" src="../photos/20241024153145.png" /></p>
+<ul>
+<li>定义<ul>
+<li>帧时：发送一个标准长的帧所需的时间</li>
+</ul>
+</li>
+<li>服从泊松分布<ul>
+<li>一个帧时内用户产生新帧：均值N个</li>
+<li>一个帧时内信道中产生的帧（包括重传）：均值G个</li>
+</ul>
+</li>
+<li>分析：<ul>
+<li>0&lt; N &lt; 1，轻载N接近0，重载N接近1</li>
+<li>G &gt;= N，轻载G=N（无冲突），重载G&gt;N（冲突/重传）</li>
+</ul>
+</li>
+<li>概率<ul>
+<li><span class="arithmatex">\(Pr[k]=G^ke^{-G}/k!\)</span> (一个帧时内信道中产生k个帧，泊松分布)</li>
+<li><span class="arithmatex">\(Pr[k=0]=e^{-G}\)</span> （一个帧时内信道中产生0个帧）</li>
+</ul>
+</li>
+</ul>
+<p><strong>性能分析</strong></p>
+<ul>
+<li>吞吐量 (Throughout) S<ul>
+<li>在发送时间 T 内成功发送的平均帧数，显然 <span class="arithmatex">\(1&lt;S&lt;1\)</span></li>
+<li>S = 1 时分组一个接一个地发送出去，帧之间没有空隙。一般用S接近于1的程度来衡量信道的利用率</li>
+</ul>
+</li>
+<li>运载负载 (Carried load) G，又称网络负载<ul>
+<li>时间T内所有通信站总共发送的帧平均值(包括原发和重发的分组)。</li>
+<li>显然，G≧S，只有在不发生冲突时G才等于S。当重负载(G&gt;&gt;1) 时，冲突频繁</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(P_0\)</span>：<span class="arithmatex">\(P_0\)</span> 是一帧发送成功(即未发生冲突)的概率。就是发送成功的分组在已发送分组的总数中所占的比例
+$$
+S=G\times P_0
+$$</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">如何计算<span class="arithmatex">\(P_0\)</span></p>
+<ul>
+<li>单向传播延迟Delay：D</li>
+<li>冲突危险期：2D<ul>
+<li>生成帧均值：2G</li>
+<li>不遭受冲突的概率：<span class="arithmatex">\(P_0=e^{-2G}\)</span></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p><span class="arithmatex">\(P_0\)</span> 与 <span class="arithmatex">\(P[0]\)</span> 是两个完全不同的概念</p>
+<ul>
+<li><span class="arithmatex">\(P_0\)</span> 是连续两个T的时间内都没有其它帧生成的概率</li>
+<li><span class="arithmatex">\(P[0]\)</span> 是单位时间内内没有帧生成的概率</li>
+</ul>
+</div>
+<details class="question">
+<summary>纯ALOHA协议的性能</summary>
+<ul>
+<li>将 <span class="arithmatex">\(P_0=e^{-2G}\)</span> 代入 <span class="arithmatex">\(S=GP_0\)</span> 得：<span class="arithmatex">\(S=Ge^{-2G}\)</span></li>
+<li>求吞吐率S的极大值：<span class="arithmatex">\(S′=e^{-2G}–2Ge^{-2G}= 0\)</span></li>
+<li>当G = 0.5 时，S ≌0.184</li>
+<li>即纯ALOHA信道的利用率最高为18.4%</li>
+</ul>
+</details>
+<p><strong>分隙ALOHA(Slotted ALOHA)</strong></p>
+<ul>
+<li>工作原理<ul>
+<li>把时间分成时隙(时槽)</li>
+<li>时隙的长度对应一帧的传输时间。</li>
+<li>帧的发送必须在时隙的起点。</li>
+<li>冲突只发生在时隙的起点</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">性能分析</p>
+<p>冲突危险期变成 D</p>
+<ul>
+<li>在G = 1 时得到最大吞吐率：</li>
+<li><span class="arithmatex">\(S_{max}\)</span> = 1/e ≌0.368</li>
+<li>该值是纯ALOHA S值的两倍</li>
+</ul>
+</div>
+<h4 id="csma">CSMA</h4>
+<ul>
+<li>特点：先听后发</li>
+</ul>
+<p><strong>非持续式CSMA</strong></p>
+<ul>
+<li>特点<ol>
+<li>经侦听，如果介质空闲，开始发送</li>
+<li>如果介质忙，则等待一个随机分布的时间，然后重复步骤①</li>
+</ol>
+</li>
+<li>好处<ul>
+<li>等待一个随机时间可以减少再次碰撞冲突的可能性</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>等待时间内介质上如果没有数据传送，这段时间是浪费的</li>
+</ul>
+</li>
+</ul>
+<p><strong>持续式(指1-持续式)CSMA</strong></p>
+<ul>
+<li>特点<ol>
+<li>经侦听，如介质空闲，则发送</li>
+<li>如介质忙，持续侦听，一旦空闲立即发送</li>
+<li>如果发生冲突，等待一个随机分布的时间再重复步骤①</li>
+</ol>
+</li>
+<li>好处：持续式的延迟时间要少于非持续式</li>
+<li>主要问题：如果两个以上的站等待发送，一旦介质空闲就一定会发生冲突</li>
+</ul>
+<p><strong>p-持续式CSMA</strong></p>
+<ul>
+<li>特点<ol>
+<li>经侦听，如介质空闲，那么以 p的概率 发送，以(1–p)的概率延迟一个时间单元发送</li>
+<li>如介质忙，持续侦听，一旦空闲重复步骤1</li>
+<li>如果发送已推迟一个时间单元，再重复步骤1</li>
+</ol>
+</li>
+<li>注意<ul>
+<li>1-持续式是p-持续式的特例</li>
+</ul>
+</li>
+</ul>
+<div class="admonition question">
+<p class="admonition-title">先听再发，避免了冲突吗？</p>
+<ul>
+<li>CSMA：如侦听到介质上无数据发送才发送，发送后还会发生冲突吗？</li>
+<li>肯定会!</li>
+<li>两种情形<ul>
+<li>(1) 同时传送; (2) 传播延迟时间
+<img alt="a" src="../photos/20241029103355.png" width="500px" /></li>
+</ul>
+</li>
+</ul>
+</div>
+<ul>
+<li>冲突窗口<ul>
+<li>发送站发出帧后能检测到冲突（碰撞）的最长时间</li>
+<li>是一个时间区间</li>
+<li>数值上：等于最远两站传播时间的两倍，即2D</li>
+</ul>
+</li>
+</ul>
+<p><strong>CSMA/CD （1-持续）</strong></p>
+<ul>
+<li>原理：“先听后发、边发边听”</li>
+<li>过程<ol>
+<li>经侦听，如介质空闲，则发送。</li>
+<li>如介质忙，持续侦听，一旦空闲立即发送。</li>
+<li>如果发生冲突，等待一个随机分布的时间再重复步骤a。</li>
+</ol>
+</li>
+</ul>
+<div class="admonition question">
+<p class="admonition-title">边发边听：是否发生了冲突？</p>
+<ul>
+<li>一旦冲突，发送Jam(强化)信号<ol>
+<li>t4时刻：甲检测到冲突，发送Jam</li>
+<li>t3时刻：乙检测到冲突，是否发送？</li>
+</ol>
+</li>
+</ul>
+<p><img alt="a" src="../photos/20241029104339.png" width="300px" /></p>
+</div>
+<details class="warning">
+<summary>怎么才能侦听到冲突</summary>
+<p><img alt="a" src="../photos/20241029104835.png" width="400px" /></p>
+</details>
+<p><strong>各种CSMA的性能比较</strong></p>
+<ul>
+<li>CSMA/CD：1-持续CSMA</li>
+<li>以太网采用了CSMA/CD<ol>
+<li>吞吐量：比ALOHA高，比P-持续式CSMA低</li>
+<li>冲突：比ALOHA少，比P-持续式高</li>
+<li>P-持续式付出了高延迟的代价</li>
+</ol>
+</li>
+</ul>
+<p><img alt="a" src="../photos/20241029105541.png" width="350px" /></p>
+<h3 id="_9">受控访问协议</h3>
+<ul>
+<li>特点：克服了冲突</li>
+</ul>
+<p><strong>位图协议（预留协议）</strong></p>
+<ul>
+<li>竞争期：在自己的时槽内发送竞争比特<ol>
+<li>举手示意</li>
+<li>资源预留</li>
+</ol>
+</li>
+<li>传输期：按序发送</li>
+<li>明确的使用权，避免了冲突</li>
+</ul>
+<p><img alt="a" src="../photos/20241029110046.png" width="420px" /></p>
+<div class="admonition info">
+<p class="admonition-title">位图协议的信道利用率分析</p>
+<ul>
+<li>假设有N个用户，需N个时隙，每帧d比特</li>
+<li>信道利用率<ul>
+<li>在低负荷条件下：d/(d+N) （N越大，站点越多，利用率越低）</li>
+<li>在高负荷条件下：d/(d+1)，接近100%</li>
+</ul>
+</li>
+<li>缺点：位图协议无法考虑优先级</li>
+</ul>
+</div>
+<p><strong>令牌传递(不太重要)</strong></p>
+<ul>
+<li>令牌：发送权限</li>
+<li>令牌的运行：发送工作站去抓取，获得发送权<ul>
+<li>除了环，令牌也可以运行在其它拓扑上，如令牌总线</li>
+</ul>
+</li>
+<li>发送的帧需要目的站或发送站将其从共享信道上去除；防止无限循环</li>
+<li>缺点：令牌的维护代价</li>
+</ul>
+<p><strong>二进制倒计数协议</strong></p>
+<ul>
+<li>站点：编序号，序号长度相同</li>
+<li>竞争期：有数据发送的站点从高序号到低序号排队，高者得到发送权</li>
+<li>特点：高序号站点优先</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">二进制倒计数协议的信道效率分析</p>
+<ul>
+<li>N个站的二进制编码所需位数是 <span class="arithmatex">\(log_2N\)</span> 位</li>
+<li>信道的利用率为：<span class="arithmatex">\(d/(d+log_2N)\)</span></li>
+<li>如果规定每个帧的帧头为发送地址，即竞争的同时也在发送。则效率为100%</li>
+</ul>
+</div>
+<h3 id="_10">有限竞争协议</h3>
+<p><strong>自适应树搜索协议</strong></p>
+<ul>
+<li>在一次成功传输后的第一个竞争时隙，所有站点同时竞争。</li>
+<li>如果只有一个站点申请，则获得信道。</li>
+<li>否则在下一竞争时隙，有一半站点参与竞争（递归），下一时隙由另一半站点参与竞争</li>
+<li>即所有站点构成一棵完全二叉树</li>
+</ul>
+<h2 id="_11">以太网</h2>
+<h3 id="_12">经典以太网</h3>
+<p><strong>物理层</strong></p>
+<ul>
+<li>最高速率10Mbps</li>
+<li>使用曼彻斯特编码</li>
+</ul>
+<details class="danger">
+<summary>为什么任意两个接法器之间的距离不得超过2.5km？</summary>
+<p>距离越大，RTT越大，需要设置的最短帧长越大，会降低传输效率。</p>
+</details>
+<p><strong>MAC子层协议</strong></p>
+<ul>
+<li>常用的以太网MAC帧格式有两种标准<ol>
+<li>DIX Ethernet V2 标准(最常用的)</li>
+<li>IEEE 的 802.3 标准</li>
+</ol>
+</li>
+<li>MAC帧中的源地址和目的地址长度均为6字节</li>
+<li>源地址后面的两个字节，Ethernet V2将其视为上一层的协议类型，IEEE802.3将其视为数据长度。</li>
+<li>数据字段不足46字节，需要填充整数字节（Padding）至46字节，以保证以太网MAC帧不小于64字节。(小于64 字节的帧都是由于冲突而异常中止的无效帧)</li>
+<li>校验和<ul>
+<li>FCS, Frame Check Sequence</li>
+<li>使用CRC32计算除了校验和以外的其他字段</li>
+</ul>
+</li>
+</ul>
+<p><img alt="a" src="../photos/20241029112104.png" width="500px" /></p>
+<p><strong>二进制指数后退</strong></p>
+<ul>
+<li>确定基本退避时间槽，其长度为以太介质上往返传播时间(<span class="arithmatex">\(2\tau\)</span>) ，以太网中设为512比特时间</li>
+<li>定义重传次数 k ，k ≤ 10，即 k = min[ 重传次数 , 10 ]</li>
+<li>从整数集合[0,1,…, (2k −1)]中随机地取出一个数，记为 r ；</li>
+<li>重传所需的时延就是 r 倍的时间槽 <span class="arithmatex">\(2\tau\)</span>；</li>
+<li>当重传达 16 次仍不能成功时即丢弃该帧，并向高层报告。</li>
+</ul>
+<details class="warning">
+<summary>以太网性能</summary>
+<p><img alt="a" src="../photos/20241029113439.png" /></p>
+</details>
+<h3 id="_13">交换式以太网</h3>
+<ul>
+<li>使用集线器（HUB）组建以太网</li>
+<li>使用Hub扩展以太网<ul>
+<li>集线器不能增加容量</li>
+<li>用集线器组成更大的局域网都在一个冲突域中</li>
+<li>Hub级连：限制了网络的可扩展性</li>
+</ul>
+</li>
+<li>交换式以太网的核心是交换机（Switch）
+    <img alt="a" src="../photos/20241029114048.png" width="500px" /></li>
+</ul>
+<h3 id="_14">快速以太网</h3>
+<ul>
+<li>带宽：100Mbps</li>
+<li>比特时间：10ns -&gt; 电缆的最大长度降低到十分之一</li>
+</ul>
+<details class="warning">
+<summary>为什么快速以太网的传播范围为100m而没有对应的扩大？</summary>
+<p>传播速度快对噪声更加敏感，对信噪比具有新的要求</p>
+</details>
+<h3 id="_15">千兆以太网</h3>
+<ul>
+<li>带宽：1000Mbps</li>
+<li>全双工和半双工两种方式工作</li>
+<li>线缆中使用标准5类UTP</li>
+</ul>
+<h3 id="_16">万兆以太网</h3>
+<ul>
+<li>带宽：10Gbps</li>
+<li>只支持全双工，不再使用CSMA/CD</li>
+<li>线缆中使用标准6a类UTP</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">使用场景</p>
+<ul>
+<li>日常生活中使用少多使用于工程师与服务器的通信以及大模型的训练中</li>
+<li>成本高，且日常需求没这么大</li>
+</ul>
+</div>
+<h3 id="40g-100g">40G-100G以太网</h3>
+<ul>
+<li>带宽：40Gbps-100Gbps</li>
+<li>只支持全双工</li>
+</ul>
+<h2 id="_17">数据链路层交换</h2>
+<h3 id="_18">数据链路层交换原理</h3>
+<ul>
+<li>物理层设备扩充网络<ul>
+<li>扩大了冲突域，性能降低，安全隐患
+<img alt="a" class="center-image" src="../photos/image.png" /></li>
+</ul>
+</li>
+<li>数据链路层设备扩充网络<ul>
+<li>网桥或交换机,分隔了冲突域
+<img alt="a" src="../photos/20241029115304.png" width="480px" /></li>
+</ul>
+</li>
+</ul>
+<details class="question">
+<summary>图中有几个冲突域？</summary>
+<p><img alt="a" class="center-image" src="../photos/20241029115809.png" /></p>
+<details class="info">
+<summary>答案</summary>
+<p>2个冲突域，Hub连接的网段处于同一个冲突域，网桥连接的才能不是一个冲突域</p>
+</details>
+</details>
+<div class="admonition info">
+<p class="admonition-title">理想的网桥是透明的</p>
+<ul>
+<li>即插即用，无需任何配置</li>
+<li>网络中的站点无需感知网桥的存在与否</li>
+</ul>
+<p>实现方式：MAC地址表的构建-逆向学习源地址</p>
+<ul>
+<li>发送帧的站MAC地址被网桥学习(假设为A)</li>
+<li>A再次发送数据，此时网桥发现MAC_A已在表中，会更新该表项的帧达到时间，重置老化时间</li>
+</ul>
+<p>MAC地址表的构建</p>
+<ul>
+<li>增加表项：帧的源地址对应的项不在表中</li>
+<li>删除表项：老化时间到期</li>
+<li>更新表项：帧的源地址在表中，更新时间戳</li>
+</ul>
+<p>网桥对于入境帧的处理过程</p>
+<ul>
+<li>Forwarding（转发）</li>
+</ul>
+<p><img alt="a" src="../photos/20241029121226.png" width="500px" /></p>
+<ul>
+<li>Filtering（过滤）</li>
+</ul>
+<p><img alt="a" src="../photos/20241029121319.png" width="500px" /></p>
+<ul>
+<li>Flooding（泛洪）</li>
+</ul>
+<p><img alt="a" src="../photos/20241029121529.png" width="500px" /></p>
+<div class="admonition danger">
+<p class="admonition-title">flooding相当于产生了一个巨大的冲突域</p>
+</div>
+<details class="question">
+<summary>需要泛洪的情形？</summary>
+<ul>
+<li>两种目的地址的帧，需要泛洪：<ul>
+<li>广播帧：目的地址为FF-FF-FF-FF-FF-FF的数据帧</li>
+<li>未知单播帧：目的地址不在MAC地址转发表中的单播数据帧</li>
+</ul>
+</li>
+</ul>
+</details>
+<div class="admonition info">
+<p class="admonition-title">透明网桥工作原理小结</p>
+<ul>
+<li>逆向学习：根据帧的源地址在MAC地址表查找匹配表项，<ol>
+<li>如果没有，则增加一个新表项（源地址、入境端口、帧到达时间）</li>
+<li>如果有，则更新原表项的帧到达时间，重置老化时间</li>
+</ol>
+</li>
+<li>对入境帧的转发过程（三选一），查帧的目的地址是否在MAC地址表中<ol>
+<li>如果有，且入境端口≠出境端口，则从对应的出境端口转发帧</li>
+<li>如果有，且入境端口=出境端口，则丢弃帧（即过滤帧）</li>
+<li>如果没有，则向除入境端口以外的其它所有端口泛洪帧</li>
+</ol>
+</li>
+</ul>
+</div>
+</div>
+<h3 id="_19">链路层交换机</h3>
+<ul>
+<li>交换方式<ol>
+<li>对称交换：出和入的带宽相同</li>
+<li>非对称交换：出和入的带宽不同</li>
+</ol>
+</li>
+<li>交换模式：从转发时机的角度<ol>
+<li>存储转发模式（Store and Forward）<ul>
+<li>特点：转发前必须接收整个帧、执行CRC校验</li>
+<li>缺点：延迟大</li>
+<li>优点：不转发出错帧、支持非对称交换</li>
+</ul>
+</li>
+<li>直通模式（Cut-through）<ul>
+<li>特点：一旦接收到帧的目的地址，就开始转发</li>
+<li>缺点：可能转发错误帧、不支持非对称交换</li>
+<li>优点：延迟非常小，可以边入边出</li>
+</ul>
+</li>
+<li>无碎片模式（Fragment-free）<ul>
+<li>特点：接收到帧的前64字节，即开始转发</li>
+<li>缺点：仍可能转发错误帧，不支持非对称交换</li>
+<li>优点：过滤了冲突碎片，延迟和转发错帧介于存储转发和直通交换之间</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="_20">生成树协议</h3>
+<p>可靠传输：冗余拓扑<br />
+付出的代价：导致物理环路</p>
+<p>物理环路引发的问题：</p>
+<ol>
+<li>广播风暴：交换机（网桥）在物理环路上无休止地泛洪广播流量，无限循环，迅速消耗网络资源</li>
+<li>重复帧：X发送到环路的单播帧，造成目的设备Y收到重复的帧(传播途径上有环路)</li>
+<li>MAC地址表不稳定：当一个帧的多个副本到达不同端口时，交换机会不断修改同一MAC地址对应的端口</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">如何得到一棵无环的生成树？</p>
+<ul>
+<li>参与的交换机（网桥）：收发桥协议数据单元BPDU</li>
+<li>选举产生根桥、根端口、指定端口，形成生成树</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">桥协议数据单元BPDU包含的四个关键信息</p>
+<ul>
+<li>根桥ID（Root ID）: 被选为根的桥ID<ul>
+<li>桥ID共8字节，由2字节的优先级和6字节的MAC地址组成的</li>
+</ul>
+</li>
+<li>根路径开销（Root Path Cost）: 到根桥的最小路径开销</li>
+<li>指定桥ID（Designated Bridge ID）: 生成和转发BPDU的桥ID</li>
+<li>指定端口ID（Designated Port ID）: 发送BPDU的端口ID</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">生成树的三个选举过程</p>
+<details class="tip">
+<summary>1. 选举根桥(Root Bridge)</summary>
+<ul>
+<li>桥ID最小的交换机（网桥）成为生成树的根<ol>
+<li>首先比较优先级，优先级数值最小的交换机胜出成为根桥。</li>
+<li>如果优先级数值相等，MAC地址最小的交换机成为根桥。</li>
+</ol>
+</li>
+</ul>
+</details>
+<details class="tip">
+<summary>2. 为每个非根桥选出一个根端口(Root Port)</summary>
+<ul>
+<li>每个非根桥，通过比较其每个端口到根桥的根路径开销，选出根端口<ol>
+<li>具有最小根路径开销的端口被选作根端口</li>
+<li>如果多个端口的根路径开销相同，则端口ID最小的端口被选作根端口</li>
+</ol>
+</li>
+<li>非根桥只能有一个根端口，根端口处于转发状态</li>
+</ul>
+<p><img alt="a" src="../photos/20241029132132.png" /></p>
+</details>
+<details class="tip">
+<summary>3. 为每个网段确定一个指定端口(Designated Port)</summary>
+<ul>
+<li>对于每一个网段， 在所有连接到它的交换机（网桥）端口中进行选择</li>
+<li>一个具有最小根路径开销的端口，作为该网段的指定端口<ul>
+<li>若连接一个网段的端口的根路径开销相同，则选择桥ID较小的设备端口为指定端口。</li>
+</ul>
+</li>
+<li>指定端口处于转发状态，负责该网段的数据转发</li>
+<li>连接该网段的其他端口，若既不是指定端口，也不是根端口，则阻塞</li>
+</ul>
+</details>
+<details class="danger">
+<summary>判断：根桥的所有连接端口都是指定端口</summary>
+<p>正确，因为根桥的的根路径为0，一定是连接网段的具有最小根路径开销的端口</p>
+</details>
+</div>
+</div>
+<ul>
+<li>端口状态的迁移<ol>
+<li>端口角色确定为指定端口或根端口后，从Blocking状态经Listening和Learning才能到Forwarding状态</li>
+<li>默认的Forwarding Delay时间是15秒，能保证当网络的拓扑发生改变时，新的配置信息能够传遍整个网络，从而避免由于网络为收敛而造成临时环路</li>
+</ol>
+</li>
+<li>生成树的某“枝”断掉了，怎么办？<ul>
+<li>当由交换机（网桥）或链路故障导致网络拓扑改变时，重新构造生成树</li>
+</ul>
+</li>
+<li>重新构建生成树太慢了，怎么办？<ul>
+<li>使用快速生成树协议（Rapid Spanning Tree Protocol, RSTP）</li>
+</ul>
+</li>
+</ul>
+<h3 id="_21">虚拟局域网</h3>
+<ul>
+<li>广播域（Broadcasting Domain）<ol>
+<li>广播域是广播帧能够到达的范围</li>
+<li>缺省情况下，交换机所有端口同属于一个广播域，无法隔离广播域</li>
+<li>广播帧在广播域中传播，占用资源，降低性能，且具有安全隐患</li>
+</ol>
+</li>
+</ul>
+<div class="admonition question">
+<p class="admonition-title">交换机可以分隔广播域吗？</p>
+<ul>
+<li>可以！支持VLAN的交换机</li>
+<li>一个VLAN（Virtual LAN）是一个独立的广播域</li>
+<li>交换机通过划分VLAN，来分隔广播域</li>
+</ul>
+</div>
+<ul>
+<li>VLAN是一个在物理网络上根据用途，工作组、应用等来逻辑划分的局域网络，与用户的物理位置没有关系</li>
+<li>通过路由器或三层交换机进行VLAN间路由，实现VLAN间通信<ul>
+<li>不能在数据链路层通信，但是可以在网络层通信</li>
+</ul>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">VLAN类型</p>
+<details class="tip">
+<summary>基于端口的VLAN(最常见)</summary>
+<p><img alt="a" src="../photos/20241029000.png" /></p>
+</details>
+<details class="tip">
+<summary>基于MAC地址的VLAN</summary>
+<p><img alt="a" src="../photos/20241029001.png" /></p>
+</details>
+<details class="tip">
+<summary>基于协议的VLAN</summary>
+<p><img alt="a" src="../photos/20241029002.png" /></p>
+</details>
+<details class="tip">
+<summary>基于子网的VLAN</summary>
+<p><img alt="a" src="../photos/20241029003.png" /></p>
+</details>
+</div>
+<ul>
+<li>如何区分不同VLAN的数据帧<ul>
+<li>在数据帧中携带VLAN标记<ol>
+<li>带VLAN标记的帧称为标记帧（Tagged Frame）</li>
+<li>不携带VLAN标记的普通以太网帧称为无标记帧（Untagged Frame）</li>
+</ol>
+</li>
+<li>VLAN 标记由交换机添加/剥除，对终端站点透明</li>
+</ul>
+</li>
+<li>Access链路类型端口<ul>
+<li>一般用于连接用户设备（无需识别802.1Q帧的设备）</li>
+<li>采用基于端口的VLAN划分, Access端口只能加入一个VLAN</li>
+<li>一旦Access端口加入了特定的VLAN，连接在该端口的设备被视为属于该VLAN
+<img alt="a" src="../photos/20241029004.png" /></li>
+</ul>
+</li>
+<li>Trunk链路类型端口与Trunk链路<ul>
+<li>Trunk端口一般用于交换机之间连接</li>
+<li>干道链路允许多个VLAN的流量通过
+<img alt="a" src="../photos/20241029005.png" /></li>
+</ul>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">VLAN优点</p>
+<ul>
+<li>有效控制广播域范围</li>
+<li>增强网络的安全性</li>
+<li>灵活构建虚拟工作组</li>
+<li>提高网络的可管理性</li>
+</ul>
+</div>
+<h2 id="_22">无线局域网</h2>
+<div class="admonition note">
+<p class="admonition-title">无线局域网</p>
+<p>无线局域网 (Wireless Local Area Network，WLAN)：指以无线信道作为传输介质的计算机局域网</p>
+</div>
+<h3 id="_23">组网模式</h3>
+<ul>
+<li>基础架构模式<ol>
+<li>分布式系统(DS)</li>
+<li>访问点(AP)</li>
+<li>站点(STA)</li>
+<li>基本服务集(BSS)</li>
+<li>扩展服务集(ESS)</li>
+<li>站点之间通信通过AP转发</li>
+</ol>
+</li>
+<li>自组织模式(Ad hoc)<ol>
+<li>站点(STA)</li>
+<li>独立基本服务集(IBSS)</li>
+<li>站点之间直接通信</li>
+<li>共享同一无线信道</li>
+</ol>
+</li>
+</ul>
+<h3 id="ieee-80211">IEEE 802.11介质访问控制</h3>
+<div class="admonition warning">
+<p class="admonition-title">直接将CSMA/CD用于无线局域网？</p>
+<ul>
+<li>冲突检测困难<ol>
+<li>在接收端，发送功率和接收功率相差太大(发射功率比接收功率大很多)</li>
+<li>站点在发送时关闭接收功能，无法在发送时同时检测冲突</li>
+</ol>
+</li>
+<li>在同一BSS中，不是所有站点都能互相感知到对方发送的信号<ol>
+<li>载波侦听失败，但在接收站点处发生冲突</li>
+<li>被称为隐藏终端问题</li>
+</ol>
+</li>
+<li>暴露终端问题，降低网络的吞吐量</li>
+<li>信号衰落随时间发生变化，使问题变得更加复杂</li>
+</ul>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">隐藏终端问题</p>
+<ul>
+<li>由于距离太远（或障碍物）导致站点无法检测到竞争对手的存在</li>
+<li>隐藏站点不能侦听到发送端但能干扰接收端</li>
+<li>假设：A正在向B传输数据，C也要向B发送数据<br />
+<img alt="a" src="../photos/20241029006.png" /></li>
+</ul>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">暴露终端问题</p>
+<ul>
+<li>由于侦听到其他站点的发送而误以为信道忙导致不能发送</li>
+<li>暴露站点能侦听到发送端但不会干扰接收端</li>
+<li>假设：B正在向A传输数据，C要向D发送数据  <br />
+<img alt="a" src="../photos/20241029007.png" /></li>
+</ul>
+</div>
+<p><strong>CSMA/CA（Carrier Sense Multiple Access with Collision Avoid）</strong></p>
+<ul>
+<li>当信道空闲时间大于IFS（帧间隙），立即传输</li>
+<li>当信道忙时，延迟直到当前传输结束+IFS时间</li>
+<li>开始随机退后过程<ol>
+<li>从（0，CWindow）中选择一个随机数作为退后计数器（backoff counter）</li>
+<li>通过侦听确定每个时间槽是否活动</li>
+<li>如果没有活动，则减少退后时间</li>
+</ol>
+</li>
+<li>退后过程中如果信道忙，则挂起退后过程（解决站点之间的公平问题）</li>
+<li>在当前帧传输结束后恢复退后过程</li>
+</ul>
+<p><img alt="a" src="../photos/2024103101.png" width="500px" /></p>
+<div class="admonition info">
+<p class="admonition-title">使用退后过程延迟发送的目的</p>
+<p>避免多个站点同时传输引起的冲突</p>
+</div>
+<p><strong>竞争窗口（CWindow）的选择</strong></p>
+<ul>
+<li>竞争窗口的选择应与网络负载情况相适应</li>
+<li>发生冲突的次数能间接反映网络的负载情况<ol>
+<li>冲突次数越多，表明网络负载越重</li>
+</ol>
+</li>
+<li>二进制指数退后算法<ol>
+<li>竞争窗口的初始值为某个最小值，发生冲突时加大窗口，直到达到最大值。</li>
+</ol>
+</li>
+<li>二进制指数退后算法对网络负载情况的自适应性<ol>
+<li>当网络负载轻时，冲突的机率较小，选择较小的竞争窗口，减小站点的等待时间</li>
+<li>当网络负载重时，冲突的机率较大，选择较大的竞争窗口，避免站点间选择的随机值过于接近，从而导致太多的冲突</li>
+</ol>
+</li>
+</ul>
+<p><strong>差错检测与确认重传</strong></p>
+<ul>
+<li>差错检测：32位CRC校验（与以太网相同）</li>
+<li>采用停等机制：发送数据，等待确认，超时重传（重传定时器）</li>
+<li>如果达到最大重传限制，该帧被丢弃，并告知上层协议</li>
+</ul>
+<p><img alt="a" src="../photos/2024103102.png" width="500px" /></p>
+<details class="warning">
+<summary>采用停等机制的原因？为什么不采用流水线机制？</summary>
+<p>WIFI 的范围非常短，此时 stop-and-wait 对性能的影响并不大</p>
+</details>
+<p><strong>不同帧间隙控制优先级</strong></p>
+<ul>
+<li>SIFS（Short IFS）：最高优先级，用于Ack, CTS, 轮询响应等</li>
+<li>PIFS（PCF IFS）：中等优先级（SIFS+1槽口时间），轮询服务</li>
+<li>DIFS（DCF IFS）：最低优先级（ SIFS+2槽口时间），异步数据服务</li>
+</ul>
+<p><img alt="a" src="../photos/2024103103.png" width="500px" /></p>
+<p><strong>RTS-CTS机制（可选机制）</strong></p>
+<ul>
+<li>目的：通过信道预约，避免长帧冲突</li>
+<li>发送端发送RTS（request to send）</li>
+<li>接收端回送CTS（clear to send）</li>
+<li>RTS和CTS中的持续时间（Duration）中指明传输所需时间（数据+控制）</li>
+<li>其他相关站点能够收到RTS或（和）CTS，维护NAV<ol>
+<li>虚拟载波侦听（Virtual Carrier Sense）</li>
+</ol>
+</li>
+<li>RTS和CTS帧很短，即使产生冲突，信道浪费较少</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">RTS-CTS机制示例</p>
+<ul>
+<li>源站点的隐藏站点可以接收到目的站点发送的CTS<ol>
+<li>RTS中包含了数据发送需要的时间长度</li>
+<li>NAV根据这些数据来确定自己的持续时间长度<br />
+<img alt="a" src="../photos/2024103104.png" width="500px" /></li>
+</ol>
+</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">如何应对无线链路较高的出错率？</p>
+<ul>
+<li>解决方法：采用较小的帧（将用户数据帧分段的机制对用户透明）</li>
+<li><span class="arithmatex">\(F_i\)</span> 帧中携带 <span class="arithmatex">\(F_{i+1}\)</span> 的传输时间 <br />
+<img alt="a" src="../photos/2024103105.png" width="500px" /></li>
+</ul>
+</div>
+<h3 id="ieee-80211_1">IEEE 802.11帧格式</h3>
+<p><strong>802.11帧格式一般结构</strong></p>
+<p><img alt="a" src="../photos/2024103106.png" width="500px" /></p>
+<ul>
+<li>主要域段解释(了解即可，不需要全部记住)<ul>
+<li>帧控制：具有多种用途</li>
+<li>持续时间：下一个要发送帧可能持续的时间（NAV）或关联ID（AID）</li>
+<li>地址1~地址4：每个地址的含义基于“去往DS”和“来自DS”域段确定</li>
+<li>顺序控制：过滤掉重复帧，或用于分片组合</li>
+<li>QoS控制域段：存放数据流的QoS信息（802.11e中扩展）</li>
+<li>数据：包含任意长度的数据（0-2312字节）</li>
+<li>CRC校验：802.11采用4个字节的校验码</li>
+</ul>
+</li>
+</ul>
+<p><strong>主要管理帧</strong></p>
+<p>不需要完全记住对应关系</p>
+<p><img alt="a" src="../photos/2024110101.png" width="500px" /></p>
+<p><strong>主要控制帧</strong></p>
+<p>不需要完全记住对应关系</p>
+<p><img alt="a" src="../photos/2024110102.png" width="500px" /></p>
+<p><strong>主要数据帧</strong></p>
+<p>不需要完全记住对应关系</p>
+<p><img alt="a" src="../photos/2024110103.png" width="500px" /></p>
+<h3 id="_24">无线局域网的构建与管理</h3>
+<p><strong>基础架构模式</strong></p>
+<p>通过AP(Access Point，接入点)接入有线网络(互联网络)</p>
+<div class="admonition note">
+<p class="admonition-title">如何关联到AP？</p>
+<ul>
+<li>BSSID：AP的MAC地址，标识AP管理的基本服务集</li>
+<li>SSID：32字节网名，标识一个扩展服务集（ESS），包含一个或多个基本服务集</li>
+<li>关联到AP的三个阶段<ul>
+<li>扫描（Scan）、认证（Authentication）、关联（Association）</li>
+</ul>
+</li>
+</ul>
+</div>
+<p><strong>被动扫描</strong></p>
+<p>AP 周期性发送 Beacon 帧，站点在每个可用的通道上扫描 Beacon 帧</p>
+<p><strong>主动扫描</strong></p>
+<p>站点依次在每个可用的通道上发出包含 SSID 的 Probe Request 帧，具有被请求 SSID 的 AP 返回 Probe Response 帧</p>
+<p><strong>认证过程</strong></p>
+<p>当站点找到与其有相同 SSID 的 AP，在 SSID 匹配的 AP 中，根据收到的 AP 信号强度，选择一个信号最强的 AP，然后进入认证阶段</p>
+<ul>
+<li>主要认证方式包括<ol>
+<li>开放系统身份认证 (open-system authentication)</li>
+<li>共享密钥认证 (shared-key authentication)</li>
+<li>WPA PSK认证(pre-shared key)</li>
+<li>802.1X EAP认证</li>
+</ol>
+</li>
+</ul>
+<p><strong>关联过程</strong></p>
+<ul>
+<li>身份认证获得通过后， 进入关联阶段</li>
+<li>站点向 AP 发送关联请求（Association Request）</li>
+<li>AP 向站点返回关联响应（Association Response）</li>
+<li>AP维护站点关联表，并记录站点的能力（如能够支持的速率等）</li>
+</ul>
+<p><strong>站点漫游</strong></p>
+<ul>
+<li>当前的AP的通道质量下降时，站点漫游到不同的AP</li>
+<li>通过扫描功能发现通道质量更好的AP<ol>
+<li>被动扫描</li>
+<li>主动扫描</li>
+</ol>
+</li>
+<li>站点向新的AP发送重关联请求（Reassociation Request）</li>
+<li>如果AP接受重关联请求<ol>
+<li>AP 向站点返回重关联响应（Reassociation Response）</li>
+<li>如果重关联成功，则站点漫游到新的AP</li>
+<li>新的AP通过分布系统通知之前的AP</li>
+</ol>
+</li>
+</ul>
+<p><img alt="a" class="width-and-center" src="../photos/2024110104.png" /></p>
+<div class="admonition abstract">
+<p class="admonition-title">站点漫游慢的实例</p>
+<p>目前WiFi之间的切换仍然比较慢</p>
+</div>
+<p><strong>站点睡眠管理</strong></p>
+<ul>
+<li>目的：延长电池的续航时间</li>
+<li>基本思想：<ol>
+<li>无线网卡的空闲接收状态占电量消耗的主要部分，关闭无线网卡可以减少电量的消耗</li>
+<li>关联的AP允许空闲站睡眠，AP跟踪睡眠的站点，并为之缓存数据，保证数据不丢失，保证会话的持续性</li>
+<li>Beacons中的TIM（Traffic Indication Map）通知睡眠站点有需要接收的数据</li>
+<li>睡眠站点定期唤醒接收数据：如果有数据要接收，发送PS-Poll帧，请求AP发送数据帧</li>
+</ol>
+</li>
+</ul>
+<h3 id="wifi-6">WiFi 6 核心技术概览</h3>
+<p><strong>Wi-Fi 6 (802.11ax) 核心目标</strong></p>
+<p>相对于Wi-Fi 5， Wi-Fi 6采用了如下新技术(不需要记忆具体细节)</p>
+<ul>
+<li>OFDMA频分复用技术：实现多站点并行传输，提升效率、降低时延</li>
+<li>DL/UL MU-MIMO技术：增加系统容量，提升用户的平均吞吐量</li>
+<li>高阶调制技术 (1024-QAM)：提高单条空间流的传输速率，相对256-QAM提升25%</li>
+<li>BSS 着色机制：信道合理划分和利用，提升高密部署环境无线网络的总体容量</li>
+<li>扩展覆盖范围：采用Long OFDM symbol发送机制，降低终端丢包率，扩大覆盖范围</li>
+</ul>
+<p><strong>OFDMA 频分复用技术</strong></p>
+<p>相较于OFDM，OFDMA对时间片的划分更加细致</p>
+<div class="admonition success">
+<p class="admonition-title">OFDMA的优势</p>
+<ol>
+<li>更细的信道资源分配</li>
+<li>提供更好的QoS</li>
+<li>更多的用户并发</li>
+<li>更高的用户带宽</li>
+</ol>
+</div>
+<p><strong>DL/UL MU-MIMO技术</strong></p>
+<p>多输入多输出（MIMO）：Multi Input Multi Output</p>
+<p><img alt="a" class="width-and-center" src="../photos/2024110105.png" /></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  <h2 id="__comments">评论</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+  data-repo="NoneZJL/mymkdocs"
+  data-repo-id="R_kgDOMETFiQ"
+  data-category="Announcements"
+  data-category-id="DIC_kwDOMETFic4Cjv-I"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="bottom"
+  data-theme="preferred_color_scheme"
+  data-lang="zh-CN"
+  crossorigin="anonymous"
+  async>
+  </script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      NoneZJL
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

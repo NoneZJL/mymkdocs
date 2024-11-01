@@ -1,0 +1,2865 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://example.com/Lessons/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/chapter2/">
+      
+      
+        <link rel="prev" href="../chapter1/">
+      
+      
+        <link rel="next" href="../chapter3/">
+      
+      
+      <link rel="icon" href="../../../images/nothing.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>chapter 2 指令——计算机的语言 - NoneZJL的个人笔记</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+
+      
+    
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+    };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="NoneZJL的个人笔记" class="md-header__button md-logo" aria-label="NoneZJL的个人笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NoneZJL的个人笔记
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              chapter 2 指令——计算机的语言
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/NoneZJL/mymkdocs" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    NoneZJL's notebook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  主页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D/" class="md-tabs__link">
+          
+  
+  课程
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Tools/mkdocs%E4%BD%BF%E7%94%A8/" class="md-tabs__link">
+          
+  
+  工具
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  关于我
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="NoneZJL的个人笔记" class="md-nav__button md-logo" aria-label="NoneZJL的个人笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    NoneZJL的个人笔记
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/NoneZJL/mymkdocs" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    NoneZJL's notebook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    主页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    课程
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            课程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机系统原理
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            计算机系统原理
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    课程介绍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter 1 计算机抽象及相关技术
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    chapter 2 指令——计算机的语言
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    chapter 2 指令——计算机的语言
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 介绍
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      指令集
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mips" class="md-nav__link">
+    <span class="md-ellipsis">
+      MIPS 指令集
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 计算机硬件上的操作
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 计算机硬件上的操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      举例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r-type-instruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      R-type Instruction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 计算机硬件上的操作数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 计算机硬件上的操作数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      寄存器操作数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      内存中的数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      指令类型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      寄存器与内存的比较
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      立即数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0" class="md-nav__link">
+    <span class="md-ellipsis">
+      常数0
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 有符号数和无符号数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 有符号数和无符号数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      无符号数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      有符号数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="有符号数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      二进制补码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      符号拓展
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他表示方式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="其他表示方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      原码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      反码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      移码
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 计算机中的表示指令
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 计算机中的表示指令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      指令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mips_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      MIPS指令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      指令编码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      存储在计算机中的程序
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 逻辑操作
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6 逻辑操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      不同语言中的逻辑操作
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shift" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shift 操作
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      立即数的拓展
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7 跳转指令
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.7 跳转指令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      分类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      指令格式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jump 指令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j" class="md-nav__link">
+    <span class="md-ellipsis">
+      J 类型指令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slt" class="md-nav__link">
+    <span class="md-ellipsis">
+      SLT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      伪指令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本块
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      比较指令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      边界检查
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8 过程调用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.8 过程调用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      步骤
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      相关指令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      寄存器使用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      栈
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      叶程序与非叶程序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      调用过程中的数据保存
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9 交互
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.9 交互">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      基于一个字、半个字的操作
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#210-mips32" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.10 MIPS中对于32位立即数地址的跳转
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.10 MIPS中对于32位立即数地址的跳转">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      32位常数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branch跳转地址
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jump_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jump跳转地址
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      寻址模式总结
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.11 并性性和指令：同步
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.11 并性性和指令：同步">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      同步
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      指令实现
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#212" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.12 编译和程序启动
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.12 编译和程序启动">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      编译过程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      汇编器伪指令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      静态链接和动态链接
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-x86" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.13 x86指令的一些局限性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cisc" class="md-nav__link">
+    <span class="md-ellipsis">
+      复杂指令集计算机CISC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risc" class="md-nav__link">
+    <span class="md-ellipsis">
+      精简指令系统计算机RISC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter 3 计算机的算数运算
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter 4 处理器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter 5 大容量和高速度——开发存储器层次结构
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter 6 输入输出系统
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机网络
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            计算机网络
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%86%85%E5%AE%B9%E4%BB%8B%E7%BB%8D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    内容介绍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据链路层
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter04/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    介质访问子层
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    网络层
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    操作系统
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            操作系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter5 | 进程调度
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter6 | 进程同步
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter8 | 主存
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    工具
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            工具
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tools/mkdocs%E4%BD%BF%E7%94%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    mkdocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tools/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tools/elasticsearch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ElasticSearch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    关于我
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 介绍
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      指令集
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mips" class="md-nav__link">
+    <span class="md-ellipsis">
+      MIPS 指令集
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 计算机硬件上的操作
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 计算机硬件上的操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      举例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r-type-instruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      R-type Instruction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 计算机硬件上的操作数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 计算机硬件上的操作数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      寄存器操作数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      内存中的数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      指令类型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      寄存器与内存的比较
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      立即数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#0" class="md-nav__link">
+    <span class="md-ellipsis">
+      常数0
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 有符号数和无符号数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 有符号数和无符号数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      无符号数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      有符号数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="有符号数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      二进制补码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      符号拓展
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他表示方式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="其他表示方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      原码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      反码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      移码
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 计算机中的表示指令
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 计算机中的表示指令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      指令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mips_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      MIPS指令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      指令编码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      存储在计算机中的程序
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 逻辑操作
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6 逻辑操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      不同语言中的逻辑操作
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shift" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shift 操作
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      立即数的拓展
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7 跳转指令
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.7 跳转指令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      分类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      指令格式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jump 指令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#j" class="md-nav__link">
+    <span class="md-ellipsis">
+      J 类型指令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slt" class="md-nav__link">
+    <span class="md-ellipsis">
+      SLT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      伪指令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本块
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      比较指令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      边界检查
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8 过程调用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.8 过程调用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      步骤
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      相关指令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      寄存器使用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      栈
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      叶程序与非叶程序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      调用过程中的数据保存
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9 交互
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.9 交互">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      字符数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      基于一个字、半个字的操作
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#210-mips32" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.10 MIPS中对于32位立即数地址的跳转
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.10 MIPS中对于32位立即数地址的跳转">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      32位常数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branch跳转地址
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jump_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jump跳转地址
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      寻址模式总结
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.11 并性性和指令：同步
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.11 并性性和指令：同步">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      同步
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      指令实现
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#212" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.12 编译和程序启动
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.12 编译和程序启动">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      编译过程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      汇编器伪指令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      静态链接和动态链接
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-x86" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.13 x86指令的一些局限性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cisc" class="md-nav__link">
+    <span class="md-ellipsis">
+      复杂指令集计算机CISC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risc" class="md-nav__link">
+    <span class="md-ellipsis">
+      精简指令系统计算机RISC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="_1">指令——计算机的语言</h1>
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 3041 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11l-3.54-4.71Z"/></svg></span> 42 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 20 分钟</p>
+</div>
+<h2 id="21">2.1 介绍</h2>
+<h3 id="_2">指令集</h3>
+<p>指令集是计算机全部指令的集合，不同电脑可能会使用不同的指令集，不同的指令集仍然会有相似的部分。</p>
+<p>早期电脑使用简单指令集，许多现代电脑仍然使用简单指令集，但是也有使用复杂指令集。</p>
+<p><strong>精简指令集思想：</strong>使用简单指令集，复杂指令的功能使用简单指令进行实现，可以精简电路工艺。</p>
+<h3 id="mips">MIPS 指令集</h3>
+<p>32个寄存器</p>
+<p><img alt="registers" src="../imags/registers.png" /></p>
+<p>指令</p>
+<p><img alt="instructions" src="../imags/instructions.png" /></p>
+<h2 id="22">2.2 计算机硬件上的操作</h2>
+<h3 id="_3">举例</h3>
+<p>算数运算：<strong>add a, b, c  #  a gets b + c</strong></p>
+<p><img alt="🎟" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f39f.svg" title=":tickets:" /> 设计原则1：尽量简化设计，减小运算开销</p>
+<h3 id="r-type-instruction">R-type Instruction</h3>
+<p>这一类的指令的操作数都是寄存器（包含算数运算和逻辑运算），并且所有 R 类型指令的操作码（ opcode ）都是 <em>000000</em> ，不同功能的实现看功能码（ Function code ）</p>
+<p><img alt="R-Type" src="../imags/RType.png" /></p>
+<p>对于寄存器，目的寄存器（ Rd ）在后面，源寄存器（ Rs, Rt）在前面</p>
+<h2 id="23">2.3 计算机硬件上的操作数</h2>
+<h3 id="_4">寄存器操作数</h3>
+<p>在 MIPS 里面，一个32 bit 的数据称为一个 word</p>
+<p><img alt="🎟" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f39f.svg" title=":tickets:" /> 设计原则2：越小的程序运行越快，越小越快</p>
+<h3 id="_5">内存中的数据</h3>
+<p><strong>内存作用：</strong>内存用于存储数据（数组、结构以及动态数据等）</p>
+<p><strong>交互方式：</strong>通过 Load 操作将数据从内存中提取到寄存器中，通过 Store 操作将寄存器中的数据存储到内存中</p>
+<p><img alt="Load and Store" src="../imags/loadandstore.png" /></p>
+<p><strong>内存的排列方式：</strong>基于字节编码（Memory is byte addressed），每个 address 存储了 8-bit</p>
+<p><strong>Word 存储在内存中：</strong>因而内存中的地址必须是4的倍数</p>
+<p><img alt="store word" src="../imags/storeword.png" /></p>
+<p><strong>数据的存储方式：</strong>MIPS采用 Big Endian（ 内存低位在寄存器的高位 ）</p>
+<p><img alt="BigEndian" src="../imags/BigEndian.png" /></p>
+<p><img alt="❗" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2757.svg" title=":exclamation:" /> 在使用 Load 和 Store 指令的时候，需要注意将偏移位 × 4</p>
+<p><img alt="times4" src="../imags/times4.png" /></p>
+<h3 id="_6">指令类型</h3>
+<p><strong>R-Type</strong> </p>
+<ul>
+<li>两个操作数和结果都在寄存器的运算指令</li>
+</ul>
+<p>R 类型指令的操作码全部为0</p>
+<p><img alt="R-type" src="../imags/R-Type.png" /></p>
+<p><strong>I-Type</strong> (存在立即数)</p>
+<ul>
+<li>运算指令：一个寄存器、一个立即数</li>
+<li>load 和 store</li>
+<li>条件分支</li>
+</ul>
+<p><img alt="I-Type" src="../imags/I-Type.png" /></p>
+<p><img alt="IType" src="../imags/IType.png" /></p>
+<p><strong>J-Type</strong></p>
+<ul>
+<li>无条件跳转</li>
+</ul>
+<p><img alt="J-Type" src="../imags/J-Type.png" /></p>
+<h3 id="_7">寄存器与内存的比较</h3>
+<ul>
+<li>寄存器访问比内存快（大致两个数量级）</li>
+<li>基于内存数据的操作需要进行 load 和 store（需要更多的指令）</li>
+<li>编译器应该尽可能多的使用寄存器（寄存器优化是必要的）</li>
+</ul>
+<h3 id="_8">立即数</h3>
+<p>一般情况下数字存储在内存中，在使用时进行读取。但是也存在直接出现在指令中的数字，这些数字就是立即数。</p>
+<p>例如：<span class="arithmatex">\(addi\quad s3,\quad s3,\quad 4\)</span></p>
+<p>立即数可以是正数，也可以是负数。</p>
+<p><img alt="🎟" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f39f.svg" title=":tickets:" /> 设计原则3：要使得常见情况操作更快。（小数字的使用是常见的，立即数的使用可以减少 load 指令的使用，加快速度）</p>
+<h3 id="0">常数0</h3>
+<p>MIPS 中存在一个存储常数0的寄存器 $zero</p>
+<h2 id="24">2.4 有符号数和无符号数</h2>
+<h3 id="_9">无符号数</h3>
+<p>计算方式：<span class="arithmatex">\(x=x_{n-1}2^{n-1}+x_{n-2}2^{n-2}+...+x_{1}2^{1}+x_{0}2^{0}\)</span></p>
+<p>范围：0 ~ <span class="arithmatex">\(2^n-1\)</span></p>
+<p>对于32位数：0 ~ +4294967295</p>
+<p><strong>数字表示</strong></p>
+<p>十进制、二进制与十六进制</p>
+<p>十进制：<span class="arithmatex">\(35_{10}=3\times 10^1+5\times 10^0\)</span></p>
+<p>二进制：<span class="arithmatex">\(00100011_2=1\times 2^5+1\times 2^1+1\times 2^0\)</span></p>
+<p>十六进制：<span class="arithmatex">\(0x23\quad or\quad 23_{16}=2\times 16^1+3\times 16^0\)</span></p>
+<p>二进制与十六进制的互相转换：四位一转换</p>
+<p>除了这些之外，还有八进制，二进制与八进制的转换为3位一组，十六进制与八进制的转换需要通过二进制</p>
+<p>R进制数=&gt;十进制数：按”权“展开</p>
+<p>十进制数=&gt;R进制数：整数部分和小数部分分别转换（整数：除基取余，上右下左）（小数：乘基取整，上左下右）</p>
+<p><img alt="convert" src="../imags/convert.png" /></p>
+<h3 id="_10">有符号数</h3>
+<h4 id="_11">二进制补码</h4>
+<p>32位的数字中，最高位（第32位）是符号位（0表示是正数，1表示是负数）</p>
+<p>数 <span class="arithmatex">\(x\)</span> 的相反数 <span class="arithmatex">\(-x\)</span> 的二进制补码是 <span class="arithmatex">\(2^n-x\)</span></p>
+<p>计算方式：<span class="arithmatex">\(x=-x_{n-1}2^{n-1}+x_{n-2}2^{n-2}+...+x_{1}2^{1}+x_{0}2^{0}\)</span></p>
+<p>范围：<span class="arithmatex">\(-2^{n-1}\quad to\quad 2^{n-1}-1\)</span></p>
+<p>结论：一个负数的补码等于对应正数补码的”各位取反，末位加1“</p>
+<h4 id="_12">符号拓展</h4>
+<p>在 MIPS 指令集中，存在半个字的数据，这些数据在运算过程中需要进行符号拓展。</p>
+<p>符号拓展就是对最高位的数字进行延伸。如果是正数，拓展位全部为0，如果是负数，拓展位全部为1。</p>
+<h4 id="_13">其他表示方式</h4>
+<h5 id="_14">原码</h5>
+<p>采用符号和幅值的方式进行表示，也就是最高位为符号位，后面的为绝对值。（存在+0和-0）</p>
+<p><img alt="🎫" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f3ab.svg" title=":ticket:" /> 现在计算机内部整数采用补码进行表示，但是浮点数的尾数用源码定点小数表示</p>
+<h5 id="_15">反码</h5>
+<p>一个数的相反数就是将这个数的每一位按位取反。（与补码相差1）</p>
+<h5 id="_16">移码</h5>
+<p>通过将数加一个偏移量使其具有非负的表示形式。最小的负数用 <span class="arithmatex">\(00...000_2\)</span> 表示，最大的正数用 <span class="arithmatex">\(11...111_2\)</span> 表示，0一般用 <span class="arithmatex">\(10...000_2\)</span> 表示。</p>
+<p>将每一个数值加上一个偏置常数（bias），一般来说，当编码位数为n时，取 <span class="arithmatex">\(2^{n-1}\)</span></p>
+<p><img alt="2e246ec4d1611d7092f3aa31753df55" src="../imags/2e246ec4d1611d7092f3aa31753df55.png" /></p>
+<p>用移码来表示指数（阶码）时，便于浮点数加减运算时的对阶操作（比较大小）</p>
+<h2 id="25">2.5 计算机中的表示指令</h2>
+<h3 id="_17">指令</h3>
+<p>计算机中的指令都是二进制数，称为机器码。MIPS指令时32位的指令。</p>
+<h3 id="mips_1">MIPS指令</h3>
+<p><strong>R型指令</strong></p>
+<p><em>格式</em></p>
+<p><img alt="image-20240806145824100" src="../imags/image-20240806145824100.png" /></p>
+<ul>
+<li>op: operation code (opcode)</li>
+<li>rs: first source register number</li>
+<li>rt: second source register number</li>
+<li>rd: destination register number</li>
+<li>shamt: shift amount</li>
+<li>funct: function code (extends opcode)</li>
+</ul>
+<p><em>举例</em></p>
+<p><img alt="add-example" src="../imags/add-example1.png" /></p>
+<p>add 指令的操作码是0，功能码是32</p>
+<p><strong>I型指令</strong></p>
+<p><em>格式</em></p>
+<p><img alt="image-20240806145851313" src="../imags/image-20240806145851313.png" /></p>
+<ul>
+<li>rt: destination or source register number</li>
+<li>Constant: <span class="arithmatex">\(-2^{15}\quad to\quad +2^{15}-1\)</span></li>
+<li>Address: offset added to base address in rs</li>
+</ul>
+<p><img alt="🎟" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f39f.svg" title=":tickets:" /> 设计原则4：好的设计需要一定的妥协</p>
+<p><em>举例</em></p>
+<p><img alt="image-20240806150620190" src="../imags/image-20240806150620190.png" /></p>
+<p>load word 指令的操作码是35</p>
+<p>I型指令包括部分跳转指令（branch instructions）以及与内存进行交互的指令（load and store instructions）</p>
+<h3 id="_18">指令编码</h3>
+<p>部分常见的指令编码</p>
+<p><img alt="image-20240806151059282" src="../imags/image-20240806151059282.png" /></p>
+<p>具体举例</p>
+<p><img alt="image-20240806151435586" src="../imags/image-20240806151435586.png" /></p>
+<h3 id="_19">存储在计算机中的程序</h3>
+<ul>
+<li>指令也是二进制表示的，和数据的表示方式一致</li>
+<li>指令和数据都存储在内存中</li>
+</ul>
+<h2 id="26">2.6 逻辑操作</h2>
+<h3 id="_20">不同语言中的逻辑操作</h3>
+<p><img alt="logicalop" src="../imags/logicalop.png" /></p>
+<h3 id="shift">Shift 操作</h3>
+<p>格式：</p>
+<p><img alt="image-20240808090811092" src="../imags/image-20240808090811092.png" /></p>
+<ul>
+<li>shamt：需要移动多少位</li>
+</ul>
+<p>左移，低位用0补全，移位表示乘。右移，高位用0补全（无符号数），移位表示除。</p>
+<h3 id="_21">立即数的拓展</h3>
+<ul>
+<li>在与立即数进行逻辑操作时，立即数的高16位补0后形成32位常数进行计算</li>
+<li>与立即数进行加法运算时，将立即数进行符号拓展</li>
+</ul>
+<h2 id="27">2.7 跳转指令</h2>
+<h3 id="_22">分类</h3>
+<ul>
+<li>有条件跳转</li>
+</ul>
+<p>​   BEQ, BNE, SLT……</p>
+<ul>
+<li>无条件跳转</li>
+</ul>
+<p>​   J, JR, JAL</p>
+<h3 id="_23">指令格式</h3>
+<p><img alt="image-20240808093128813" src="../imags/image-20240808093128813.png" /></p>
+<p>跳转都是相对跳转，而且是相对当前指令的下一条进行跳转。（运行过程中在取指令的过程中 PC 就会自增）</p>
+<p>而且在跳转过程中的偏移会左移两位，也就是低位补两个0，因为计算机中指令位置的最后两位一定是两个0（32位的指令需要占用4份空间进行存储），所以在机器码中就不写最后两位的0来增大可以跳转的范围。</p>
+<p><img alt="image-20240808093311992" src="../imags/image-20240808093311992.png" /></p>
+<p><img alt="image-20240808093416984" src="../imags/image-20240808093416984.png" /></p>
+<p><img alt="image-20240808093428236" src="../imags/image-20240808093428236.png" /></p>
+<p>jump 指令仅仅只是跳转到目的位置，jump and link 除了跳转过去之外，还存储了当前指令的下一条指令的位置，便于后续跳回来。</p>
+<p><strong>举例</strong></p>
+<p><img alt="image-20240808093907720" src="../imags/image-20240808093907720.png" /></p>
+<h3 id="jump">Jump 指令</h3>
+<p><img alt="image-20240808095941572" src="../imags/image-20240808095941572.png" /></p>
+<p>跳转到的位置取当前指令的下一条的高四位以及 label 作为低位的位置。</p>
+<h3 id="j">J 类型指令</h3>
+<p>J 类型指令只包括 j 和 jal 两条指令。这些指令的跳转同样需要内存的地址，并且跳转的范围不是无限的。当需要跳转的位置过于远时，就需要用到 jump register</p>
+<h3 id="slt">SLT</h3>
+<p>格式：</p>
+<p><img alt="image-20240808100534253" src="../imags/image-20240808100534253.png" /></p>
+<p>机器码：</p>
+<p><img alt="image-20240808100546878" src="../imags/image-20240808100546878.png" /></p>
+<p>使用 SLT 指令实现不同的跳转条件</p>
+<p><img alt="image-20240808100658922" src="../imags/image-20240808100658922.png" /></p>
+<h3 id="_24">伪指令</h3>
+<p>MIPS 内部本身没有的指令，但是可以通过指令的组合实现。</p>
+<p><strong>举例</strong></p>
+<p><img alt="image-20240808101516083" src="../imags/image-20240808101516083.png" /></p>
+<p>伪指令汇编器会提供，但是在计算性能的时候需要替换成实际需要的指令进行计算</p>
+<h3 id="_25">基本块</h3>
+<p>一系列不涉及跳转的连续指令，也就是顺序执行下来的指令。</p>
+<p>基本块因为不涉及指令的跳转，所以有较快的执行速度，并且 CPU 会进行优化，可以做到多条指令同时进行，并且可以实现乱序执行。</p>
+<h3 id="_26">比较指令</h3>
+<p>为什么涉及比较的指令只有 blt 和 bge？</p>
+<ul>
+<li>一个指令集中的指令不能过多</li>
+<li>对于硬件来说，大于小于比较会比等于比较慢很多，如果增加了大于小于比较指令，就需要增加单条指令的执行时间，会影响到程序的整体性能</li>
+</ul>
+<p>所以在MIPS中，大于小于比较是通过其他指令的结合实现的</p>
+<h3 id="_27">边界检查</h3>
+<ul>
+<li>
+<p>将有符号数作为无符号数来处理，是检验 <span class="arithmatex">\(0\leq x&lt;y\)</span> 的一种低开销方法，常用于检查数组下标是否越界</p>
+</li>
+<li>
+<p>使用无符号比较 <span class="arithmatex">\(x&lt;y\)</span> ，在检查x是否小于y的同时，也检查了x是不是一个负数</p>
+</li>
+</ul>
+<p><strong>举例</strong></p>
+<p><img alt="image-20240809085134982" src="../imags/image-20240809085134982.png" /></p>
+<h2 id="28">2.8 过程调用</h2>
+<h3 id="_28">步骤</h3>
+<ol>
+<li>将参数放到寄存器中</li>
+<li>将控制器转到程序中</li>
+<li>获取子程序运行空间</li>
+<li>执行子程序操作</li>
+<li>获取返回值并且存储到寄存器中</li>
+<li>返回调用子程序的地方</li>
+</ol>
+<h3 id="_29">相关指令</h3>
+<p>调用子程序的指令为 jal（ jump and link ），会更改 pc 的指向（跳转到目标地址），并且存储返回地址（ $ra ）。</p>
+<p>在调用子程序时，可能目前的程序也是一个子程序，所以在调用子程序之前需要对 $ra 进行保存以保证程序执行后依然能够返回到正确的位置。</p>
+<h3 id="_30">寄存器使用</h3>
+<p>寄存器使用过程中的一些约定</p>
+<p><img alt="image-20240809090201959" src="../imags/image-20240809090201959.png" /></p>
+<p>子程序可以直接使用t系列寄存器，但是如果要使用s系列寄存器，需要首先对寄存器中的值进行保存，并且在返回主程序的时候恢复寄存器中的值。</p>
+<h3 id="_31">栈</h3>
+<p>子程序在栈中的结构</p>
+<p><img alt="image-20240809090642624" src="../imags/image-20240809090642624.png" /></p>
+<p>栈中存储的内容包括参数寄存器，返回地址，s寄存器以及传入的参数等</p>
+<p>地址空间的划分</p>
+<p><img alt="image-20240809090821744" src="../imags/image-20240809090821744.png" /></p>
+<p>多级子程序的调用</p>
+<p><img alt="image-20240809091406469" src="../imags/image-20240809091406469.png" /></p>
+<p>每一个活跃的子程序都会在栈中有自己的空间，执行完后就会释放。程序的栈指针指向栈顶（最小地址），帧指针指向栈底（最大地址），栈指针在程序执行过程中会发生变化，但是帧指针始终保持不变。</p>
+<h3 id="_32">叶程序与非叶程序</h3>
+<p>叶程序是指不会再调用别的程序的程序，非叶程序在执行过程中还会再调用别的程序。因而非叶程序需要保存 $ra 以及参数寄存器中的值。</p>
+<h3 id="_33">调用过程中的数据保存</h3>
+<p>调用者需要保存的内容（调用前）</p>
+<ul>
+<li>$a0-a3 旧的参数</li>
+<li>$ra 返回地址</li>
+<li>$t0-t9 临时变量寄存器（如果后续需要用到其中的数据的话） </li>
+</ul>
+<p>被调用者需要保存的内容（调用中）</p>
+<ul>
+<li>$s0-s7 需要保存的寄存器中的数据，需要假设为仍然有用</li>
+</ul>
+<h2 id="29">2.9 交互</h2>
+<h3 id="_34">字符数据</h3>
+<p><strong>基于Byte的字符集</strong></p>
+<ul>
+<li>ASCII：128个字符</li>
+<li>Latin-1：256个字符</li>
+</ul>
+<p><strong>Unicode</strong></p>
+<ul>
+<li>
+<p>UTF-16，UTF-32：长度比较长（2个字节、4个字节）</p>
+</li>
+<li>
+<p>UTF-8：不定长编码（英文1个字节，中文3个字节等）</p>
+</li>
+</ul>
+<h3 id="_35">基于一个字、半个字的操作</h3>
+<ul>
+<li>MIPS中的字、半个字的存储</li>
+</ul>
+<p>MIPS中的数据传输是32位的，也就是说，数据总是基于32位进行传输的，如果传输的仅仅只是8或者16bit的数据，会造成一定的浪费。</p>
+<h2 id="210-mips32">2.10 MIPS中对于32位立即数地址的跳转</h2>
+<h3 id="32">32位常数</h3>
+<p>因为指令内部最多存储16位的立即数，因而对32位常数的处理需要额外的操作方式进行处理。</p>
+<p>一种方式为将32位的常数拆分为高16位与低16位分别进行处理。</p>
+<p><img alt="image-20240901152752717" src="../imags/image-20240901152752717.png" /></p>
+<p>同时，在跳转指令中，跳转的偏移量也是有限的，因而在需要跳转到比较远距离的时候需要使用 j 指令，如果还是不够远的话，需要先将需要跳转的地址存储在寄存器中，然后使用 jr 指令进行跳转。</p>
+<h3 id="branch">Branch跳转地址</h3>
+<p><img alt="image-20240901153227021" src="../imags/image-20240901153227021.png" /></p>
+<p>跳转的目标地址 <span class="arithmatex">\(<span class="arithmatex">\(Target\quad address= PC + offset\times 4\)</span>\)</span>，并且在这个时候 PC 以及完成了 +4 操作</p>
+<h3 id="jump_1">Jump跳转地址</h3>
+<p><img alt="image-20240901153529164" src="../imags/image-20240901153529164.png" /></p>
+<p>跳转的目标地址 <span class="arithmatex">\(<span class="arithmatex">\(Target\quad address=PC_{31...28}:(address\times 4)\)</span>\)</span></p>
+<h2 id="_36">寻址模式总结</h2>
+<p><img alt="image-20240901154604046" src="../imags/image-20240901154604046.png" /></p>
+<h2 id="211">2.11 并性性和指令：同步</h2>
+<h3 id="_37">同步</h3>
+<p>两个进程共享一块内存区域</p>
+<ul>
+<li>P1写数据，P2读数据</li>
+<li>当P1和P2不是同步的时候容易产生数据冲突</li>
+</ul>
+<p>硬件上的支持（加锁）</p>
+<ul>
+<li>原子性的对内存的读写</li>
+<li>不允许同时对一块内存空间进行读和写的操作</li>
+</ul>
+<p>实现方式</p>
+<ul>
+<li>单个指令（难以实现，复杂，不推荐）</li>
+<li>使用指令对（更加规整，推荐）</li>
+</ul>
+<h3 id="_38">指令实现</h3>
+<ul>
+<li>Load linked: ll rt, offset(rs)</li>
+<li>Store conditional: sc rt, offset(rs)</li>
+</ul>
+<p>两条指令之间不能够有其他程序操作这个数（这对指令是零件驱动的，需要尽可能少的在这两条指令之间加别的指令），成功的话 rt = 1，否则 rt = 0</p>
+<p>可以额外使用一个寄存器来表示是否对一个数据进行了加锁</p>
+<p><img alt="image-20240901161624084" src="../imags/image-20240901161624084.png" /></p>
+<h2 id="212">2.12 编译和程序启动</h2>
+<h3 id="_39">编译过程</h3>
+<p>高级语言 -&gt; 汇编语言 -&gt; 目标代码（不是机器语言）和链接器 -&gt; 可执行程序</p>
+<p>目标码可以减少在编译过程中重复文件的编译过程，只会编译修改过的文件，减少编译时间</p>
+<h3 id="_40">汇编器伪指令</h3>
+<p>汇编器中本来不存在的指令，但是为了简化汇编语言而出现的一些“汇编指令”，这些“新的指令”由原来的指令组合形成。这些指令可能会使用到一些临时的寄存器，这个寄存器是 $at ，专门提供给这些汇编器伪指令使用，程序员在写程序的过程中不能使用这个寄存器。</p>
+<p><img alt="image-20240903143138818" src="../imags/image-20240903143138818.png" /></p>
+<h3 id="_41">静态链接和动态链接</h3>
+<p>静态链接为编译时链接，动态链接为运行时链接，只有当需要使用的时候才会去链接库文件，动态链接在初次链接中耗时较长。</p>
+<p>动态链接相较于静态链接的优点：①在编译之后可以更改链接的文件，比如文件更新之后可以直接链接到新的库文件运行程序，而静态链接此时需要重新编译。②动态链接只有在使用时才会链接，生成的可执行文件一般小于静态链接生成的可执行文件。</p>
+<h3 id="213-x86">2.13 x86指令的一些局限性</h3>
+<h3 id="cisc">复杂指令集计算机CISC</h3>
+<p>指令系统越来越大，难以保证涉及的正确性、难以调试和维护，并且因指令操作复杂而增加机器周期，从而导致了系统性能的下降。</p>
+<p>而且，在程序中各种指令出现的频率悬殊很大，最长使用的是一些简单指令，这些指令占程序的80%，但只占指令系统的20%。而且在为操作控制的计算机中，占指令总数20%复杂指令占用了控制存储容量的80%。</p>
+<h3 id="risc">精简指令系统计算机RISC</h3>
+<p>指令的总数较少，一些复杂的操作使用指令集中不同指令的组合实现。</p>
+<p><strong>RISC涉及风格的主要特点：</strong></p>
+<ol>
+<li>简化的指令系统（指令少/寻址方式少/指令格式少/指令长度一致）</li>
+<li>以RR方式工作（除Load/Store指令可访问存储器外，其余指令都只访问寄存器）</li>
+<li>指令周期短（以流水线方式工作， 因而除Load/Store指令外，其他简单指令都只需一个或一个不到的时钟周期就可完成）</li>
+<li>采用大量通用寄存器，以减少访存次数</li>
+<li>采用组合逻辑电路控制，不用或少用微程序控制</li>
+<li>采用优化的编译系统，力求有效地支持高级语言程序</li>
+</ol>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      NoneZJL
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
