@@ -1032,7 +1032,7 @@
           <li class="md-nav__item">
   <a href="#ieee-80211" class="md-nav__link">
     <span class="md-ellipsis">
-      IEEE 802.11介质访问控制
+      IEEE 802.11物理层
     </span>
   </a>
   
@@ -1040,6 +1040,15 @@
         
           <li class="md-nav__item">
   <a href="#ieee-80211_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      IEEE 802.11介质访问控制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ieee-80211_2" class="md-nav__link">
     <span class="md-ellipsis">
       IEEE 802.11帧格式
     </span>
@@ -1646,7 +1655,7 @@
           <li class="md-nav__item">
   <a href="#ieee-80211" class="md-nav__link">
     <span class="md-ellipsis">
-      IEEE 802.11介质访问控制
+      IEEE 802.11物理层
     </span>
   </a>
   
@@ -1654,6 +1663,15 @@
         
           <li class="md-nav__item">
   <a href="#ieee-80211_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      IEEE 802.11介质访问控制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ieee-80211_2" class="md-nav__link">
     <span class="md-ellipsis">
       IEEE 802.11帧格式
     </span>
@@ -1704,14 +1722,14 @@
 
 <h1 id="mac">介质访问子层 MAC</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 7157 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11l-3.54-4.71Z"/></svg></span> 41 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 48 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 7564 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11l-3.54-4.71Z"/></svg></span> 41 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 50 分钟</p>
 </div>
 <details class="question">
 <summary>MAC 子层在哪里？</summary>
 <p>数据链路层分为两个子层：</p>
 <p>• MAC子层：介质访问</p>
 <p>• LLC子层：承上启下（弱层）</p>
-<p><img alt="a" src="../photos/image2024102402.png" /></p>
+<p><img alt="a" src="../photos/image2024102402.png" width="500px" /></p>
 </details>
 <h2 id="_1">信道分配问题</h2>
 <p>信道：信号的通道</p>
@@ -1952,7 +1970,7 @@ $$</li>
 <p><strong>p-持续式CSMA</strong></p>
 <ul>
 <li>特点<ol>
-<li>经侦听，如介质空闲，那么以 p的概率 发送，以(1–p)的概率延迟一个时间单元发送</li>
+<li>经侦听，如介质空闲，那么以p的概率发送，以(1–p)的概率延迟一个时间单元继续监听</li>
 <li>如介质忙，持续侦听，一旦空闲重复步骤1</li>
 <li>如果发送已推迟一个时间单元，再重复步骤1</li>
 </ol>
@@ -1968,7 +1986,7 @@ $$</li>
 <li>CSMA：如侦听到介质上无数据发送才发送，发送后还会发生冲突吗？</li>
 <li>肯定会!</li>
 <li>两种情形<ul>
-<li>(1) 同时传送; (2) 传播延迟时间
+<li>(1) 同时传送; (2) 传播延迟时间  <br />
 <img alt="a" src="../photos/20241029103355.png" width="500px" /></li>
 </ul>
 </li>
@@ -2032,7 +2050,7 @@ $$</li>
 <li>传输期：按序发送</li>
 <li>明确的使用权，避免了冲突</li>
 </ul>
-<p><img alt="a" src="../photos/20241029110046.png" width="420px" /></p>
+<p><img alt="a" src="../photos/20241029110046.png" width="550px" /></p>
 <div class="admonition info">
 <p class="admonition-title">位图协议的信道利用率分析</p>
 <ul>
@@ -2045,7 +2063,7 @@ $$</li>
 <li>缺点：位图协议无法考虑优先级</li>
 </ul>
 </div>
-<p><strong>令牌传递(不太重要)</strong></p>
+<p><strong>轮询访问：令牌传递(不太重要)</strong></p>
 <ul>
 <li>令牌：发送权限</li>
 <li>令牌的运行：发送工作站去抓取，获得发送权<ul>
@@ -2078,11 +2096,12 @@ $$</li>
 <li>即所有站点构成一棵完全二叉树</li>
 </ul>
 <h2 id="_11">以太网</h2>
+<p>以太网是目前最流行的有线局域网技术。以太网逻辑上采用总线形拓扑结构，所以计算机共享同一条总线，信息以广播方式发送，以太网使用CSMA/CD方式对总线进行访问控制。</p>
 <h3 id="_12">经典以太网</h3>
 <p><strong>物理层</strong></p>
 <ul>
 <li>最高速率10Mbps</li>
-<li>使用曼彻斯特编码</li>
+<li>使用<font color="red">曼彻斯特编码</font></li>
 </ul>
 <details class="danger">
 <summary>为什么任意两个接法器之间的距离不得超过2.5km？</summary>
@@ -2095,9 +2114,15 @@ $$</li>
 <li>IEEE 的 802.3 标准</li>
 </ol>
 </li>
+<li>MAC帧中前8个字节为前导码，分为两个字段：第一个字段是7字节的前同步码，用来实现MAC帧的比特同步；第二个字段是1字节的帧开始定界符，表示后面的信息就是MAC帧 。</li>
 <li>MAC帧中的源地址和目的地址长度均为6字节</li>
 <li>源地址后面的两个字节，Ethernet V2将其视为上一层的协议类型，IEEE802.3将其视为数据长度。</li>
-<li>数据字段不足46字节，需要填充整数字节（Padding）至46字节，以保证以太网MAC帧不小于64字节。(小于64 字节的帧都是由于冲突而异常中止的无效帧)</li>
+<li>数据字段不足46字节，需要填充整数字节（Padding）至46字节，以保证以太网MAC帧不小于64字节。<font color="red">(小于64字节的帧都是由于冲突而异常中止的无效帧)</font></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">46是怎么来的?由CSMA/CD可知以太网帧的最短帧长为64B, 而MAC帧的首部和尾部的长度为18字节(不包括前导码)，所以数据字段最短为64-18=46字节。</p>
+</div>
+<ul>
 <li>校验和<ul>
 <li>FCS, Frame Check Sequence</li>
 <li>使用CRC32计算除了校验和以外的其他字段</li>
@@ -2127,12 +2152,13 @@ $$</li>
 </ul>
 </li>
 <li>交换式以太网的核心是交换机（Switch）
-    <img alt="a" src="../photos/20241029114048.png" width="500px" /></li>
+    <img alt="a" src="../photos/20241029114048.png" width="700px" /></li>
 </ul>
 <h3 id="_14">快速以太网</h3>
 <ul>
 <li>带宽：100Mbps</li>
 <li>比特时间：10ns -&gt; 电缆的最大长度降低到十分之一</li>
+<li>既支持全双工方式，又支持半双工方式，可在全双工方式下工作而无冲突发生，因此在全双工方式下不使用CSMA/CD协议</li>
 </ul>
 <details class="warning">
 <summary>为什么快速以太网的传播范围为100m而没有对应的扩大？</summary>
@@ -2410,18 +2436,18 @@ $$</li>
 <li>VLAN 标记由交换机添加/剥除，对终端站点透明</li>
 </ul>
 </li>
-<li>Access链路类型端口<ul>
+<li>Access链路类型端口<ol>
 <li>一般用于连接用户设备（无需识别802.1Q帧的设备）</li>
 <li>采用基于端口的VLAN划分, Access端口只能加入一个VLAN</li>
 <li>一旦Access端口加入了特定的VLAN，连接在该端口的设备被视为属于该VLAN
 <img alt="a" src="../photos/20241029004.png" /></li>
-</ul>
+</ol>
 </li>
-<li>Trunk链路类型端口与Trunk链路<ul>
+<li>Trunk链路类型端口与Trunk链路<ol>
 <li>Trunk端口一般用于交换机之间连接</li>
-<li>干道链路允许多个VLAN的流量通过
+<li><font color="red">干道链路(传播带VLAN标记的标记帧)</font>允许多个VLAN的流量通过
 <img alt="a" src="../photos/20241029005.png" /></li>
-</ul>
+</ol>
 </li>
 </ul>
 <div class="admonition info">
@@ -2440,16 +2466,16 @@ $$</li>
 </div>
 <h3 id="_23">组网模式</h3>
 <ul>
-<li>基础架构模式<ol>
+<li>基础架构模式：有固定基础设施无线局域网<ol>
 <li>分布式系统(DS)</li>
 <li>访问点(AP)</li>
 <li>站点(STA)</li>
-<li>基本服务集(BSS)</li>
+<li>基本服务集(BSS)：802.11标准规定无线局域网的最小构件(Basic Service Set)</li>
 <li>扩展服务集(ESS)</li>
 <li>站点之间通信通过AP转发</li>
 </ol>
 </li>
-<li>自组织模式(Ad hoc)<ol>
+<li>自组织模式(Ad hoc)：无固定基础设施无线局域网<ol>
 <li>站点(STA)</li>
 <li>独立基本服务集(IBSS)</li>
 <li>站点之间直接通信</li>
@@ -2457,7 +2483,16 @@ $$</li>
 </ol>
 </li>
 </ul>
-<h3 id="ieee-80211">IEEE 802.11介质访问控制</h3>
+<h3 id="ieee-80211">IEEE 802.11物理层</h3>
+<p>物理层技术概览</p>
+<ul>
+<li>频段：2.4GHz、5GHz（ISM频段，无需授权；限制发送功率，例如：≤ 1瓦）</li>
+<li>调制技术：DPSK → QPSK → CCK → 64-QAM → 256-QAM → 1024-QAM</li>
+<li>直接序列扩频（DSSS）→ 正交频分多路复用（OFDM）→正交频分多址（OFDMA）</li>
+<li>单天线 → 单用户多入多出（SU-MIMO）→ 多用户多入多出（MU-MIMO）</li>
+<li>目标：提升传输速率、增强可靠性、支持高密度接入</li>
+</ul>
+<h3 id="ieee-80211_1">IEEE 802.11介质访问控制</h3>
 <div class="admonition warning">
 <p class="admonition-title">直接将CSMA/CD用于无线局域网？</p>
 <ul>
@@ -2577,9 +2612,9 @@ $$</li>
 <img alt="a" src="../photos/2024103105.png" width="500px" /></li>
 </ul>
 </div>
-<h3 id="ieee-80211_1">IEEE 802.11帧格式</h3>
+<h3 id="ieee-80211_2">IEEE 802.11帧格式</h3>
 <p><strong>802.11帧格式一般结构</strong></p>
-<p><img alt="a" src="../photos/2024103106.png" width="500px" /></p>
+<p><img alt="a" src="../photos/2024103106.png" width="700px" /></p>
 <ul>
 <li>主要域段解释(了解即可，不需要全部记住)<ul>
 <li>帧控制：具有多种用途</li>
