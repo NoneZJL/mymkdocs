@@ -17,7 +17,7 @@
         <link rel="next" href="../chapter8/">
       
       
-      <link rel="icon" href="../../../images/nothing.svg">
+      <link rel="icon" href="../../../images/暗影蜘蛛侠.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.30">
     
     
@@ -967,10 +967,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="死锁避免">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      资源分配图
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      银行家算法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       死锁检测
     </span>
@@ -979,7 +1003,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       死锁恢复
     </span>
@@ -1238,10 +1262,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="死锁避免">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      资源分配图
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      银行家算法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       死锁检测
     </span>
@@ -1250,7 +1298,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       死锁恢复
     </span>
@@ -1278,7 +1326,7 @@
 
 <h1 id="deadlocks">Deadlocks</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1066 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11l-3.54-4.71Z"/></svg></span> 6 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 7 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 3167 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11l-3.54-4.71Z"/></svg></span> 8 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 21 分钟</p>
 </div>
 <h2 id="_1">死锁问题</h2>
 <p><strong>过桥问题</strong></p>
@@ -1311,7 +1359,7 @@
 <ul>
 <li><font color="red">Mutual exclusion(互斥条件)</font>: only one process at a time can use a resource.</li>
 <li><font color="red">Hold and wait(请求并保持条件)</font>: a process holding at least one resource is waiting to acquire additional resources held by other processes.(单个进程在占有资源的同时又在请求新的资源)</li>
-<li><font color="red">No preemption(不剥夺条件)</font>: a resource can be released only voluntarily by the process holding it, after that process has completed its task.(当某个进程获得某个具体的资源之后不会强行剥夺)</li>
+<li><font color="red">No preemption(不剥夺条件)</font>: a resource can be released only voluntarily by the process holding it, after that process has completed its task.(当某个进程获得某个具体的资源之后不会强行剥夺，进程执行完之后才会释放资源)</li>
 <li><font color="red">Circular wait(循环等待/环路等待条件)</font>: there exists a set {P0, P1, …, Pn} of waiting processes such that P0 is waiting for a resource that is held by P1, P1 is waiting for a resource that is held by P2, …, Pn–1 is waiting for a resource that is held by Pn, and Pn is waiting for a resource that is held by P0.</li>
 </ul>
 <p><strong>System model</strong></p>
@@ -1346,13 +1394,13 @@
 <p>图形表示</p>
 <ul>
 <li>进程    <br />
-<img alt="a" src="../images/2024110611.png" width="100px" /></li>
+<img alt="a" src="../images/2024110611.png" width="50px" /></li>
 <li>具有4个 instance 的资源     <br />
-<img alt="a" src="../images/2024110612.png" width="100px" /></li>
+<img alt="a" src="../images/2024110612.png" width="50px" /></li>
 <li>正在等待资源 j 的进程 i     <br />
-<img alt="a" src="../images/2024110613.png" width="200px" /></li>
+<img alt="a" src="../images/2024110613.png" width="100px" /></li>
 <li>正占用资源 j 的进程 i   <br />
-<img alt="a" src="../images/2024110614.png" width="200px" /></li>
+<img alt="a" src="../images/2024110614.png" width="100px" /></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">3个示例</p>
@@ -1381,7 +1429,7 @@
 </ol>
 </li>
 <li>死锁检测(Detection)、死锁解除(Recovery)<ol>
-<li>允许系统进入死锁状态，并且从死锁状态恢复</li>
+<li>允许系统进入死锁状态，但是当进入死锁时，能够从死锁状态恢复</li>
 </ol>
 </li>
 <li>鸵鸟算法<ol>
@@ -1399,11 +1447,186 @@
 <p>通过破坏产生死锁的必要条件之一来防止死锁的发生。</p>
 <p><strong>逐一条件分析</strong></p>
 <ul>
-<li>互斥条件：增加资源，让资源不共享；为每个进程都分配独占的资源<font color="red">(不现实，因为计算机的资源是有限的)</font></li>
+<li>互斥条件：如果将只能互斥使用的资源改造为允许共享使用，那么系统不会进入死锁状态。<font color="red">但有些资源根本不能同时访问，所以这种方法不可行</font>(有些教材上说可以通过虚拟技术实现？)</li>
+<li>破坏请求并保持条件：分为两个点，分别从 hold 和 wait 两个角度考虑<ol>
+<li>hold：只允许进程在没有资源时请求资源，不能够在占用资源的时候再次请求资源</li>
+<li>wait：进程请求资源的时候，一次性把它需要的所有资源都给它，这样进程就不会再等待资源</li>
+<li><font color="red">存在的问题：</font>资源浪费，并且可能导致饥饿问题。</li>
+</ol>
+</li>
+<li>破坏不可剥夺条件：持有的资源可以被剥夺<ol>
+<li>如果持有某些资源的进程请求另一个不能立即分配给它的资源，那么当前持有的所有资源都将被释放</li>
+<li>被抢占的资源被添加到进程正在等待的资源列表中</li>
+<li>只有当进程能够重新获得其旧资源以及正在请求的新资源时，进程才会重新启动</li>
+</ol>
+</li>
+<li>破坏循环等待条件：对资源的分配安排一个顺序，并且进程申请资源的时候必须从小到大申请<ol>
+<li>强加所有资源类型的总顺序，并要求每个进程以递增的枚举顺序请求资源</li>
+<li><font color="red">存在的问题：</font>资源的顺序不好确定，不同类型进程使用资源的顺序不一样</li>
+</ol>
+</li>
 </ul>
+<div class="admonition danger">
+<p class="admonition-title">这4种方法在实际情况下一般都不可行</p>
+</div>
 <h2 id="_6">死锁避免</h2>
-<h2 id="_7">死锁检测</h2>
-<h2 id="_8">死锁恢复</h2>
+<p><strong>定义</strong></p>
+<p>通过动态检测资源分配的安全性，确保系统不会进入不安全状态。也就是说在分配资源给进程之前进行检查，确保分配之后系统不会进入不安全状态。</p>
+<p><strong>大概思想</strong></p>
+<ul>
+<li>要求每个进程声明它可能需要的每种类型的最大资源数量。</li>
+<li>死锁避免算法动态检查资源分配状态，以确保永远不会出现循环等待条件。</li>
+<li>资源分配状态由可用资源和已分配资源的数量以及进程的最大需求来定义。</li>
+</ul>
+<p><strong>安全状态</strong></p>
+<p>如果存在所有进程的 <span class="arithmatex">\(&lt;P_1, P_2，…，P_n&gt;\)</span> 序列，使得对于每个 Pi， Pi 仍然可以请求的资源可以由当前可用资源 + 所有 Pj 持有的资源来满足，且 j &lt; i，则系统处于<font color="red">安全状态</font>。(系统空闲的资源以及进程 Pi 前面的所有进程已经占用的资源总和能够确保进程 Pi 顺利执行完成)</p>
+<div class="admonition warning">
+<p class="admonition-title">死锁和安全状态的关系</p>
+<ol>
+<li>如果系统处于安全状态，就一定没有死锁</li>
+<li>如果系统不处于安全状态，可能产生死锁</li>
+</ol>
+<p><font color="red">确保系统永远不会进入不安全状态</font></p>
+</div>
+<p><strong>避免算法</strong></p>
+<ul>
+<li>一种资源只有单个实例 -- 使用资源分配图</li>
+<li>一种资源具有多个实例 -- 银行家算法</li>
+</ul>
+<h3 id="_7">资源分配图</h3>
+<ol>
+<li>Claim egde Pi → Rj 表示进程 Pi 可能请求资源 Rj，用虚线表示</li>
+<li>当请求资源时，claim edge 转化成 request edge</li>
+<li>当资源分配后，request edge 转化成 assignment edge</li>
+<li>释放资源后，assignment edge 转化成 claim edge</li>
+<li>资源必须在系统中预先声明</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">通过查看资源分配图中有没有环<font color="red">(包括实线和虚线)</font>来判断是不是安全状态(死锁避免)</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">示例</p>
+<p><img alt="a" src="../images/2024111101.png" width="150px" /></p>
+<p>当 P2 发出 request 请求时，就要阻断它，否则就是不安全状态，可能导致死锁。</p>
+</div>
+<h3 id="_8">银行家算法</h3>
+<p><strong>前提假设</strong></p>
+<ol>
+<li>资源具有多个实例</li>
+<li>每个过程必须申明自己的最大使用量</li>
+<li>当进程请求资源时，它可能需要等待</li>
+<li>当一个进程获得它所有的资源时，它必须在有限的时间内返回它们</li>
+</ol>
+<p><strong>数据结构</strong></p>
+<p>一共有 n 个进程，m 种资源类型</p>
+<ul>
+<li>Available：如果Available[j] = k，表示资源 Rj 有 k 个资源实例</li>
+<li>Max：Max[i，j] = k，表示进程 Pi 最多需要请求 k 个资源 Rj 的实例</li>
+<li>Allocation：Allocation[i，j] = k，表示进程 Pi 已经被分配到 k 个资源 Rj 实例</li>
+<li>Need：Need[i，j] = k，表示进程 Pi 还需要 k 个资源 Rj 实例</li>
+</ul>
+<div class="arithmatex">\[
+Need [i,j] = Max[i,j] – Allocation [i,j]
+\]</div>
+<p><strong>具体算法</strong></p>
+<ol>
+<li>Work 和 Finish 分别是长度为 m 和 n 的数据，并且进行初始化      <br />
+<span class="arithmatex">\(Work = Available\)</span>       <br />
+<span class="arithmatex">\(Finish[i] = false~for~i = 0, 1, ..., n-1\)</span></li>
+<li>找到一个 i 满足：       <br />
+   (a) <span class="arithmatex">\(Finish[i] = false\)</span>     <br />
+   (b) <span class="arithmatex">\(Need_i\le Work\)</span>   <br />
+   如果不存在满足条件的 i，就跳到第4步</li>
+<li><span class="arithmatex">\(Work = Work + Allocation_i\)</span>     <br />
+<span class="arithmatex">\(Finish[i] = true\)</span>      <br />
+    跳到第2步</li>
+<li>如果对于所有的 i 都满足 Finish[i] == true，那么系统处于安全状态</li>
+</ol>
+<p><strong>进程 Pi 的资源请求算法</strong></p>
+<ol>
+<li><span class="arithmatex">\(Request_i[j]≤Need[i,j]\)</span>,则转向步骤2;否则认为出错,因为它所需要的资源数已超过它所宣布的最大值。</li>
+<li><span class="arithmatex">\(Request_i[j]≤Available[j]\)</span>,则转向步骤3;否则,表示尚无足够资源,<span class="arithmatex">\(P_i\)</span> 必须等待。</li>
+<li>系统试探着将资源分配给进程 P,并修改下面数据结构中的数值:
+$$ 
+Available= Available-Request_i;
+$$
+$$
+Allocation[i,j]=Allocation[i,j]+Request_i[j]:
+$$
+$$
+Need[i,j]=Need[i,j]-Request-i[j]
+$$</li>
+<li>系统执行安全性算法,检查此次资源分配后,系统是否处于安全状态。若安全,才正式将资源分配给进程 P,以完成本次分配；否则,将本次的试探分配作废,恢复原来的资源分配状态,让进程 P 等待。</li>
+</ol>
+<h2 id="_9">死锁检测</h2>
+<p>死锁检测使用的算法与死锁避免使用的算法类似，同样是<font color="red">在一种资源类型只具有一个实例的时候使用资源分配图，在一种资源具有多个实例的时候使用类似于银行家算法的算法。</font></p>
+<p><strong>wait-for 图</strong></p>
+<p>使用于一个资源类型只有单个实例的情况中，在图中检测循环需要进行 <span class="arithmatex">\(n^2\)</span> 次操作，其中 n 是图中顶点的数量。</p>
+<div class="admonition note">
+<p class="admonition-title">将 Resource-Allocation 图转化为 Wait-for 图</p>
+<p><img alt="a" src="../images/2024111102.png" width="500px" /></p>
+<p>简单来说，就是将资源的等待和使用条件简化为进程之间的等待条件。一个进程等待另外一个进程正在使用的资源，就认为这个进程正在等待使用资源的进程。</p>
+</div>
+<p><strong>多实例的算法</strong></p>
+<ul>
+<li>数据结构<ol>
+<li>Available：长度为 m 的数组，表示每一种资源还可使用的实例数量</li>
+<li>Allocation：一个 n*m 的矩阵，表示每一个进程已经分配到的资源的实例数量</li>
+<li>Request：一个 n*m 的矩阵，表示每一个进程当前正在请求资源实例的数量，<span class="arithmatex">\(Request[i_j]=k\)</span> 表示进程 Pi 正在请求资源 Rj 的 k 个实例对象 </li>
+</ol>
+</li>
+<li>算法步骤<ol>
+<li>Let Work and Finish be vectors of length m and n, respectively Initialize:    <br />
+    (a) <span class="arithmatex">\(Work = Available\)</span>      <br />
+    (b) For i = 1,2, ..., n, if <span class="arithmatex">\(Allocation_i\ne 0\)</span>, then <span class="arithmatex">\(Finish[i] = false\)</span>; otherwise, <span class="arithmatex">\(Finish[i] = true\)</span>.</li>
+<li>Find an index i such that both:    <br />
+    (a) <span class="arithmatex">\(Finish[i] == false\)</span>     <br />
+    (b) <span class="arithmatex">\(Request_i\le Work\)</span>    <br />
+    If no such i exists, go to step 4.</li>
+<li><span class="arithmatex">\(Work = Work + Allocation_i\)</span>   <br />
+<span class="arithmatex">\(Finish[i] = true\)</span>      <br />
+    go to step 2.</li>
+<li>If <span class="arithmatex">\(Finish[i] == false\)</span>, for some i, <span class="arithmatex">\(1\le i\le n\)</span>, then the system is in deadlock state. Moreover, if <span class="arithmatex">\(Finish[i] == false\)</span>, then Pi is deadlocked.</li>
+</ol>
+</li>
+</ul>
+<p><strong>可完全化简图</strong></p>
+<p>能消去图中所有边，能则称为可完全化简图</p>
+<ul>
+<li>过程<ol>
+<li>找出一个既不阻塞又非独立的进程结点P</li>
+<li>在顺利的情况下，分配给其资源让其完成，消去所有边变成孤立点</li>
+<li>循环上述两步操作，直至消去所有边，代表无死锁。</li>
+</ol>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">检测算法的使用</p>
+<p>调用的时间和频率取决于</p>
+<ol>
+<li>可能发生死锁的频率</li>
+<li>需要回滚多少个进程</li>
+</ol>
+<p>如果任意调用检测算法，在资源图中可能会有很多循环，因此我们将无法判断是哪个死锁进程导致了死锁。</p>
+</div>
+<h2 id="_10">死锁恢复</h2>
+<ul>
+<li>资源剥夺法<ol>
+<li>把部分进程挂起，剥夺其资源并分配给其他的死锁进程</li>
+</ol>
+</li>
+<li>撤销进程法<ol>
+<li>撤销部分甚至全部死锁进程，释放资源</li>
+</ol>
+</li>
+<li>进程回退法<ol>
+<li>让一个进程或多个进程回退到避免死锁的地步，释放中间资源。需要系统保持进程的历史信息，设置还原点。</li>
+</ol>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">依据: 进程的优先级、已执行时间、剩余时间、已用资源、交互还是批处理等</p>
+</div>
 
 
 

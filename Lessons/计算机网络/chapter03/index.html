@@ -17,7 +17,7 @@
         <link rel="next" href="../chapter04/">
       
       
-      <link rel="icon" href="../../../images/nothing.svg">
+      <link rel="icon" href="../../../images/暗影蜘蛛侠.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.30">
     
     
@@ -3723,75 +3723,45 @@
 <h3 id="ppp">点到点链路层协议PPP</h3>
 <h4 id="ppp_1">PPP协议简介</h4>
 <ul>
-<li>
-<p>PPP (Point-to-Point Protocol)协议由IETF制定，1994年成为正式标准（RFC1661）</p>
-</li>
-<li>
-<p>PPP协议是目前使用最多的数据链路层协议之一</p>
-</li>
-<li>
-<p>能够在不同的链路上运行</p>
-</li>
-<li>
-<p>能够承载不同的网络层分组</p>
-</li>
-<li>
-<p>特点：简单、灵活</p>
-</li>
+<li>PPP (Point-to-Point Protocol)协议由IETF制定，1994年成为正式标准（RFC1661）</li>
+<li>PPP协议是目前使用最多的数据链路层协议之一</li>
+<li>能够在不同的链路上运行</li>
+<li>能够承载不同的网络层分组</li>
+<li>特点：简单、灵活</li>
 </ul>
 <h4 id="ppp_2">PPP协议实现的功能</h4>
 <ul>
-<li>
-<p>利用帧定界符封装成帧</p>
-</li>
-<li>
-<p>填充技术实现透明数据传输：字节填充、零比特填充</p>
-</li>
-<li>
-<p>帧的差错检测</p>
-</li>
-<li>
-<p>实时监测链路工作状态</p>
-</li>
-<li>
-<p>设置链路最大传输单元（MTU）</p>
-</li>
-<li>
-<p>网络层地址协商机制</p>
-</li>
-<li>
-<p>数据压缩协商机制</p>
-</li>
+<li>利用帧定界符封装成帧</li>
+<li>填充技术实现透明数据传输：字节填充、零比特填充</li>
+<li>帧的差错检测</li>
+<li>实时监测链路工作状态</li>
+<li>设置链路最大传输单元（MTU）</li>
+<li>网络层地址协商机制</li>
+<li>数据压缩协商机制</li>
 </ul>
 <h4 id="ppp_3">PPP协议未实现的功能</h4>
 <ul>
-<li>帧数据的纠错功能</li>
-<li>
-<p>数据链路层的PPP协议只进行检错，PPP协议是不可靠传输协议</p>
+<li>帧数据的纠错功能<ul>
+<li>数据链路层的PPP协议只进行检错，PPP协议是不可靠传输协议</li>
+</ul>
 </li>
-<li>
-<p>流量控制功能</p>
+<li>流量控制功能<ul>
+<li>PPP协议未实现点到点的流量控制</li>
+</ul>
 </li>
-<li>
-<p>PPP协议未实现点到点的流量控制</p>
+<li>可靠传输功能<ul>
+<li>PPP为不可靠协议，不使用帧的序号。不可靠网络中可能使用有序号的工作方式。</li>
+</ul>
 </li>
-<li>
-<p>可靠传输功能</p>
-</li>
-<li>
-<p>PPP为不可靠协议，不使用帧的序号。不可靠网络中可能使用有序号的工作方式。</p>
-</li>
-<li>
-<p>多点连接功能</p>
-</li>
-<li>
-<p>PPP协议不支持多点线路，只支持点对点的链路通信。</p>
+<li>多点连接功能<ul>
+<li>PPP协议不支持多点线路，只支持点对点的链路通信。</li>
+</ul>
 </li>
 <li>
 <p>单工和半双工链路</p>
-</li>
-<li>
-<p>PPP协议支持全双工链路</p>
+<ul>
+<li>PPP协议支持全双工链路</li>
+</ul>
 </li>
 <li>
 <p><strong>只能检错，不能纠错</strong></p>
@@ -3815,12 +3785,12 @@
 <p><img alt="image-20241017103618485" src="../photos/image-20241017103618485.png" /></p>
 <p><img alt="image-20241017103645469" src="../photos/image-20241017103645469.png" /></p>
 <h4 id="pppoe_1">PPPoE组网方式</h4>
-<p>​   不需要掌握</p>
+<p>​不需要掌握</p>
 <p><img alt="image-20241017103708123" src="../photos/image-20241017103708123.png" /></p>
 <p><img alt="image-20241017103720349" src="../photos/image-20241017103720349.png" /></p>
 <h4 id="pppoe_2">PPPoE报文格式</h4>
 <p><img alt="image-20241017103820538" src="../photos/image-20241017103820538.png" /></p>
-<p>​   架构中 PPPoE 位于 Ethernet 的上层</p>
+<p>​架构中 PPPoE 位于 Ethernet 的上层</p>
 <p><img alt="image-20241017103912380" src="../photos/image-20241017103912380.png" /></p>
 <h4 id="pppoe_3">PPPoE工作过程</h4>
 <p><img alt="image-20241017103932456" src="../photos/image-20241017103932456.png" /></p>
