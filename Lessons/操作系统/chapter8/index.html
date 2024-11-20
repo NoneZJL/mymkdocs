@@ -1008,7 +1008,7 @@
         <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
-      页表的结构
+      交换
     </span>
   </a>
   
@@ -1282,7 +1282,7 @@
         <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
-      页表的结构
+      交换
     </span>
   </a>
   
@@ -1326,7 +1326,7 @@
 
 <h1 id="main-memory">Main Memory</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 2411 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11l-3.54-4.71Z"/></svg></span> 4 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 16 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 4514 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11l-3.54-4.71Z"/></svg></span> 13 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 30 分钟</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">不同类型的存储器</p>
@@ -1475,7 +1475,7 @@
 </div>
 <p><strong>动态部分</strong></p>
 <ul>
-<li>Hole - 可用的内存块，不同大小的 hole 分布在整个内存中</li>
+<li>Hole - 可用的内存块空间，不同大小的 hole 分布在整个内存中</li>
 <li>当一个进程到达时，从一个足够大的 hole 中为它分配内存</li>
 <li>操作系统需要保存如下信息<ol>
 <li>已经分配的部分</li>
@@ -1486,8 +1486,8 @@
 <p><img alt="a" src="../images/2024111804.png" width="500px" /></p>
 <p><strong>动态分配算法</strong></p>
 <ul>
-<li>First-fit：每次都从第一个 hole 开始判断</li>
-<li>Next-fit：从上次结束的那个 hole 开始判断</li>
+<li>First-fit：每次都从第一个 hole 开始寻找，找到第一个大小满足要求的</li>
+<li>Next-fit：从上次结束的那个 hole 开始寻找，找到第一个大小满足要求的</li>
 <li>Best-fit：能满足当前要求的 hole 中最小的那个(会产生比较小的碎片)</li>
 <li>Worst-fit：能满足当前要求的 hole 中最大的那个(会产生比较大的碎片)</li>
 </ul>
@@ -1510,16 +1510,187 @@
 <ul>
 <li>外部碎片：总的内存空间中没有使用的部分，是不连续的</li>
 <li>内部碎片：一个分区内部没有被使用的内存部分</li>
-<li>通过压缩/碎片整理来减少外部碎片<ol>
+<li>通过压缩(compaction)/碎片整理(defragmentation)来减少外部碎片<ol>
 <li>打乱内存内容，将所有空闲内存放在一个大块中</li>
-<li>压缩只有当动态重定位时有效，并且在执行时完成</li>
+<li>压缩只有当动态重定位时有效，并且在执行时完成，<font color="red">编译以及载入时的地址绑定无法进行压缩</font>。</li>
+<li>I/O问题<ol>
+<li>I/O操作时也不运行进行压缩，因为I/O操作时数据读写，压缩操作也是数据读写操作，如果同时进行可能会导致数据不一致性</li>
+</ol>
+</li>
 </ol>
 </li>
 </ul>
 <h2 id="_7">分页</h2>
-<h2 id="_8">页表的结构</h2>
+<p>分页的方式可以有效的解决碎片问题，内存分配是不连续的。</p>
+<p><strong>基本思想</strong></p>
+<p>将逻辑地址空间与物理地址空间都划分成小块，逻辑地址划分的结果是页，物理地址划分的结果是帧。要运行一个大小为n页的程序，需要找到n个空闲帧并加载程序。</p>
+<p><strong>逻辑地址结构</strong></p>
+<ul>
+<li>Page number(p) - 页号，用作页表的索引，页表包含物理内存中每个页的基址</li>
+<li>Page offset(d) - 页内偏移   <br />
+<img alt="a" src="../images/2024112001.png" width="200px" /></li>
+</ul>
+<p>对于这一张图，逻辑地址为 <span class="arithmatex">\(2^m\)</span>，页的大小为 <span class="arithmatex">\(2^n\)</span></p>
+<p><strong>映射过程</strong></p>
+<p><img alt="a" src="../images/2024112002.png" width="500px" /></p>
+<p>获取逻辑地址之后，取出页号，在 page table 中根据逻辑页号找到对应的物理页号，然后再根据页偏移找到对应的物理地址，从而对应到物理内存空间中的实际部分</p>
+<div class="admonition question">
+<p class="admonition-title">问题</p>
+<p>页面大小为4KB，虚地址2362H、1565H的物理地址分别是多少？</p>
+<table>
+<thead>
+<tr>
+<th>页号</th>
+<th>页框号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0    </td>
+<td>101H  </td>
+</tr>
+<tr>
+<td>1    </td>
+<td>102H  </td>
+</tr>
+<tr>
+<td>2    </td>
+<td>254H  </td>
+</tr>
+</tbody>
+</table>
+<details class="answer">
+<summary>答案与解析</summary>
+<p>页面的大小为4KB，也就是13个bit，此时需要的偏移量为12位，也就是3个字节，所以虚地址的后3个字节表示的是物理地址的偏移，那么第一位标识的就是虚拟页号，需要与物理页号进行对应，2对应的是254H，1对应的是102H，所以这两个虚地址的物理地址分别是254362H与102565H.</p>
+</details>
+</div>
+<p><strong>空闲帧的分配</strong></p>
+<p><img alt="a" src="../images/2024112003.png" width="400px" /></p>
+<p><strong>Page Table的硬件实现</strong></p>
+<p>两个寄存器，page-table base register(PTBR)和page-table length register(PTLR)，分别存储页表的起始地址以及页表长度。</p>
+<div class="admonition warning">
+<p class="admonition-title">page table存在于内存中，所以进行一次地址访问需要访问两次内存</p>
+<p>如何解决此时内存访问次数变多，消耗的时间变长的问题？</p>
+<p>使用快表translation look-aside buffers(TLBs)解决问题，使用sddress-space identifiers(ASID)来区分快表是由那个进程提供的。</p>
+<details class="note">
+<summary>ASID如何判断快表到底属于哪一个进程</summary>
+<ol>
+<li>TLB 条目存储：<ul>
+<li>当一个进程进行内存访问时，CPU 会将虚拟地址和对应的物理地址存储在 TLB 中，同时附上该进程的 ASID。</li>
+</ul>
+</li>
+<li>TLB 查找：<ul>
+<li>当 CPU 再次访问同一个虚拟地址时，它会首先检查 TLB。TLB 不仅会匹配虚拟地址，还会检查 ASID 是否匹配。</li>
+<li>如果 ASID 匹配，说明这个 TLB 条目属于当前进程，CPU 可以直接使用 TLB 中的物理地址。</li>
+<li>如果 ASID 不匹配，说明这个 TLB 条目属于另一个进程，CPU 会忽略这个条目，并重新进行地址转换。</li>
+</ul>
+</li>
+<li>TLB 刷新：<ul>
+<li>当进程切换时，操作系统通常会刷新 TLB，以确保新进程的 TLB 条目不会与旧进程的条目混淆。刷新 TLB 可以通过清除所有条目或使用 ASID 来标记哪些条目需要保留。</li>
+</ul>
+</li>
+</ol>
+</details>
+<p>使用快表的时候，如果可以从快表中获得对应的物理页号，就直接取出。如果不能从快表中获得对应的物理页号，就在页表中获得物理页号之后将对应关系添加到快表中。</p>
+<p><strong>加了快表之后的硬件实现方式</strong></p>
+<p><img alt="a" src="../images/2024112004.png" width="400px" /></p>
+</div>
+<p><strong>分页中的内存保护</strong></p>
+<p>添加 valid 位标记，如果这一位为1，那么这一位就是有效的，否则这一页就是无效的。</p>
+<div class="admonition warning">
+<p class="admonition-title">valid标记用来进行内存保护，可能有些页表虽然已经被分配给了某个进程，但是具体的页中的内容还没有进入内存，就标记为invalid</p>
+</div>
+<p><strong>共享页</strong></p>
+<p>一些仅读的代码或者数据内容可以在多个进程之间共享，这些共享的内容需要在不同进程的同一处逻辑地址上，从而对应到相同的物理地址上。除了这些共享的内容之外，每一个进程还有自己的局部变量等其他私有数据变量，这些数据由不同的进程自己维护，逻辑地址没有额外要求。</p>
+<p><strong>页表结构</strong></p>
+<ul>
+<li>层级页表<ol>
+<li>将逻辑页表再次拆分成多级页表的结构</li>
+<li>典型例子：二级页表<ol>
+<li>使用 1K 作为页大小的 32bit 机器将逻辑地址首先划分成两份<ol>
+<li>22bit 表示页号</li>
+<li>10bit 表示页内偏移</li>
+</ol>
+</li>
+<li>此时可以对这个 22bit 进行再次划分<ol>
+<li>12bit 表示页号</li>
+<li>10bit 表示页内偏移</li>
+</ol>
+</li>
+<li>于是就有了这样的页表结构   <br />
+<img alt="a" src="../images/2024112005.png" width="200px" />    <br />
+    图中 p1 表示在外层页表中的页号，p2 表示在外层页表中的这一个页中的偏移
+    <img alt="a" src="../images/2024112006.png" width="400px" /></li>
+<li>使用多级页表的好处：可以节省内存 </li>
+</ol>
+</li>
+</ol>
+</li>
+<li>哈希页表<ol>
+<li>虚拟地址被哈希到一个页表中，页表中存储中哈希到同一个位置的元素的链表(每一个元素都包含了虚拟页号、物理页号以及指向下一个元素的指针)</li>
+<li>在链表中通过匹配虚拟页号来进行匹配，如果匹配成功，就取出对应的物理页号</li>
+<li>典型例子是64bit地址的聚集页表(clustered page table)</li>
+<li>每一条链表都指向多个页面而不仅仅只是一个</li>
+<li>对于内存引用分散且不连续的稀疏地址空间非常有用</li>
+</ol>
+</li>
+<li>倒排页表(在整个系统中只有一个页表)<ol>
+<li>包含存储在实际内存中的页的虚拟地址以及拥有这个页的进程的信息</li>
+<li>减少存储页表所需的内存空间，但是增加了搜索时的耗时</li>
+<li>使用哈希来降低搜索的范围</li>
+</ol>
+</li>
+</ul>
+<h2 id="_8">交换</h2>
+<ul>
+<li>当内存不足但需要进行进程调度时，需要进行换入/换出方法。</li>
+<li>backing store：一个快速盘大到足够存储所有用户的所有内存镜像，这时换入换出直接进行部分内存镜像的交换。它必须提供直接的内存镜像的访问。<ol>
+<li>Windows中使用交换文件 <code>pagefile.sys</code></li>
+<li>Linux中使用交换区</li>
+</ol>
+</li>
+<li>使用换入换出的逻辑（roll out, roll in）：根据优先权调度算法进行排序，低优先度的进程被换出，高优先级的进程被换入。</li>
+<li>交换的主要开销在于交换时间；交换时间的大小直接取决于交换内容的大小。</li>
+<li>同时，系统需要维护一个ready queue作为等待换入的进程队列(即在disk中有内存镜像的进程)</li>
+</ul>
+<p><img alt="a" src="../images/2024112007.png" width="400px" /></p>
 <h2 id="_9">分段</h2>
+<ul>
+<li>基于用户管理的内存管理方案</li>
+<li>将用户进程的逻辑地址空间划分为大小不等的段(段内要求连续，段间不要求连续)</li>
+<li>进程的地址空间是二维的，需要包含段号以及段内偏移量</li>
+</ul>
+<p><strong>段表结构</strong></p>
+<p>段表包含着二位的物理地址映射，每一个段表项都包含</p>
+<ul>
+<li>base(基地址) - 这个段在物理地址上的起始位置</li>
+<li>limit(段长) - 这个段的长度</li>
+</ul>
+<p><strong>两个寄存器</strong></p>
+<ul>
+<li>Segment-table base register(STBR)指向段表在内存中的起始位置</li>
+<li>Segment-table length register(STLR)表示段表长度<ol>
+<li>只有当段号小于 STLR 的时候才是有效的 </li>
+</ol>
+</li>
+</ul>
+<p><strong>保护机制</strong></p>
+<p>同样使用有效位以及读写执行的标记来表示页面的有效情况</p>
+<p><strong>硬件实现</strong></p>
+<p><img alt="a" src="../images/2024112008.png" width="500px" /></p>
+<p>首先判断段号(s)是否有效，然后判断页内偏移的大小是否有效，最后根据物理页的基地址以及偏移量来计算出实际的物理地址</p>
 <h2 id="the-intel-pentium">举例：The Intel Pentium</h2>
+<ul>
+<li>支持同时使用段以及段页进行内存管理</li>
+<li>CPU获取逻辑地址<ol>
+<li>逻辑地址被划分成局部部分以及全局部分</li>
+<li>页部分使用的是线性地址</li>
+</ol>
+</li>
+</ul>
+<p><strong>流程</strong></p>
+<p><img alt="a" src="../images/202411202009.png" width="500px" /></p>
+<p>首先是使用段表结构找到页表的位置，接着再使用页表结构找到实际的物理地址。</p>
 
 
 
