@@ -943,19 +943,52 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="背景">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      交换
+      内存架构
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      程序运行的生命周期
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      不同步骤中的地址
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      地址绑定和映射
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       连续内存分配
     </span>
@@ -964,7 +997,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       分页
     </span>
@@ -973,7 +1006,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       页表的结构
     </span>
@@ -982,7 +1015,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       分段
     </span>
@@ -1184,19 +1217,52 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="背景">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      交换
+      内存架构
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      程序运行的生命周期
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      不同步骤中的地址
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      地址绑定和映射
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       连续内存分配
     </span>
@@ -1205,7 +1271,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       分页
     </span>
@@ -1214,7 +1280,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       页表的结构
     </span>
@@ -1223,7 +1289,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       分段
     </span>
@@ -1260,7 +1326,7 @@
 
 <h1 id="main-memory">Main Memory</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 402 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 3 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 2411 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11l-3.54-4.71Z"/></svg></span> 4 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 16 分钟</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">不同类型的存储器</p>
@@ -1281,7 +1347,7 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">非挥发性存储器</p>
-<p>又称非易失性存储器，简称NVM，是指存储器所存储的信息在电源关掉之后依然能长时间存在，不易丢失。Flash 存储器是最常见的非挥发性存储器，近些年，随着科学技术的发展，出现了一些新型非挥发性存储器，如：铁电存储器（FRAM）、相变存储器（PRAM）、磁存储器（MRAM）和电阻式存储器（RRAM）等。</p>
+<p>又称非易失性存储器，简称NVM，是指<font color="red">存储器所存储的信息在电源关掉之后依然能长时间存在</font>，不易丢失。Flash 存储器是最常见的非挥发性存储器，近些年，随着科学技术的发展，出现了一些新型非挥发性存储器，如：铁电存储器（FRAM）、相变存储器（PRAM）、磁存储器（MRAM）和电阻式存储器（RRAM）等。</p>
 <p>利用特殊材料在晶态和非晶态之间相互转化时所表现出来的导电性差异来存储数据的</p>
 </div>
 <div class="admonition note">
@@ -1290,11 +1356,169 @@
 <p>存内计算已经在智能可穿戴设备中得到了商用</p>
 </div>
 <h2 id="_1">背景</h2>
-<h2 id="_2">交换</h2>
-<h2 id="_3">连续内存分配</h2>
-<h2 id="_4">分页</h2>
-<h2 id="_5">页表的结构</h2>
-<h2 id="_6">分段</h2>
+<ul>
+<li>程序必须(从磁盘)进入内存并置于进程中才能运行</li>
+<li>主存和寄存器都是只有CPU才可以直接访问的存储</li>
+<li>寄存器访问在一个CPU时钟(或更少)</li>
+<li>主存访问需要多个时钟周期</li>
+<li>缓存位于主存和CPU寄存器之间</li>
+</ul>
+<h3 id="_2">内存架构</h3>
+<p><img alt="a" src="../images/2024111801.png" width="500px" /></p>
+<div class="admonition warning">
+<p class="admonition-title">L1中代码和数据分开存，L2中代码与数据混合存储</p>
+</div>
+<h3 id="_3">程序运行的生命周期</h3>
+<ol>
+<li>编译：使用编译器将用高级语言编写的源程序转化成机器可以识别的机器语言(通常是二进制文件)</li>
+<li>链接：将编译之后的离散的文件以及库函数进行链接，形成一个完整的可执行文件</li>
+<li>装入：将可执行文件装入到内存中运行</li>
+</ol>
+<h3 id="_4">不同步骤中的地址</h3>
+<ul>
+<li>Symbolic Address(符号地址)：源程序中的地址通常是符号的</li>
+<li>Relocatable Addresses(可重定位地址)：编译器将这些符号地址绑定到可重定位地址(例如“从本模块开始的14个字节”)</li>
+<li>Absolute Addresses(绝对地址)：链接器或加载器将可重定位地址绑定到绝对地址(物理地址)</li>
+</ul>
+<h3 id="_5">地址绑定和映射</h3>
+<ul>
+<li>Compile time(编译时刻)：如果事先知道内存位置，则可以生成绝对代码。如果起始位置改变，必须重新编译代码</li>
+<li>Load time(装入时刻)：如果在编译时不知道内存位置，必须生成可重定位的代码</li>
+<li>Execution time(执行时刻)：如果进程在执行期间可以从一个内存段移动到另一个内存段，则绑定延迟到运行时(需要硬件支持地址映射)</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">如果在装入时刻就地址绑定，那么运行时内存中的程序的位置就不能移动了。一般在实际运行中使用执行时刻的地址绑定，需要实现地址绑定与映射的快速计算(硬件实现)</p>
+</div>
+<p><strong>Base and Limit Registers(基址/限长寄存器)</strong></p>
+<p>基址寄存器决定起始位置，限长寄存器决定最大长度(最大逻辑地址)，用户程序如果访问到了内存中超出最大逻辑地址的部分，直接清除程序</p>
+<p><strong>逻辑地址与物理地址</strong></p>
+<ul>
+<li>逻辑地址：CPU看到的地址，也称为虚拟地址</li>
+<li>物理地址：内存看到的地址</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">如果在编译和载入时进行地址绑定(compile-time and load-time address-binding，运行前地址绑定)，那么逻辑地址和物理地址是<font color="red">一样</font>的，也就是此时虚拟地址直接对应物理地址；如果在运行时进行地址绑定，那么逻辑地址和物理地址是<font color="red">不一样</font>的，也就是说此时虚拟地址与物理地址之间需要进行映射。</p>
+</div>
+<p><strong>内存管理单元MMU</strong></p>
+<p>可以进行地址运算，是用于将虚拟地址映射到物理地址的硬件设备。用户程序在运行时看到的是逻辑地址，不会看到物理地址。</p>
+<div class="admonition question">
+<p class="admonition-title">为什么不通过软件实现？</p>
+<p>地址转化的使用频率非常高，硬件实现更加快速，可以认为运行时间忽略不计。</p>
+</div>
+<p><strong>动态载入</strong></p>
+<p>运行时动态的将需要的程序载入内存中，程序在没有被调用之前不会被载入。</p>
+<p>优点：</p>
+<ol>
+<li>可以节省内存使用量</li>
+<li>不加载未使用的例程</li>
+<li>当需要大量代码来处理不经常发生的情况时非常有用</li>
+<li>不需要通过程序设计实现操作系统的特殊支持</li>
+<li>减小可执行文件的大小</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">动态载入的一个重要的作用是共享库的使用是需要载入一次，而不是每个进程每个程序都载入一次</p>
+</div>
+<details class="success">
+<summary>小结</summary>
+<ul>
+<li>编译<ol>
+<li>从高级语言到目标模块的过程(实际是预处理、编译、汇编三个阶段的统称)</li>
+<li>本质是一些机器可以“看懂”的0/1指令和数据文件</li>
+</ol>
+</li>
+<li>链接<ol>
+<li>把编译后的目标模块与所需库函数链接在一起形成一个整体</li>
+<li>静态链接、装入时动态链接、运行时动态链接</li>
+</ol>
+</li>
+<li>装入<ol>
+<li>将虚拟地址映射为内存实际的物理地址</li>
+<li>绝对装入、静态重定位(可重定位装入)、动态重定位(动态运行时装入)</li>
+</ol>
+</li>
+</ul>
+</details>
+<h2 id="_6">连续内存分配</h2>
+<p>将一段完整连续的进程分配给一个进程，使得进程可以完整实现</p>
+<p>内存通常分为两个分区</p>
+<ol>
+<li>常驻操作系统，通常用中断向量保存在低内存中</li>
+<li>然后将用户进程保存在高内存中</li>
+</ol>
+<p>重定位寄存器(包含最小物理地址的值)用于保护用户进程之间的相互影响，以及防止操作系统代码和数据的变化</p>
+<ul>
+<li>重定位寄存器用于保护用户进程之间的相互影响，以及防止操作系统代码和数据的变化</li>
+<li>重定位寄存器包含最小物理地址的值</li>
+<li>限制寄存器包含逻辑地址的范围-每个逻辑地址必须小于限制寄存器</li>
+<li>MMU动态映射逻辑地址</li>
+</ul>
+<p><img alt="a" src="../images/2024111802.png" width="500px" /></p>
+<p><strong>连续内存分配的类别</strong></p>
+<ul>
+<li>Single Continuous Allocation(单一连续分配)<ol>
+<li>内存分为系统区和用户区，用户区每次只调入一道程序运行</li>
+<li>一次只放一道程序，无并发</li>
+</ol>
+</li>
+<li>Multiple-partition allocation(多分区分配)<ol>
+<li>将内存划分成若干个连续区域，称为分区。每个分区只能存放一个进程。包含<ol>
+<li>Fixed Partitioning(固定分区) </li>
+<li>Dynamic Partitions(动态分区)或 Variable Partitiom(可变分区)    <br />
+<img alt="a" src="../images/2024111803.png" width="200px" /></li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">固定分区各个部分的大小是不可变的，一旦划分就不可更改，可能会造成内存空间的浪费</p>
+</div>
+<p><strong>动态部分</strong></p>
+<ul>
+<li>Hole - 可用的内存块，不同大小的 hole 分布在整个内存中</li>
+<li>当一个进程到达时，从一个足够大的 hole 中为它分配内存</li>
+<li>操作系统需要保存如下信息<ol>
+<li>已经分配的部分</li>
+<li>空闲部分</li>
+</ol>
+</li>
+</ul>
+<p><img alt="a" src="../images/2024111804.png" width="500px" /></p>
+<p><strong>动态分配算法</strong></p>
+<ul>
+<li>First-fit：每次都从第一个 hole 开始判断</li>
+<li>Next-fit：从上次结束的那个 hole 开始判断</li>
+<li>Best-fit：能满足当前要求的 hole 中最小的那个(会产生比较小的碎片)</li>
+<li>Worst-fit：能满足当前要求的 hole 中最大的那个(会产生比较大的碎片)</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">First-fit and best-fit better than worst-fit in terms of speed and storage utilization</p>
+</div>
+<p><strong>基于索引的算法</strong></p>
+<ul>
+<li>快速适应算法：也称分类搜索算法，将空闲分区按容量大小进行分类，设置素引表项，每一个空闲分区类型对应一项，挂成链(把原来一根变成多根)<ol>
+<li>根据进程长度，从素引表项中找到能容纳他的最小空闲区链表；从链表中取下第一块进行分配。</li>
+</ol>
+</li>
+<li>伙伴系统：每个空闲分区大小必须是2的n次幂字节；对进程占用空间n计算一个i值使得<span class="arithmatex">\(2^i&gt;n\)</span>，从剩余空闲分区找最适合的;若无则将分区逐层拆分;释放时则逐层合并<ol>
+<li>初始内存空间为1024K，有一个进程请求150K空间。</li>
+</ol>
+</li>
+<li>哈希算法：根据空闲分区链表的分布规律，建立哈希函数，构建一张以空闲分区大小为关键字的哈希表，根据所需空间大小通过计算得到哈希表的位置。</li>
+</ul>
+<p><strong>Fragmentation(碎片，零头)</strong></p>
+<ul>
+<li>外部碎片：总的内存空间中没有使用的部分，是不连续的</li>
+<li>内部碎片：一个分区内部没有被使用的内存部分</li>
+<li>通过压缩/碎片整理来减少外部碎片<ol>
+<li>打乱内存内容，将所有空闲内存放在一个大块中</li>
+<li>压缩只有当动态重定位时有效，并且在执行时完成</li>
+</ol>
+</li>
+</ul>
+<h2 id="_7">分页</h2>
+<h2 id="_8">页表的结构</h2>
+<h2 id="_9">分段</h2>
 <h2 id="the-intel-pentium">举例：The Intel Pentium</h2>
 
 
