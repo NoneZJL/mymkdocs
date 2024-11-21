@@ -1,0 +1,2214 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://example.com/Lessons/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter06/">
+      
+      
+        <link rel="prev" href="../chapter05/">
+      
+      
+        <link rel="next" href="../../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter1/">
+      
+      
+      <link rel="icon" href="../../../images/暗影蜘蛛侠.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>chapter6 | 传输层 - NoneZJL的个人笔记</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+
+      
+    
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+    };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#transport-layer" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="NoneZJL的个人笔记" class="md-header__button md-logo" aria-label="NoneZJL的个人笔记" data-md-component="logo">
+      
+  <img src="../../../images/logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NoneZJL的个人笔记
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              chapter6 | 传输层
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/NoneZJL/mymkdocs" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    NoneZJL's notebook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  主页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D/" class="md-tabs__link">
+          
+  
+  课程
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Tools/mkdocs%E4%BD%BF%E7%94%A8/" class="md-tabs__link">
+          
+  
+  工具
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  关于我
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="NoneZJL的个人笔记" class="md-nav__button md-logo" aria-label="NoneZJL的个人笔记" data-md-component="logo">
+      
+  <img src="../../../images/logo.jpg" alt="logo">
+
+    </a>
+    NoneZJL的个人笔记
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/NoneZJL/mymkdocs" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    NoneZJL's notebook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    主页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    课程
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            课程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机系统原理
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            计算机系统原理
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    课程介绍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/chapter1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter 1 | 计算机抽象及相关技术
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/chapter2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter 2 | 指令——计算机的语言
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/chapter3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter 3 | 计算机的算数运算
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/chapter4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter 4 | 处理器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/chapter5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter 5 | 大容量和高速度——开发存储器层次结构
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/chapter6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter 6 | 输入输出系统
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机网络
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            计算机网络
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%86%85%E5%AE%B9%E4%BB%8B%E7%BB%8D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    内容介绍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter3 | 数据链路层
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter04/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter4 | 介质访问子层
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter5 | 网络层
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    chapter6 | 传输层
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    chapter6 | 传输层
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      概述和传输层服务
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      套接字编程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="套接字编程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#udp" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用UDP套接字实现回音服务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用TCP套接字实现回音服务
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      传输层复用和分用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="传输层复用和分用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#udp_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      UDP分用的方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP分用的方法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#udp_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      无连接传输：UDP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      面向连接的传输：TCP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="面向连接的传输：TCP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tcp_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP概述
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP报文段结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP可靠数据传输
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TCP可靠数据传输">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tcp_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      一个高度简化的TCP协议
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crash-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crash Recovery
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP流量控制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP连接管理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      理解网络拥塞
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP拥塞控制
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      拥塞控制的发展
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      传输层协议的发展
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    操作系统
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            操作系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter1 | 介绍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter5 | 进程调度
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter6 | 进程同步
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter7 | 死锁
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter8 | 内存
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    工具
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            工具
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tools/mkdocs%E4%BD%BF%E7%94%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    mkdocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tools/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tools/elasticsearch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ElasticSearch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    关于我
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      概述和传输层服务
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      套接字编程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="套接字编程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#udp" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用UDP套接字实现回音服务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用TCP套接字实现回音服务
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      传输层复用和分用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="传输层复用和分用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#udp_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      UDP分用的方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP分用的方法
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#udp_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      无连接传输：UDP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      面向连接的传输：TCP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="面向连接的传输：TCP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tcp_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP概述
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP报文段结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP可靠数据传输
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TCP可靠数据传输">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tcp_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      一个高度简化的TCP协议
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crash-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crash Recovery
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP流量控制
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP连接管理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      理解网络拥塞
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP拥塞控制
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      拥塞控制的发展
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      传输层协议的发展
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="transport-layer">Transport layer</h1>
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 5721 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11l-3.54-4.71Z"/></svg></span> 29 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 38 分钟</p>
+</div>
+<h2 id="_1">概述和传输层服务</h2>
+<p><strong>传输层的位置</strong></p>
+<ul>
+<li>传输层位于网络层和应用层之间 - 基于网络层提供的服务，向分布式应用程序提供通信服务</li>
+<li>按照因特网的“端到端”设计原则 - 应用程序只运行在终端上，即不需要为网络设备编写程序</li>
+<li>站在应用程序的角度 - 传输层应提供进程之间本地通信的抽象：即运行在不同终端上的应用进程仿佛是直接连在一起的</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">作为应用程序的开发者，看到的就是传输层的内容，更下层的内容对于开发者来说是不可见的</p>
+</div>
+<p><strong>不同终端上的进程间的通信</strong></p>
+<p>在TCP/IP网络中，使用<font color="red">套接字(socket)</font>进行通信，这是应用层和传输层的接口，也是应用程序和网络之间的API</p>
+<p><strong>传输层提供的服务</strong></p>
+<ul>
+<li>网络层提供“尽力而为”的服务</li>
+<li>传输层提供“有所为、有所不为”的服务<ol>
+<li>传输层可以通过差错恢复、重排序等手段提供可靠、按序的交付服务</li>
+<li>但传输层无法提供延迟保证、带宽保证等服务</li>
+</ol>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">因特网传输层提供的服务</p>
+<ul>
+<li>最低限度的传输服务：<ol>
+<li>将终端-终端的数据交付扩展到进程 - 进程的数据交付</li>
+<li>报文检错</li>
+</ol>
+</li>
+<li>增强服务：<ol>
+<li>可靠数据传输</li>
+<li>流量控制</li>
+<li>拥塞控制</li>
+</ol>
+</li>
+<li>因特网传输层通过UDP协议和TCP协议，向应用层提供两种不同的传输服务：<ol>
+<li>UDP协议：仅提供最低限度的传输服务</li>
+<li>TCP协议：提供基础服务和增强服务</li>
+</ol>
+</li>
+</ul>
+</div>
+<h2 id="_2">套接字编程</h2>
+<p><strong>应用程序体系结构</strong></p>
+<ul>
+<li>传统及主流的是客户-服务器体系结构(C/S)</li>
+<li>有一台总是在线的主机，运行一个服务器程序(server)，服务器主机具有永久的、众所周知的地址</li>
+<li>用户终端上运行一个客户程序（client），需要时主动与服务器程序通信，请求服务</li>
+<li>客户只与服务器通信，客户之间不通信</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">进程使用端口号来标识自己(主机地址+端口号)</p>
+</div>
+<p><strong>应用编程接口：socket API</strong></p>
+<ul>
+<li>应用需显式地创建、使用和释放套接字</li>
+<li>采用客户-服务器模式：<ol>
+<li>客户总是主动发起通信的一方，服务器始终在等待客户的服务请求到来</li>
+</ol>
+</li>
+<li>应用可以通过socket API调用两种传输服务: <ol>
+<li>不可靠的数据报服务：由UDP协议实现</li>
+<li>可靠的字节流服务：由TCP协议实现</li>
+</ol>
+</li>
+</ul>
+<p><strong>套接字传输层协议</strong></p>
+<p><img alt="a" src="../photos/2024112101.png" width="500px" /></p>
+<ul>
+<li>type指明传输层协议<ol>
+<li>SOCK_STREAM代表TCP字节流</li>
+<li>SOCK_DGRAM代表UDP数据报</li>
+</ol>
+</li>
+</ul>
+<p><strong>套接字描述符</strong></p>
+<ul>
+<li>Linux系统中程序通过访问套接字描述符来进行套接字通信</li>
+<li>在套接字描述符上的发送、接收数据的行为可以用<font color="red">文件读写</font>调用完成<ol>
+<li>read从描述符fd中读取(接收)长度为返回值的字节数至buf中</li>
+<li>write向描述符fd中写入(发送)buf中长度为返回值的字节数</li>
+</ol>
+</li>
+</ul>
+<p><img alt="a" src="../photos/20241121110814.png" width="400px" /></p>
+<h3 id="udp">使用UDP套接字实现回音服务</h3>
+<p><strong>绑定套接字地址 - bind()</strong></p>
+<ul>
+<li>用来将服务器本地套接字地址sa与描述符socket_fd绑定</li>
+<li>客户程序不需要调用bind()，操作系统将为其在1024～5000之间分配一个端口号</li>
+</ul>
+<p><img alt="a" src="../photos/20241121110950.png" width="400px" /></p>
+<p><strong>关闭套接字 - close()</strong></p>
+<ul>
+<li>当实参fd为TCP套接字描述符时<ul>
+<li>调用close()会引起本地进程向远程进程发送关闭连接的消息</li>
+</ul>
+</li>
+<li>当实参fd为UDP套接字描述符时<ul>
+<li>调用close()会引起为此描述符分配的资源被内核释放</li>
+</ul>
+</li>
+</ul>
+<p><img alt="a" src="../photos/20241121111152.png" width="350px" /></p>
+<p><strong>基于UDP的套接字通信流程</strong></p>
+<p><img alt="a" src="../photos/20241121141653.png" width="500px" /></p>
+<details class="note">
+<summary>UDP代码实现</summary>
+<p>服务端代码</p>
+<p><img alt="a" src="../photos/20241121141854.png" width="500px" /></p>
+<p>首先创建socket对象，参数为使用IPv4地址以及使用UDP服务。接着设置服务地址，包括设置IPv4、可以接收来自任何IP地址的信息以及端口，然后将刚刚设置的地址信息与前面创建的socket信息绑定。最后就可以进入循环，在循环中不断的接收客户端发来的信息并且将元信息返回。</p>
+<p>客户端代码</p>
+<p><img alt="a" src="../photos/20241121142434.png" width="450px" /></p>
+<p><img alt="a" src="../photos/20241121142608.png" width="500px" /></p>
+<p>同样的，首先创建socket对象，参数为使用IPv4地址以及使用UDP服务。接着设置服务地址信息，包括设置IPv4、设置接收信息的服务器为IPv4地址以及端口信息。最后就可以向服务器发送信息，然后接收信息并且将接收到的信息进行打印。</p>
+</details>
+<h3 id="tcp">使用TCP套接字实现回音服务</h3>
+<p>使用TCP套接字编程时，可将TCP连接想像成一对套接字之间的一条封闭管道</p>
+<ul>
+<li>发送端TCP将要发送的字节序列从管道的一(套接字)送入</li>
+<li>接收端TCP从管道的另一端(套接字)取出字节序列</li>
+<li>在管道中传输的字节不丢失，并保持顺序</li>
+</ul>
+<p><strong>服务器使用多个套接字服务客户</strong></p>
+<ul>
+<li>服务器进程在<font color="red">监听套接字</font>上等待客户的连接请求</li>
+<li>客户进程创建一个本地套接字，与服务器的监听套接字通信<ol>
+<li>在此过程中，客户TCP向服务器TCP发送连接请求</li>
+</ol>
+</li>
+<li>收到连接请求后，服务器进程创建一个<font color="red">临时套接字(称连接套接字)</font>和一个新的服务器进程，与客户进程通信</li>
+<li>服务器进程回到监听套接字上继续等待<ol>
+<li>此举<font color="blue">允许服务器同时服务多个客户</font></li>
+</ol>
+</li>
+<li>客户服务结束后，服务器销毁进程，关闭连接套接字</li>
+</ul>
+<p><strong>TCP服务器监听套接字 - listen()</strong></p>
+<ul>
+<li>将主动套接字转变为被动套接字，进入监听状态</li>
+<li>backlog设定了监听队列长度(也就是最大能够同时支持的连接数)</li>
+</ul>
+<p><img alt="a" src="../photos/20241121143817.png" width="450px" /></p>
+<p><strong>TCP套接字系统调用 - accept()</strong></p>
+<ul>
+<li>服务端从已建立连接的队列中出队列一个客户端</li>
+<li>返回值是用来和客户端交换数据的套接字描述符，需要在通信完毕后调用close关闭</li>
+<li>返回时客户端的IP地址和端口可在cliaddr中访问</li>
+</ul>
+<p><img alt="a" src="../photos/20241121144012.png" width="450px" /></p>
+<p><strong>TCP套接字系统调用 - connect()</strong></p>
+<ul>
+<li>客户端调用connect向服务器发起建立连接的请求</li>
+<li>服务器的IP地址和端口信息在servaddr中</li>
+<li>三次握手的过程导致connect的调用是阻塞的</li>
+</ul>
+<p><img alt="a" src="../photos/20241121144141.png" width="500px" /></p>
+<p><strong>基于TCP的套接字通信流程</strong></p>
+<p><img alt="a" src="../photos/20241121144409.png" width="450px" /></p>
+<details class="note">
+<summary>TCP代码实现</summary>
+<p>服务端代码</p>
+<p><img alt="a" src="../photos/20241121144600.png" width="500px" /></p>
+<p><img alt="a" src="../photos/20241121144654.png" width="400px" /></p>
+<p>客户端代码</p>
+<p><img alt="a" src="../photos/20241121144745.png" width="500px" /></p>
+<p><img alt="a" src="../photos/20241121144819.png" width="500px" /></p>
+<p>这两份代码的实现都与UDP的代码实现类似，只是多了connect部分</p>
+</details>
+<h2 id="_3">传输层复用和分用</h2>
+<p><strong>复用和分用定义</strong></p>
+<ul>
+<li>(发送端)复用:传输层从多个套接字收集数据，交给网络层发送</li>
+<li>(接收端)分用:传输层将从网络层收到的数据，交付给正确的套接字</li>
+</ul>
+<p><strong>套接字标识与端口号</strong></p>
+<p><img alt="a" src="../photos/20241121145624.png" width="300px" /></p>
+<ul>
+<li>端口号是套接字标识的一部分：每个套接字在本地关联一个端口号，端口号是一个16比特的数</li>
+<li>端口号的分类：<ol>
+<li>熟知端口：0~1023，由公共域协议使用</li>
+<li>注册端口：1024~49151，需要向IANA注册才能使用</li>
+<li>动态和/或私有端口：49152~65535，一般程序使用</li>
+</ol>
+</li>
+<li>报文段中有两个字段携带端口号<ol>
+<li>源端口号：与发送进程关联的本地端口号</li>
+<li>目的端口号：与接收进程关联的本地端口号</li>
+</ol>
+</li>
+</ul>
+<p><strong>套接字端口号的分配</strong></p>
+<ul>
+<li>自动分配(通常客户端使用)：创建套接字时不指定端口号，由操作系统从49152~65535中分配</li>
+<li>使用指定端口号创建套接字(通常服务器使用)：创建套接字时指定端口号，实现公共域协议的服务器应分配众所周知的端口号(0~1023)</li>
+</ul>
+<h3 id="udp_1">UDP分用的方法</h3>
+<p><font color="red">UDP套接字使用&lt;IP地址，端口号&gt;二元组进行标识</font></p>
+<p>接收方传输层收到一个UDP报文段后，检查报文段中的目的端口号，将UDP报文段交付到具有该端口号的套接字，是要目的IP地址已目的端口号相同，就会交到同一个套接字，与源IP地址与源端口号无关，源IP地址与源端口号仅用在发送响应报文中</p>
+<h3 id="tcp_1">TCP分用的方法</h3>
+<p><font color="red">连接套接字需要使用&lt;源IP地址，目的IP地址，源端口号，目的端口号&gt;四元组进行标识</font></p>
+<ul>
+<li>一个TCP服务器为了同时服务很多个客户，使用两种套接字</li>
+<li>监听套接字：服务器平时在监听套接字上等待客户的连接请求，该套接字具有众所周知的端口号</li>
+<li>连接套接字：服务器在收到客户的连接请求后，创建一个连接套接字，使用临时分配的端口号。同时创建一个新的进程，在该连接套接字上服务该客户<ul>
+<li>每个连接套接字只与一个客户通信(与目的IP地址及目的端口号、源IP地址及源端口号都有关)</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">小结</p>
+<ul>
+<li>UDP套接字<ol>
+<li>使用&lt;IP地址，端口号&gt;二元组标识UDP套接字</li>
+<li>服务器使用一个套接字服务所有客户</li>
+</ol>
+</li>
+<li>TCP套接字<ol>
+<li>使用&lt;源IP地址，目的IP地址，源端口号，目的端口号&gt;四元组标识连接套接字</li>
+<li>服务器使用一个监听套接字和多个连接套接字服务多个客户，每个连接套接字服务一个客户</li>
+</ol>
+</li>
+</ul>
+</div>
+<h2 id="udp_2">无连接传输：UDP</h2>
+<p><strong>UDP提供的服务</strong></p>
+<p>UDP提供的服务：进程到进程之间的报文交付；报文完整性检查(可选)：检测并丢弃出错的报文。</p>
+<p>UDP需要实现的功能：复用和分用。报文检错</p>
+<p><strong>UDP报文段结构</strong></p>
+<p><img alt="a" src="../photos/20241121151101.png" width="250px" /></p>
+<ul>
+<li>UDP报文：报头(携带协议处理需要的信息)、载荷(payload - 携带上层数据)</li>
+<li>用于复用和分用的字段：源端口号、目的端口号</li>
+<li>用于检测报文错误的字段：报文总长度、校验和(checksum)</li>
+</ul>
+<p><strong>UDP校验和计算</strong></p>
+<p><img alt="a" src="../photos/20241121151602.png" width="400px" /></p>
+<ul>
+<li>计算UDP校验和时，要包括伪头(从IP中获得的信息)、UDP头和数据三个部分</li>
+<li>UDP伪头信息取自IP报头，包括：源IP地址，目的IP地址，UDP的协议号，UDP报文段总长度</li>
+<li>计算校验和时包含伪头信息，是为了避免由于IP地址错误等造成的误投递</li>
+<li>UDP校验和的使用是可选的，若不计算校验和，该字段填入0</li>
+</ul>
+<details class="question">
+<summary>为什么需要UDP</summary>
+<ul>
+<li>应用可以尽可能快地发送报文：①无建立连接的延迟②不限制发送速率（不进行拥塞控制和流量控制）</li>
+<li>报头开销小</li>
+<li>协议处理简单</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">UDP适合的应用</p>
+<ul>
+<li>容忍丢包但对延迟敏感的应用：如流媒体</li>
+<li>以单次请求/响应为主的应用：如DNS</li>
+<li>若应用要求基于UDP进行可靠传输：由应用层实现可靠性</li>
+</ul>
+</div>
+</details>
+<h2 id="tcp_2">面向连接的传输：TCP</h2>
+<h3 id="tcp_3">TCP概述</h3>
+<ul>
+<li>TCP服务模型：在一对通信的进程之间提供一条理想的<font color=red">字节流</font>管道</li>
+<li>点对点通信、全双工</li>
+<li>可靠、有序的字节流：不保留报文边界</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">需要的机制</p>
+<ul>
+<li>建立连接：通信双方为本次通信建立数据传输所需的状态(套接字、缓存、变量等)</li>
+<li>可靠数据传输：流水线式发送，报文段检错，丢失重传</li>
+<li>流量控制：发送方不会令接收方缓存溢出</li>
+</ul>
+</div>
+<h3 id="tcp_4">TCP报文段结构</h3>
+<p><img alt="a" src="../photos/20241121152442.png" width="500px" /></p>
+<p><strong>重要的TCP选项</strong></p>
+<ul>
+<li>最大段长度(MSS)<ol>
+<li>TCP段中可以携带的最大数据字节数</li>
+<li>建立连接时，每个主机可声明自己能够接受的MSS，缺省为536字节</li>
+</ol>
+</li>
+<li>窗口比例因子(window scale)：<ol>
+<li>建立连接时，双方可以协商一个窗口比例因子</li>
+<li>实际接收窗口大小 = window size * 2^window scale</li>
+</ol>
+</li>
+<li>选择确认(SACK)：<ol>
+<li>最初的TCP协议只使用累积确认</li>
+<li>改进的TCP协议引入选择确认，允许接收端指出缺失的数据字节</li>
+</ol>
+</li>
+</ul>
+<p><strong>发送序号和确认序号的含义</strong></p>
+<p><img alt="a" src="../photos/20241121152921.png" width="500px" /></p>
+<div class="admonition warning">
+<p class="admonition-title">初始序号的选取: 每个TCP实体维护一个32位计数器，该计数器每4微秒增1，建立连接时从中读取计数器当前值</p>
+</div>
+<h3 id="tcp_5">TCP可靠数据传输</h3>
+<p><strong>概述</strong></p>
+<ul>
+<li>基本机制<ol>
+<li>发送端：流水线式发送数据、等待确认、超时重传</li>
+<li>接收端：进行差错检测，采用累积确认机制</li>
+</ol>
+</li>
+<li>乱序段处理：协议没有明确规定<ol>
+<li>接收端不缓存：可以正常工作，处理简单，但效率低</li>
+<li>接收端缓存：效率高，但处理复杂</li>
+</ol>
+</li>
+</ul>
+<h4 id="tcp_6">一个高度简化的TCP协议</h4>
+<p>仅考虑可靠传输机制，且数据仅在一个方向上传输</p>
+<ul>
+<li>接收方<ol>
+<li>确认方式：采用累积确认，仅在正确、按序收到报文段后，更新确认序号；其余情况，重复前一次的确认序号(与GBN类似)</li>
+<li>失序报文段处理：缓存失序的报文段(与SR类似)</li>
+</ol>
+</li>
+<li>发送方<ol>
+<li>发送策略：流水线式发送报文段</li>
+<li>定时器的使用：仅对最早未确认的报文段使用一个重传定时器(与GBN类似)</li>
+<li>重发策略：仅在超时后重发最早未确认的报文段(与SR类似，因为接收端缓存了失序的报文段)</li>
+</ol>
+</li>
+</ul>
+<p><strong>TCP发送方要处理的事件</strong></p>
+<ul>
+<li>收到应用数据<ol>
+<li>创建并发送TCP报文段</li>
+<li>若当前没有定时器在运行(没有已发送、未确认的报文段)，启动定时器</li>
+</ol>
+</li>
+<li>超时<ol>
+<li>重传包含最小序号的、未确认的报文段</li>
+<li>重启定时器</li>
+</ol>
+</li>
+<li>收到ACK<ol>
+<li>如果确认序号大于基序号(已发送未确认的最小序号)<ol>
+<li>推进发送窗口(更新基序号)</li>
+<li>如果发送窗口中还有未确认的报文段，启动定时器，否则终止定时器</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<p><strong>TCP可能的重传场景</strong></p>
+<p><img alt="a" src="../photos/20241121153730.png" width="600px" /></p>
+<div class="admonition note">
+<p class="admonition-title">TCP为了减少不必要的重传采用的机制</p>
+<ul>
+<li>只使用一个定时器，避免了超时设置过小时重发大量报文段</li>
+<li>利用流水式发送和累积确认，可以避免重发某些丢失了ACK的报文段</li>
+</ul>
+</div>
+<p><strong>超时值的设置</strong></p>
+<p>若超时值太小，容易产生不必要的重传；若超时值太大，则丢包恢复的时间太长。直观上，超时值应大于RTT，但RTT是变化的。</p>
+<div class="admonition question">
+<p class="admonition-title">如何估计RTT？</p>
+<ul>
+<li>RTT是变化的，需要实时测量从发出某个报文段到收到其确认报文段之间经过的时间(称SampleRTT)</li>
+<li>由于SampleRTT波动很大，更有意义的是计算其平均值(称EstimatedRTT)</li>
+<li>平均RTT的估算方法(指数加权移动平均)<ol>
+<li>EstimatedRTT = (1- α)*EstimatedRTT + α*SampleRTT (典型地，α = 0.125)</li>
+</ol>
+</li>
+<li>瞬时RTT和平均RTT有很大的偏差<ol>
+<li>需要在EstimtedRTT 上加一个“安全距离”，作为超时值</li>
+<li>安全距离的大小与RTT的波动幅度有关</li>
+</ol>
+</li>
+<li>估算SampleRTT 与 EstimatedRTT的偏差(称DevRTT)<ol>
+<li>DevRTT = (1-β)*DevRTT + β*|SampleRTT-EstimatedRTT| (典型地， β = 0.25)</li>
+</ol>
+</li>
+<li>设置重传定时器的超时值 TimeoutInterval = EstimatedRTT + 4*DevRTT</li>
+</ul>
+</div>
+<p><strong>TCP确认的二义性</strong></p>
+<ul>
+<li>TCP确认的二义性问题：重传的TCP报文段使用与原报文段相同的序号,发送端收到确认后 ，无法得知是对哪个报文段进行的确认</li>
+<li>二义性确认带来的问题：对重传报文段测量的SampleRTT，可能不准确</li>
+<li>解决方法：忽略有二义性的确认，只对一次发送成功的报文段测量SampleRTT ，并更新EstimtedRTT。当TCP重传一个段时，停止测量SampleRTT</li>
+</ul>
+<p><strong>定时器补偿</strong></p>
+<ul>
+<li>简单忽略重传报文段的问题：重传意味着超时值可能偏小了，需要增大。若简单忽略重传报文段(不更新EstimtedRTT)，则超时值也不会更新，超时设置过小的问题没有解决</li>
+<li>解决方法：<ol>
+<li>采用定时器补偿策略，发送方每重传一个报文段，就直接将超时值增大一倍(不依赖于RTT的更新)</li>
+<li>若连续发生超时事件，超时值呈指数增长（至一个设定的上限值）</li>
+</ol>
+</li>
+</ul>
+<p><strong>Karn算法</strong></p>
+<p>Karn算法结合使用RTT估计值和定时器补偿策略确定超时值</p>
+<ul>
+<li>使用EstimatedRTT估计初始的超时值</li>
+<li>若发生超时，每次重传时对定时器进行补偿，直到成功传输一个报文段为止</li>
+<li>若收到上层应用数据、或某个报文段没有重传就被确认了，用最近的EstimatedRTT估计超时值</li>
+</ul>
+<p><strong>TCP的接收端</strong></p>
+<ul>
+<li>理论上，接收端只需区分两种情况：<ol>
+<li>收到期待的报文段：发送更新的确认序号</li>
+<li>其它情况：重复当前的确认序号</li>
+</ol>
+</li>
+<li>为减小通信量，TCP允许接收端推迟确认：<ol>
+<li>接收端可以在收到若干个报文段后，发送一个累积确认的报文段</li>
+</ol>
+</li>
+<li>推迟确认带来的问题：<ol>
+<li>若延迟太大，会导致不必要的重传</li>
+<li>推迟确认造成RTT估计不准确</li>
+</ol>
+</li>
+<li>TCP协议规定：<ol>
+<li>推迟确认的时间最多为500ms</li>
+<li>接收方至少每隔一个报文段使用正常方式进行确认</li>
+</ol>
+</li>
+</ul>
+<p>TCP接收端的事件和处理</p>
+<p><img alt="a" src="../photos/20241121155229.png" width="600px" /></p>
+<p><strong>快速重传</strong></p>
+<ul>
+<li>发送方可利用重复ACK检测报文段丢失：<ol>
+<li>发送方通常连续发送许多报文段</li>
+<li>若仅有个别报文段丢失，发送方将收到多个重复序号的ACK</li>
+<li>多数情况下IP按序交付分组，重复ACK极有可能因丢包产生</li>
+</ol>
+</li>
+<li>TCP协议规定：<ol>
+<li>当发送方收到对同一序号的3次重复确认时，立即重发包含该序号的报文段</li>
+</ol>
+</li>
+<li>快速重传：就是在定时器到期前重发丢失的报文段</li>
+</ul>
+<p>快速重传算法实现</p>
+<p><img alt="a" src="../photos/20241121160730.png" width="500px" /></p>
+<details class="note">
+<summary>TCP与一些其他协议的对比</summary>
+<p><img alt="a" src="../photos/20241121160916.png" width="500px" /></p>
+<p><img alt="a" src="../photos/20241121160948.png" width="500px" /></p>
+<p>TCP结合了GBN和SR的优点</p>
+<ul>
+<li>定时器的使用：与GBN类似，只对最早未确认的报文段使用一个定时器</li>
+<li>超时重传：与SR类似，只重传缺失的数据</li>
+</ul>
+<p><font color="red">TCP在减小定时器开销和重传开销方面要优于GBN和SR！</font></p>
+</details>
+<h3 id="crash-recovery">Crash Recovery</h3>
+<p>从host crash的恢复是困难的。</p>
+<p>当一个主机crash掉的时候，客户端可能有两种状态</p>
+<ul>
+<li>S0 -&gt; 没有数据段(ack)在传输中</li>
+<li>S1 -&gt; 有数据段(ack)在传输中。</li>
+</ul>
+<p><strong>一些解决方式</strong></p>
+<ul>
+<li>当客户端得知崩溃时，只有其存在没有传输到的ack时，才会进行重传</li>
+<li>如果在崩溃发生的时候，ack已经发出了，但是数据还没有写入到磁盘中，客户端就会收到ack信号并且处于S0状态。(导致LOST问题)</li>
+<li>如果在崩溃发生的时候，数据写入磁盘已经完成了，但是ack信号还没有发出，客户端就会没有收到ack信号因而处于S1状态。(导致Dup问题)</li>
+</ul>
+<p><img alt="a" src="../photos/20241121162521.png" width="500px" /></p>
+<details class="question">
+<summary>能否通过总是重传以及使用序列号的方式来避免重复的情况？</summary>
+<p>取决于能不能向上层询问信息，如果能够向上层询问缓存信息，获得数据段传输的情况，就可以实现。仅仅通过自己本层的服务是无法实现的。</p>
+<div class="admonition danger">
+<p class="admonition-title">更加笼统的来说，想要从一个N层的crash恢复，一定需要N+1或者更高层的服务提供信息来进行状态保持</p>
+</div>
+</details>
+<h3 id="tcp_7">TCP流量控制</h3>
+<p><strong>TCP的接收端 - 接收缓存</strong></p>
+<ul>
+<li>TCP接收端有一个接收缓存：接收端TCP将收到的数据放入接收缓存，应用进程从接收缓存中读数据。但是进入接收缓存的数据不一定被立即取走、取完，如果接收缓存中的数据未及时取走，后续到达的数据可能会因缓存溢出而丢失</li>
+<li>流量控制：发送端TCP通过调节发送速率，不使接收端缓存溢出</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">为什么GBN/SR和UDP不需要流量控制</p>
+<ul>
+<li>GBN和SR<ol>
+<li>GBN和SR均假设：①正确、按序到达的分组被立即交付给上层②其占用的缓冲区被立即释放</li>
+<li>发送方根据确认序号即可知道：①哪些分组已被移出接收窗口②接收窗口还可以接受多少分组</li>
+<li>因此GBN和SR不需要流量控制</li>
+</ol>
+</li>
+<li>UDP<ol>
+<li>接收端UDP将收到的报文载荷放入接收缓存</li>
+<li>应用进程每次从接收缓存中读取一个完整的报文载荷</li>
+<li>当应用进程消费数据不够快时，接收缓存溢出，报文数据丢失，UDP不负责任</li>
+<li>因此UDP不需要流量控制</li>
+</ol>
+</li>
+</ul>
+</div>
+<p><strong>TCP的流量控制</strong></p>
+<ul>
+<li>接收缓存中的可用空间称为接收窗口：RcvWindow = RcvBuffer - [LastByteRcvd -LastByteRead]</li>
+<li>接收方将RcvWindow放在报头中，向发送方通告接收缓存的可用空间</li>
+<li>发送方限制未确认的字节数不超过接收窗口的大小，即：LastByteSent-LastByteAcked ≦ RcvWindow</li>
+<li>特别是，当接收方通告接收窗口为0时，发送方必须停止发送</li>
+</ul>
+<p><img alt="a" src="../photos/20241121170743.png" width="350px" /></p>
+<div class="admonition danger">
+<p class="admonition-title">可能会导致死锁问题</p>
+<p><img alt="a" src="../photos/20241121170911.png" width="500px" /></p>
+<p>第16步执行完成之后，因为B发送给A的数据丢失了，所以A仍然认为B没有接收窗口，所以一直不会发送数据给B，而B一直接收不到A的数据，就认为A的数据已经全部发送完成了，也不会给A发送数据，此时也就陷入了死锁。</p>
+<div class="admonition answer">
+<p class="admonition-title">解决方式：非零窗口通告</p>
+<p>TCP协议规定：发送方收到“零窗口通告”后，可以发送“零窗口探测”报文段，从而接收方可以发送包含接收窗口的响应报文段。</p>
+</div>
+</div>
+<p><strong>零窗口探测的实现</strong></p>
+<ul>
+<li>发送端收到零窗口通告时，启动一个坚持定时器</li>
+<li>定时器超时后，发送端发送一个零窗口探测报文段(序号为上一个段中最后一个字节的序号)</li>
+<li>接收端在响应的报文段中通告当前接收窗口的大小</li>
+<li>若发送端仍收到零窗口通告，重新启动坚持定时器</li>
+</ul>
+<p><strong>糊涂窗口综合症</strong></p>
+<h3 id="tcp_8">TCP连接管理</h3>
+<h2 id="_4">理解网络拥塞</h2>
+<h2 id="tcp_9">TCP拥塞控制</h2>
+<h2 id="_5">拥塞控制的发展</h2>
+<h2 id="_6">传输层协议的发展</h2>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  <h2 id="__comments">评论</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+  data-repo="NoneZJL/mymkdocs"
+  data-repo-id="R_kgDOMETFiQ"
+  data-category="Announcements"
+  data-category-id="DIC_kwDOMETFic4Cjv-I"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="bottom"
+  data-theme="preferred_color_scheme"
+  data-lang="zh-CN"
+  crossorigin="anonymous"
+  async>
+  </script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      NoneZJL
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
