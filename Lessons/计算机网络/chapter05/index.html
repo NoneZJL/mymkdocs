@@ -2553,7 +2553,7 @@ $D_x(y) ← min_v{c(x,v) + D_v(y)}~for~each~node~y ∊ N $</li>
 <div class="admonition danger">
 <p class="admonition-title">但是并没有完全解决问题。仍然可能出现这个问题</p>
 <p>考虑一种情况</p>
-<p><img alt="a" src="https://gitee.com/NoneZJL/picture/raw/master/b2755a85ab9738341349bb485c0d190.png" width="500px" /></p>
+<p><img alt="a" src="../photos/20241122121329.png" width="300px" /></p>
 <p>此时在正常情况下，A到达D的距离为2(经过C)，B到达D的距离为2(经过C)，C到达D的距离为2(直达)。</p>
 <p>如果此时C和D之间的路径断开了，那么C就会向A和B发送信息，告诉它们现在自己到达D的路径长度是∞。但是因为信息发送到A和B的时间是不一样的，所以会产生问题。</p>
 <p>假设A首先收到C发送过来的消息，此时它已知的信息是从C到达D的距离为∞，从B到达D的距离为2，于是它更新自己的信息为通过B到达D，并且距离为3，然后将这个消息发送给B和C。</p>
