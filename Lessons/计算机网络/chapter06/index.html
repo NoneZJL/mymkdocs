@@ -1689,7 +1689,7 @@
 
 <h1 id="transport-layer">Transport layer</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 9381 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11l-3.54-4.71Z"/></svg></span> 42 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 63 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 9703 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11l-3.54-4.71Z"/></svg></span> 43 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 65 分钟</p>
 </div>
 <h2 id="_1">概述和传输层服务</h2>
 <p><strong>传输层的位置</strong></p>
@@ -2483,8 +2483,10 @@
 <p><strong>TCP拥塞控制状态机</strong></p>
 <p><img alt="a" src="../photos/20241128113813.png" width="500px" /></p>
 <p><strong>无线传输中的问题</strong></p>
-<p>无线传输中就算不拥塞也会有丢包问题的产生，此时的指示器结果就不准确了，此时的错误判断会降低网络的利用率</p>
-<p>解决方式：有线连接和无线连接在不同的timescale上实现问题，超时重传的消耗不一样</p>
+<p>无线传输中就算不拥塞也会有丢包问题的产生(因为传输错误而丢包)，此时的指示结果就不准确了，此时的错误判断会降低网络的利用率</p>
+<p>解决方式：为了在无线网络中也能正常工作,拥塞控制算法观察到的丢包只能是那些因带宽不足造成的丢包,而不能把由于传输错误造成的丢包也算在内。这个问题的一种解决方案是通过使用无线链路上的重传机制把无线链路的丢包掩盖起来。例如,802.11使用停-等式协议来传递每个帧,在向上层报告丢包之前,如果需要会进行多次重传。在正常情况下,每个数据包的交付对高层是不可见的,尽管可能曾经发生过瞬间的传输错误。</p>
+<p><img alt="a" src="../photos/20241128150609.png" width="400px" /></p>
+<p>图中显示了一条由有线和无线链路组成的路径,传输层采用了屏蔽策略。有两个方面需要注意。首先,发送端并不一定要知道该路径包括一条无线链路,因为它所能看到的只是与它连接的有线链路。Intemet上的路径是异构的,而且不存在一种通用的方法用来告知发送端路经由什么链路组成。这样的现状加深了拥塞控制问题的复杂性,因为没有简单的方法使得无线链路采用一个协议而有线链路采用另一个协议。</p>
 <div class="admonition note">
 <p class="admonition-title">TCP性能分析</p>
 <p>一个长期存活的TCP连接，平均吞吐量是多少？</p>
@@ -2510,8 +2512,8 @@
 </ol>
 </li>
 </ul>
-<div class="admonition question">
-<p class="admonition-title">一道思考题</p>
+<details class="question">
+<summary>一道思考题</summary>
 <p>Consider the following figure. Assuming TCP Reno is the protocol experiencing the behavior, answer the following questions. In all cases, you should provide a short discussion justifying your answer.</p>
 <p><img alt="a" src="../photos/20241128142459.png" width="500px" /></p>
 <p>(1) Identify the intervals of time when TCP slow start is operating.</p>
@@ -2523,8 +2525,8 @@
 <p>(7) What is the value of Threshold at the 24th transmission round?</p>
 <p>(8) Assuming a packet loss is detected after the 26th round by the receipt of a triple duplicate ACK, what will be the values of the cwnd and Threshold?</p>
 <p>(9) Suppose TCP Tahoe is used (instead of TCP Reno), and assume that triple duplicate ACKs are received at the 16th round. What are the Threshold and cwnd at the 19th round?</p>
-<div class="admonition answer">
-<p class="admonition-title">答案与解析</p>
+<details class="answer">
+<summary>答案与解析</summary>
 <p>(1) 慢启动部分 cwnd 是以指数形式增长的，所以答案是 <font color="red">[1, 6] 以及 [23, 26]</font></p>
 <p>(2) 拥塞避免部分 cwnd 是以线性形式增长的，所以答案是 <font color="red">[6, 16] 以及 [17, 22]</font></p>
 <p>(3) 在16轮后，cwnd 的大小下降了一半，并且采用的是 TCP Reno，所以是 <font color="red">a triple deplicate ACK</font></p>
@@ -2534,8 +2536,8 @@
 <p>(7) 第24轮中的 Threshold，其实就是第22轮之后的 Threshold，在第2轮之后，因为丢包导致 Threshold 减半，所以答案是<font color="red">(21+5)/2=13</font></p>
 <p>(8) 如果在第 26 轮之后发生了连续收到3个重复的 ACK 的异常，根据 TCP Reno，这时的 cwnd 和 Threshold 都会减半，所以此时这两个变量的值都是<font color="red">(1*2*2*2)/2=4</font></p>
 <p>(9) 要知道第19轮的情况，首先需要知道第17轮的情况，第16轮之后发生了连续收到3个重复的ACK包的异常，并且此时使用的是TCP Tahoe，所以此时Threshold 都会减半，并且 cwnd 会减小到1，也就是说第17轮的时候，cwnd = 1 并且 Threshold = 42/2 = 21。接下来进入指数增长阶段，所以第19轮时候的情况是这样的<font color="red">cwnd = 1*2*2 = 4, Threshold = 21</font></p>
-</div>
-</div>
+</details>
+</details>
 <h2 id="_8">拥塞控制的发展</h2>
 <h2 id="_9">传输层协议的发展</h2>
 
