@@ -14,7 +14,7 @@
         <link rel="prev" href="../chapter05/">
       
       
-        <link rel="next" href="../../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter1/">
+        <link rel="next" href="../chapter07/">
       
       
       <link rel="icon" href="../../../images/暗影蜘蛛侠.svg">
@@ -660,6 +660,8 @@
       
         
       
+        
+      
     
     
       
@@ -1083,6 +1085,48 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="拥塞控制的发展">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tcp-cubic" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP CUBIC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-bbr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google BBR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-center-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Center TCP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dccp" class="md-nav__link">
+    <span class="md-ellipsis">
+      DCCP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1092,12 +1136,57 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="传输层协议的发展">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mptcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      MPTCP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quic" class="md-nav__link">
+    <span class="md-ellipsis">
+      QUIC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter07/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter7 | 应用层
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1770,6 +1859,48 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="拥塞控制的发展">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tcp-cubic" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP CUBIC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-bbr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google BBR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-center-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Center TCP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dccp" class="md-nav__link">
+    <span class="md-ellipsis">
+      DCCP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1778,6 +1909,30 @@
       传输层协议的发展
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="传输层协议的发展">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mptcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      MPTCP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quic" class="md-nav__link">
+    <span class="md-ellipsis">
+      QUIC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1801,7 +1956,7 @@
 
 <h1 id="transport-layer">Transport layer</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 9703 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11l-3.54-4.71Z"/></svg></span> 43 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 65 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 12076 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11l-3.54-4.71Z"/></svg></span> 56 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 81 分钟</p>
 </div>
 <h2 id="_1">概述和传输层服务</h2>
 <p><strong>传输层的位置</strong></p>
@@ -2651,7 +2806,166 @@
 </details>
 </details>
 <h2 id="_8">拥塞控制的发展</h2>
+<h3 id="tcp-cubic">TCP CUBIC</h3>
+<p><strong>经典TCP拥塞控制的性能问题</strong></p>
+<p>TCP Reno线性增大拥塞窗口，探测当前可用网络带宽，即每经过一个RTT，拥塞窗口增加一个MSS；当端到端时延带宽乘积（BDP）较大时，拥塞窗口增长过慢，导致信道无法满载</p>
+<p><img alt="a" src="../photos/20241205100229.png" width="450px" /></p>
+<p><strong>BIC算法对满载窗口进行二分查找</strong></p>
+<ul>
+<li>如发生丢包时窗口大小是W1，为保持满载而不丢包，满载窗口应小于W1</li>
+<li>如检测到丢包并将窗口乘性减小为W2 ，则满载窗口应大于W2</li>
+<li>窗口更新受ACK时钟驱动，即以RTT为更新间隔时间</li>
+<li>在ACK时钟的驱动下，将拥塞窗口置为(W1 + W2)/2(新的W2值)，不断逼近满载窗口</li>
+<li>最大探查：如窗口再次达到W1而没有丢包，说明满载窗口大于W1 ，则以逼近W1的镜像过程增大拥塞窗口</li>
+</ul>
+<p><img alt="a" src="../photos/20241205110856.png" width="500px" /></p>
+<div class="admonition danger">
+<p class="admonition-title">BIC存在带宽不公平性问题</p>
+<p>BIC以ACK时钟驱动拥塞窗口的更新，RTT较短的连接会更快到达满载窗口，占据更多的带宽，产生不公平性问题</p>
+</div>
+<p><strong>TCP CUBIC</strong></p>
+<p>CUBIC将BIC算法连续化，用三次函数拟合BIC算法曲线，并且拥塞窗口成为距上次丢包的时间t的函数，t取值位于两次丢包之间，<font color="red">不再根据RTT间隔来确定调整窗口的时机，避免了RTT不公平问题</font></p>
+<p><img alt="a" src="../photos/20241205111247.png" width="300px" /></p>
+<h3 id="google-bbr">Google BBR</h3>
+<p>瓶颈链路带宽BtlBw，决定了端到端路径上的最大数据投递速率。拥塞窗口大于BtlBw时，瓶颈链路处会形成排队，导致RTT延长(直至超时)</p>
+<p><img alt="a" src="../photos/20241205140356.png" width="500px" /></p>
+<p>先前学的TCP Reno是从开始丢包的时候才开始处理的，相对开始处理时间较晚，实际上可以早一些开始处理。</p>
+<p><strong>BBR</strong></p>
+<ul>
+<li>瓶颈链路带宽BtlBw：不会引起路由器缓存排队的最大发送速率</li>
+<li>RTprop：往返时间</li>
+<li>BDP=BtlBw x RTprop</li>
+<li>经典拥塞控制状态机以丢包事件为驱动，探测阶段将瓶颈链路上的缓冲区填满直至丢包，并以此为依据判断是否进行被动的乘性减小</li>
+<li>BBR试图测量图中左侧优化点的BtlBw，尽量将cwnd收敛到实际BtlBw，从而避免出现丢包，属于主动探测</li>
+</ul>
+<p><strong>优化点的近似观测</strong></p>
+<p>用过去10秒内的最小RTT(min RTT)和最大投递率(max BW)，分别近似RTprop和BtlBw，并依据这两个值估算当前BDP</p>
+<p><img alt="a" src="../photos/20241205141032.png" width="500px" /></p>
+<p>从图中可以看出，最小RTT(最低延迟测量需要保证链路队列为空)和最大投递率(测量最大带宽需要把瓶颈链路填满)两个值无法同时被测出</p>
+<p><strong>BDP检测</strong></p>
+<ul>
+<li>启动阶段(START_UP)<ol>
+<li>当连接建立时，类似TCP的慢启动，指数增加发送速率，尽可能快地占满管道</li>
+<li>若经过三次发现投递率不再增长，说明已达到BtlBw，瓶颈链路处分组已开始排队(事实上此时占的是三倍BDP)   <br />
+<img alt="a" src="../photos/20241205141411.png" width="300px" /></li>
+</ol>
+</li>
+<li>排空阶段(DRAIN)<ol>
+<li>指数降低发送速率（相当于是startup的逆过程），将多占的两倍buffer慢慢排空    <br />
+<img alt="a" src="../photos/20241205141546.png" width="300px" /></li>
+</ol>
+</li>
+<li>瓶颈带宽探测(PROBE_BW)<ol>
+<li>进入稳定状态后, 先在一个RTT内增加发送速率，探测最大带宽</li>
+<li>如果RTT没有变化，再减小发送速率，排空前一个RTT多发出来的包</li>
+<li>后面6个周期使用更新后的估计带宽发送    <br />
+<img alt="a" src="../photos/20241205141700.png" width="300px" /></li>
+</ol>
+</li>
+<li>时延探测(PROBE_RTT)<ol>
+<li>测得的RTprop作为基准，用以判断带宽检测阶段瓶颈链路中是否发生排队</li>
+<li>每过10秒，如果估计的RTprop不变，就进入RTprop探测阶段，cwnd固定为4个包      <br />
+<img alt="a" src="../photos/20241205142046.png" width="300px" /></li>
+</ol>
+</li>
+</ul>
+<p><strong>BBR状态机</strong></p>
+<p><img alt="a" src="../photos/20241205142254.png" width="400px" /></p>
+<h3 id="data-center-tcp">Data Center TCP</h3>
+<p><strong>数据中心的通信模式</strong></p>
+<p><font color="red">Partition/Aggregate</font>：Aggregator将上层应用任务划分给下层的worker执行</p>
+<p><strong>数据中心流量特点</strong></p>
+<ul>
+<li>根据流量大小可分为<font color="red">时延敏感的短流(50KB-1MB)</font>和<font color="red">吞吐敏感的长流(1MB-50MB)</font></li>
+<li>还存在大量<font color="red">突发流量(时间&lt;1s、大小&lt;2KB)</font></li>
+</ul>
+<p><strong>数据中心的性能问题</strong></p>
+<ol>
+<li>Incast<ul>
+<li>在一个很短的时间内，大量流量同时到达交换机的一个端口，导致缓冲区被占满，最终导致丢包</li>
+<li>在并发流量很大的情况下，即使每条流的包很小，也会产生Incast问题</li>
+</ul>
+</li>
+<li>Queue Buildup<ul>
+<li>长流和短流同时通过交换机的同一个端口时，由于长流占用较多的缓冲区空间，导致短流延迟增大，甚至丢包</li>
+</ul>
+</li>
+<li>Buffer Pressure<ul>
+<li>交换机的不同端口通常共享同一块缓冲区，即使长流和短流通过不同的端口，短流通过的端口也会出现缓冲区不足的问题</li>
+</ul>
+</li>
+</ol>
+<p><strong>数据中心传输层协议要求</strong></p>
+<ul>
+<li>容忍高突发流量</li>
+<li>低时延</li>
+<li>高吞吐</li>
+</ul>
+<p><strong>DCTCP核心思想</strong></p>
+<ul>
+<li>根据网络拥塞程度精细地减小发送窗口：一旦发现拥塞，发送窗口减至原窗口的(1-α/2)， α反映了拥塞程度，而TCP中α总为1</li>
+<li>根据交换机队列的瞬时长度标记ECN(explicit congestion notification)，使用显式的拥塞反馈能够更好地控制突发流量</li>
+</ul>
+<p><strong>优点</strong></p>
+<ul>
+<li>容忍高突发流量<ul>
+<li>DCTCP能将队列长度稳定地维持在一个很低的水平</li>
+<li>采用激进的标记策略</li>
+</ul>
+</li>
+<li>低时延</li>
+<li>高吞吐<ul>
+<li>DCTCP根据拥塞程度精确调节窗口</li>
+</ul>
+</li>
+</ul>
+<h3 id="dccp">DCCP</h3>
+<p>UDP 没有拥塞控制机制，但是又想要使用 UDP，所以就有了DCCP = UDP + 拥塞控制</p>
 <h2 id="_9">传输层协议的发展</h2>
+<h3 id="mptcp">MPTCP</h3>
+<p>解决同时使用多个网络接口来实现多路径传输的问题(比如手机同时使用WIFI和流量)</p>
+<p><strong>优势</strong></p>
+<ul>
+<li>多径带宽聚合</li>
+<li>提升传输的可靠性</li>
+<li>支持链路的平滑切换</li>
+</ul>
+<p><strong>位置</strong></p>
+<p>MPTCP位于套接字和TCP之间：应用程序通过套接字调用MPTCP，MPTCP向应用程序提供单条连接的抽象，因而对应用层透明。MPTCP连接是一个或多个子流的集合。</p>
+<p><strong>MPTCP连接管理</strong></p>
+<p>连接建立：首先初始化一条MPTCP连接(与建立常规TCP连接的过程相似)，然后将MPTCP的其它子流附加到已经存在的MPTCP连接上。</p>
+<p><strong>MPTCP的数据调度</strong></p>
+<p>在多路径传输中，发送端将属于同一个数据流的数据包调度到不同的路径上传输，由于不同路径的差异，这些数据包往往无法按照发送顺序到达接收端。乱序到达的数据包需暂存在接收缓存中，直到接收缓中的数据包能够按序交付给上层应用，这既影响了数据传输的实时性，又影响了网络的吞吐量。MPTCP根据拥塞窗口大小及路径延迟，将数据按比例分配给各个子流，尽力保证数据包按序到达接收端，降低数据乱序到达对网络性能产生的不利影响。</p>
+<p><strong>MPTCP的拥塞控制</strong></p>
+<p>目标</p>
+<ol>
+<li>提升吞吐量：多路径TCP连接的各个子流获得的总吞吐量，不应低于其最优路径上单路径TCP连接的吞吐量</li>
+<li>公平性：多路径TCP连接在同一网络瓶颈处的多个子流，不能过多地侵占其它单路径TCP连接的带宽</li>
+<li>均衡拥塞：多路径TCP连接应能在满足前两个准则的情况下，实现各个子流之间的负载均衡，尽可能将拥塞路径上的流量迁移到较好的路径上</li>
+</ol>
+<h3 id="quic">QUIC</h3>
+<p><strong>TCP存在的问题</strong></p>
+<p>TCP在操作系统内核中实现，应用无法对TCP进行修改，而操作系统的更新往往跟不上应用的需求和节奏，并且TCP体系握手时时延很大，而目前对低时延的要求越来越高。而且，TCP多流复用存在队头阻塞问题(TCP传输需要有序性，一旦出现丢包，后面的数据需要等丢失的包重传完成才能使用)。</p>
+<p><strong>QUIC在网络体系结构中的位置</strong></p>
+<p><img alt="a" src="../photos/20241205145711.png" width="400px" /></p>
+<p>QUIC实现在用户态中，底层基于UDP实现。QUIC与应用的联系更加紧密，可以频繁地更新。</p>
+<p><strong>QUIC包格式</strong></p>
+<p><img alt="a" src="../photos/20241205150102.png" width="400px" /></p>
+<ul>
+<li>连接标识符(Connection ID)：用于对连接进行表示和识别</li>
+<li>包号(Packet Number)：单调递增。即同一个连接中，每个QUIC包的包号都不一样</li>
+</ul>
+<p>QUIC底层使用UDP进行传输(QUIC包作为UDP地数据载荷)，IANA（互联网数字分配机构）建议QUIC使用UDP的443端口</p>
+<p><strong>连接建立时延优化</strong></p>
+<p><img alt="a" src="../photos/20241205150422.png" width="600px" /></p>
+<p><strong>优势</strong></p>
+<ul>
+<li>明确的包序号和更精确的RTT(后者是由前者决定的)</li>
+<li>IP地址/端口切换无需重新建立连接(QUIC使用Connection ID来表示每个连接，IP地址或端口的变化不影响对原有连接的识别)</li>
+<li>由传输层对连接的切换进行管理</li>
+<li>无队头阻塞的多流复用(在单个连接中，建立相互独立的多个QUIC流，某个流的数据包丢失不影响其它流的数据交付，可以减少不必要的等待)</li>
+<li>QUIC易于部署和更新(整个QUIC包被加密传输，QUIC在用户态实现)</li>
+</ul>
 
 
 

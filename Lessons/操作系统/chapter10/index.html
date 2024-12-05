@@ -658,6 +658,8 @@
       
         
       
+        
+      
     
     
       
@@ -806,6 +808,27 @@
   
   <span class="md-ellipsis">
     chapter6 | 传输层
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter07/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter7 | 应用层
   </span>
   
 
@@ -1118,9 +1141,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#soft-link-hard-link" class="md-nav__link">
+  <a href="#soft-link-vs-hard-link" class="md-nav__link">
     <span class="md-ellipsis">
-      Soft link 和 Hard link
+      Soft link VS Hard link
     </span>
   </a>
   
@@ -1405,9 +1428,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#soft-link-hard-link" class="md-nav__link">
+  <a href="#soft-link-vs-hard-link" class="md-nav__link">
     <span class="md-ellipsis">
-      Soft link 和 Hard link
+      Soft link VS Hard link
     </span>
   </a>
   
@@ -1465,7 +1488,7 @@
 
 <h1 id="file-system-interface">File-System Interface</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 2479 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> 4 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11l-3.54-4.71Z"/></svg></span> 10 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 17 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 2653 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> 4 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11l-3.54-4.71Z"/></svg></span> 10 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 18 分钟</p>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">文件系统本身对用户是透明的，但是它暴露了一些接口来让用户对文件进行操作。</p>
@@ -1478,7 +1501,10 @@
 <p><strong>文件概念</strong></p>
 <p><font color="blue">文件系统</font>是规定如何在存储介质内部实现存储和获取数据的方法(包含文件命名、存储位置、访问规则、元数据等)。</p>
 <p>(从用户的角度来看)<font color="blue">文件</font>是一段连续的逻辑地址空间，是一段连续的并且含义由创建者和使用者定义的数据(bits, bytes, lines, or records)，但是在物理的磁盘存储上可能是离散的。</p>
-<p>文件的类型包括数据(数字、字符以及二进制)和程序(源文件、连接文件以及可执行文件)。</p>
+<p>文件的类型包括数据(数字、字符以及二进制)和程序(源文件、目标文件以及可执行文件)。</p>
+<div class="admonition note">
+<p class="admonition-title">在系统运行时，计算机以进程为基本单位进行资源的调度和分配；而在用户进行的输入、输出中，则以文件为基本单位。</p>
+</div>
 <p><strong>文件结构</strong></p>
 <ul>
 <li><font color="red">None(无结构)</font>，只是一串连续的数据(比如数据库中的文件就是无格式的)</li>
@@ -1502,11 +1528,11 @@
 </ul>
 <p><strong>文件操作</strong></p>
 <ul>
-<li>Create：文件创建</li>
+<li>Create：文件创建，有两个必要的步骤：一是为新文件分配外存空间；二是在目录中为之创建一个目录项，目录项记录了新文件名、文件在外存中的地址等信息。</li>
 <li>Write：写文件，定义指针指向写的位置</li>
 <li>Read：读文件，和写文件使用同一个指针</li>
 <li>Reposition within file(file seek)：文件中的定位</li>
-<li>Delete：删除文件</li>
+<li>Delete：删除文件，同时删除指定文件对应的目录项和文件控制块，然后回收该文件所占用的存储空间</li>
 <li>Truncate：文件内容追加</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">Open</span><span class="p">(</span><span class="n">Fi</span><span class="p">)</span><span class="w">  </span><span class="c1">// 搜索目录，打开文件</span>
@@ -1539,6 +1565,14 @@
 </ul>
 <p><strong>文件类型</strong></p>
 <p><img alt="a" src="../images/20241204151339.png" width="350px" /></p>
+<div class="admonition abstract">
+<p class="admonition-title">不同操作系统使用的文件系统类型</p>
+<ul>
+<li>Windows：MS-DOS</li>
+<li>MAC：MAC OS X</li>
+<li>Linux：UNIX</li>
+</ul>
+</div>
 <h2 id="_2">访问方式</h2>
 <ul>
 <li>顺序读取：物理上的文件读取方式      <br />
@@ -1550,7 +1584,7 @@
 <p>Index and Relative Files实例</p>
 <p><img alt="a" src="../images/20241204161401.png" width="400px" /></p>
 <h2 id="_3">目录结构</h2>
-<p>对应操作系统来说，目录就是一份符号表，将文件名映射到实际的文件控制块(FCB, symble table)上(每一个文件关系的映射记录就是一个FCB)，是一个包含了所有文件信息的映射点的集合</p>
+<p>对应操作系统来说，目录就是一份符号表，将文件名映射到实际的文件控制块(FCB, symble table)上(每一个文件目录项就是一个FCB)，是一个包含了所有文件信息的映射点的集合</p>
 <div class="admonition warning">
 <p class="admonition-title">对文件名的修改实际上是对FCB的修改，并没有修改文件本身</p>
 </div>
@@ -1625,11 +1659,11 @@
 </ol>
 </li>
 </ul>
-<h3 id="soft-link-hard-link">Soft link 和 Hard link</h3>
+<h3 id="soft-link-vs-hard-link">Soft link VS Hard link</h3>
 <ul>
 <li>soft link：新的用户创建一个新的索引节点直接指向一个新的文件，这个新的文件中只存一个路径字符串，这个路径就是访问这个文件的方式，因为这是一种字符串而不是指针，所以即使删除了文件也不会出现严重的错误，只是提示找不到文件。<ol>
-<li>软链接会有自己的FCB，并且内容时文件路径而不是具体的文件数据 </li>
-<li>最大优点：可以跨越文件系统来实现文件的连接(感觉整个文件系统的是指文件夹)</li>
+<li>软链接会有自己的FCB，并且内容时文件路径而不是具体的文件数据(每个文件系统都有自己的inode，inode号在不同的文件系统中可能重复)</li>
+<li>最大优点：可以跨越文件系统来实现文件的连接</li>
 <li>缺点：降低了查找效率</li>
 </ol>
 </li>
