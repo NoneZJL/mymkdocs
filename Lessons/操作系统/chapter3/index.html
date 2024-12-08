@@ -14,7 +14,7 @@
         <link rel="prev" href="../chapter2/">
       
       
-        <link rel="next" href="../chapter5/">
+        <link rel="next" href="../chapter4/">
       
       
       <link rel="icon" href="../../../images/暗影蜘蛛侠.svg">
@@ -861,6 +861,8 @@
       
         
       
+        
+      
     
     
       
@@ -1026,25 +1028,16 @@
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      进程合作
+      合作进程
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#ipc" class="md-nav__link">
     <span class="md-ellipsis">
-      进程间通信
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cs" class="md-nav__link">
-    <span class="md-ellipsis">
-      C/S 系统中的通信
+      进程间通信(IPC)
     </span>
   </a>
   
@@ -1054,6 +1047,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter04 | 线程
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1415,25 +1429,16 @@
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      进程合作
+      合作进程
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#ipc" class="md-nav__link">
     <span class="md-ellipsis">
-      进程间通信
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cs" class="md-nav__link">
-    <span class="md-ellipsis">
-      C/S 系统中的通信
+      进程间通信(IPC)
     </span>
   </a>
   
@@ -1459,7 +1464,7 @@
 
 <h1 id="processes">Processes</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1162 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11l-3.54-4.71Z"/></svg></span> 5 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 8 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 2168 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> 25 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11l-3.54-4.71Z"/></svg></span> 5 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 15 分钟</p>
 </div>
 <h2 id="_1">进程的概念</h2>
 <p>进程是正在运行中的程序，进程的执行必须是有序的。</p>
@@ -1568,10 +1573,160 @@
 <p>CPU 切换进程的时候需要保存上一个进程的信息，并且加载下一个进程的相关信息。上下文切换的时间是多余的，系统在上下文切换的时候没有做任何实际有效的工作，而上下文切换的时间决定于硬件的支持情况。</p>
 <h2 id="_3">进程操作</h2>
 <p><strong>进程创建</strong></p>
-<p>TODO 23</p>
-<h2 id="_4">进程合作</h2>
-<h2 id="_5">进程间通信</h2>
-<h2 id="cs">C/S 系统中的通信</h2>
+<p>父进程创建子进程，子进程进一步创建其他进程，最终形成一棵进程树。</p>
+<ul>
+<li>资源共享<ol>
+<li>父进程和子进程共享资源</li>
+<li>子进程共享父进程的部分资源</li>
+<li>父进程和子进程不共享资源</li>
+</ol>
+</li>
+<li>执行<ol>
+<li>父进程和子进程同时执行</li>
+<li>父进程等待子进程执行完成后执行</li>
+</ol>
+</li>
+<li>地址空间<ol>
+<li>子进程是父进程的复制品(一段程序)</li>
+</ol>
+</li>
+</ul>
+<p><strong>进程中断</strong></p>
+<ul>
+<li>进程执行完最后一条语句，请求操作系统删除<ol>
+<li>从子进程到父进程输出数据(通过 wait)</li>
+<li>进程的资源会被操作系统回收</li>
+</ol>
+</li>
+<li>父进程可以终止子进程的执行(abort)<ol>
+<li>子进程使用的资源已经超过了分配给它的资源</li>
+<li>分配给子进程的任务不再被需要了</li>
+<li>如果父进程被取消了<ol>
+<li>一些操作系统当父进程取消后，就不允许子进程的继续运行，也就是说需要删除这个父进程的全部子进程(cascade)</li>
+<li>另外一些操作系统中允许子进程继续存在，并且会设置父进程位初始化进程</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="_4">合作进程</h2>
+<ul>
+<li>独立的进程不能被被的进程影响，也不能影响别的进程</li>
+<li>合作进程可以被被的进程影响，也可以影响别的进程</li>
+<li>进程合作的优势<ol>
+<li>信息共享</li>
+<li>多 CPU 情况下可以加快计算速度</li>
+<li>模块化</li>
+<li>方便</li>
+</ol>
+</li>
+</ul>
+<p><strong>生产者消费者模型</strong></p>
+<p>生产者进程生产信息，消费者进程消费信息。</p>
+<ul>
+<li>unbounded-buffer：对缓冲区的大小没有限制。如果缓冲区中没有资源，消费者进程就必须等待。</li>
+<li>bounded-buffer：缓冲区的大小是固定的。如果缓冲区中的资源已经满了，生产者进程必须等待。</li>
+</ul>
+<div class="highlight"><span class="filename">Shared data</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#define BUFFER_SIZE 10</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span><span class="n">item</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">item</span><span class="w"> </span><span class="n">buffer</span><span class="p">[</span><span class="n">BUFFER_SIZE</span><span class="p">];</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kt">int</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="kt">int</span><span class="w"> </span><span class="n">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Producer</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nb">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">Produce</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">item</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(((</span><span class="n">in</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">BUFFER_SIZE</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">out</span><span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="p">;</span><span class="w"> </span><span class="c1">// do nothing -- no free buffers</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">buffer</span><span class="p">[</span><span class="n">in</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">item</span><span class="p">;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="n">in</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">BUFFER_SIZE</span><span class="p">;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Consumer</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nb">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">in</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">out</span><span class="p">)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="p">;</span><span class="w"> </span><span class="c1">//do nothing -- nothing to consume</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">Remove</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">buffer</span><span class="p">;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buffer</span><span class="p">[</span><span class="n">out</span><span class="p">];</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="n">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">out</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">BUFFER</span><span class="w"> </span><span class="n">SIZE</span><span class="p">;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">item</span><span class="p">;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">   </span><span class="p">}</span>
+</code></pre></div>
+<h2 id="ipc">进程间通信(IPC)</h2>
+<p>IPC 的两种模型：消息传递和共享内存</p>
+<ul>
+<li>消息传递(message passing)<ol>
+<li>进程间通过两个操作函数来进行消息传递<ol>
+<li>send(message)：消息的长度可以是固定的，也可以是可变的</li>
+<li>receive(message) </li>
+</ol>
+</li>
+<li>如果两个进程之间想要交流，就需要<ol>
+<li>首先建立通信连接：这个连接的实现可以是物理层面上的(共享内存、硬件总线)，也可以是逻辑层面上的(逻辑属性)</li>
+<li>通过两个操作函数进程信息交换 </li>
+</ol>
+</li>
+</ol>
+</li>
+<li>直接通信<ol>
+<li>进程之间必须要显示命名<ol>
+<li>send(P, message)：向进程 P 发送消息</li>
+<li>receive(Q, message)：从进程 Q 接收到消息</li>
+</ol>
+</li>
+<li>通信连接的属性<ol>
+<li>连接时自动建立的</li>
+<li>一个连接仅支持一对进程间的通信</li>
+<li>连接既可以是单向的，也可以是双向的</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>间接通信<ol>
+<li>信息是通过mailboxes(或者是 ports)来传递的<ol>
+<li>每一个邮箱都有唯一的 id</li>
+<li>共享同一个邮箱的进程之间可以通信</li>
+</ol>
+</li>
+<li>通信连接的属性<ol>
+<li>仅当进程共享同一个邮箱时才建立连接</li>
+<li>一个连接中可能会有多个进程</li>
+<li>每一对进程可能处于多个通信连接中</li>
+<li>连接既可以是单向的，也可以是双向的</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">间接通信存在的问题</p>
+<p>三个进程共享同一个邮箱时，如果 P1 发送了消息，P2 和 P3 同时接收了消息，那么这个消息是谁收到的？</p>
+<div class="admonition answer">
+<p class="admonition-title">解决方案</p>
+<ul>
+<li>一个连接最多允许两个进程</li>
+<li>同一时刻只允许一个进程调用 receive 函数</li>
+<li>允许系统任意选择接收端，发送方被系统通知接收方是谁</li>
+</ul>
+</div>
+</div>
+<p><strong>同步和异步</strong></p>
+<p>信息的传输有两种形式：blocking 和 non-blocking</p>
+<ul>
+<li>Blocking 被认为是同步的<ol>
+<li>发送发只有接收方接收信息后才能继续发送信息</li>
+<li>接收方只有有消息能接收时才能调用接收函数</li>
+</ol>
+</li>
+<li>Non-blocking 被认为是异步的<ol>
+<li>发送发可以连续发送信息</li>
+<li>接收方无论是否有信息，都可以调用接收函数</li>
+</ol>
+</li>
+</ul>
 
 
 
