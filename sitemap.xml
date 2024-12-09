@@ -144,4 +144,8 @@
          <loc>https://example.com/Tools/%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/</loc>
          <lastmod>2024-12-09</lastmod>
     </url>
+    <url>
+         <loc>https://example.com/Tools/Redis/install/</loc>
+         <lastmod>2024-12-09</lastmod>
+    </url>
 </urlset>
