@@ -648,6 +648,8 @@
       
         
       
+        
+      
     
     
       
@@ -827,6 +829,27 @@
   
   <span class="md-ellipsis">
     chapter7 | 应用层
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Lessons/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter08/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chapter8 | 网络安全
   </span>
   
 
@@ -1658,7 +1681,7 @@
 
 <h1 id="redis">Redis 命令</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 549 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 4 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 1600 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> 1 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 11 分钟</p>
 </div>
 <h2 id="_1">数据结构</h2>
 <p>Redis是典型的key-value数据库，key一般是字符串，而value包含很多不同的数据类型：</p>
@@ -1703,24 +1726,149 @@
 </div>
 <p><strong>String的常见命令</strong></p>
 <ul>
-<li>SET：添加或者修改已经存在的一个String类型的键值对</li>
-<li>GET：根据key获取String类型的value</li>
-<li>MSET：批量添加多个String类型的键值对</li>
-<li>MGET：根据多个key获取多个String类型的value</li>
-<li>INCR：让一个整型的key自增1</li>
-<li>INCRBY:让一个整型的key自增并指定步长，例如：incrby num 2 让num值自增2</li>
-<li>INCRBYFLOAT：让一个浮点类型的数字自增并指定步长，必须指定增长的大小</li>
-<li>SETNX：添加一个String类型的键值对，前提是这个key不存在，否则不执行</li>
-<li>SETEX：添加一个String类型的键值对，并且指定有效期</li>
+<li>SET：添加或者修改已经存在的一个String类型的键值对<ol>
+<li><code>SET name NoneZJL</code>  </li>
+</ol>
+</li>
+<li>GET：根据key获取String类型的value<ol>
+<li><code>GET name</code>  </li>
+</ol>
+</li>
+<li>MSET：批量添加多个String类型的键值对<ol>
+<li><code>MSET k1 v1 k2 v2 k3 v3</code> </li>
+</ol>
+</li>
+<li>MGET：根据多个key获取多个String类型的value<ol>
+<li><code>MGET k1 k2 k3</code>  </li>
+</ol>
+</li>
+<li>INCR：让一个整型的key自增1<ol>
+<li><code>SET number 10</code></li>
+<li><code>INCR number</code> </li>
+</ol>
+</li>
+<li>INCRBY:让一个整型的key自增并指定步长<ol>
+<li><code>INCRBY number 2</code>  </li>
+</ol>
+</li>
+<li>INCRBYFLOAT：让一个浮点类型的数字自增并指定步长，必须指定增长的大小<ol>
+<li><code>SET f_num 10.1</code></li>
+<li><code>INCRBYFLOAT f_num 0.5</code>  </li>
+</ol>
+</li>
+<li>SETNX：添加一个String类型的键值对，前提是这个key不存在，否则不执行<ol>
+<li><code>SETNX name Found</code></li>
+<li><code>SETNX name1 NotFound</code>  </li>
+</ol>
+</li>
+<li>SETEX：添加一个String类型的键值对，并且指定有效期<ol>
+<li><code>SETEX due_time 10 value</code>  </li>
+</ol>
+</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">SETNX key value 的效果和 SET key value NX 的效果是一样的，SETEX也同样如此</p>
 </div>
 <h2 id="key">Key的层级格式</h2>
+<p>Redis的key允许有多个单词形成层级结构，多个单词之间用':'隔开，格式如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>项目名:业务名:类型:id
+</code></pre></div>
+<p>如果value是一个Java对象，例如一个User对象，则可以将对象序列化为JSON字符串后存储：</p>
+<table>
+<thead>
+<tr>
+<th><strong>KEY</strong></th>
+<th><strong>VALUE</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>net:user:1</td>
+<td>{"id":1,  "name": "Jack", "age": 21}</td>
+</tr>
+<tr>
+<td>net:product:1</td>
+<td>{"id":1,  "name": "小米11", "price": 4999}</td>
+</tr>
+</tbody>
+</table>
+<p>这时候在redis的图形化页面中，这些数据的显示可以用层级的格式显示出来</p>
 <h2 id="hash">Hash类型</h2>
+<p>Hash类型，也叫散列，其value是一个无序字典，类似于Java中的HashMap结构。</p>
+<p>Hash结构可以将对象中的每个字段独立存储，可以针对单个字段做CRUD。</p>
+<p>Hash的常见命令有：</p>
+<ul>
+<li>HSET key field value：添加或者修改hash类型key的field的值</li>
+<li>HGET key field：获取一个hash类型key的field的值</li>
+<li>HMSET：批量添加多个hash类型key的field的值</li>
+<li>HMGET：批量获取多个hash类型key的field的值</li>
+<li>HGETALL：获取一个hash类型的key中的所有的field和value</li>
+<li>HKEYS：获取一个hash类型的key中的所有的field</li>
+<li>HVALS：获取一个hash类型的key中的所有的value</li>
+<li>HINCRBY:让一个hash类型key的字段值自增并指定步长</li>
+<li>HSETNX：添加一个hash类型的key的field值，前提是这个field不存在，否则不执行</li>
+</ul>
 <h2 id="list">List类型</h2>
+<p>Redis中的List类型与Java中的LinkedList类似，可以看做是一个双向链表结构。既可以支持正向检索和也可以支持反向检索。</p>
+<p>特征也与LinkedList类似：</p>
+<ul>
+<li>有序</li>
+<li>元素可以重复</li>
+<li>插入和删除快</li>
+<li>查询速度一般</li>
+</ul>
+<p>List的常见命令有：</p>
+<ul>
+<li>LPUSH key element ... ：向列表左侧插入一个或多个元素</li>
+<li>LPOP key：移除并返回列表左侧的第一个元素，没有则返回nil</li>
+<li>RPUSH key element ... ：向列表右侧插入一个或多个元素</li>
+<li>RPOP key：移除并返回列表右侧的第一个元素</li>
+<li>LRANGE key star end：返回一段角标范围内的所有元素</li>
+<li>BLPOP和BRPOP：与LPOP和RPOP类似，只不过在没有元素时等待指定时间，而不是直接返回nil</li>
+</ul>
 <h2 id="set">Set类型</h2>
+<p>Redis的Set结构与Java中的HashSet类似，可以看做是一个value为null的HashMap。因为也是一个hash表，因此具备与HashSet类似的特征：</p>
+<ul>
+<li>无序</li>
+<li>元素不可重复</li>
+<li>查找快</li>
+<li>支持交集、并集、差集等功能</li>
+</ul>
+<p>Set的常见命令有：</p>
+<ul>
+<li>SADD key member ... ：向set中添加一个或多个元素</li>
+<li>SREM key member ... : 移除set中的指定元素</li>
+<li>SCARD key： 返回set中元素的个数</li>
+<li>SISMEMBER key member：判断一个元素是否存在于set中</li>
+<li>SMEMBERS：获取set中的所有元素</li>
+<li>SINTER key1 key2 ... ：求key1与key2的交集</li>
+<li>SDIFF key1 key2 ... ：求key1与key2的差集</li>
+<li>SUNION key1 key2 ... ：求key1与key2的并集</li>
+</ul>
 <h2 id="sortset">SortSet类型</h2>
+<p>Redis的SortedSet是一个可排序的set集合，与Java中的TreeSet有些类似，但底层数据结构却差别很大。SortedSet中的每一个元素都带有一个score属性，可以基于score属性对元素排序，底层的实现是一个跳表（SkipList）加 hash表。</p>
+<p>SortedSet具备下列特性：</p>
+<ul>
+<li>可排序</li>
+<li>元素不重复</li>
+<li>查询速度快</li>
+</ul>
+<p>SortedSet的常见命令有：</p>
+<ul>
+<li>ZADD key score member：添加一个或多个元素到sorted set ，如果已经存在则更新其score值</li>
+<li>ZREM key member：删除sorted set中的一个指定元素</li>
+<li>ZSCORE key member : 获取sorted set中的指定元素的score值</li>
+<li>ZRANK key member：获取sorted set 中的指定元素的排名</li>
+<li>ZCARD key：获取sorted set中的元素个数</li>
+<li>ZCOUNT key min max：统计score值在给定范围内的所有元素的个数</li>
+<li>ZINCRBY key increment member：让sorted set中的指定元素自增，步长为指定的increment值</li>
+<li>ZRANGE key min max：按照score排序后，获取指定排名范围内的元素</li>
+<li>ZRANGEBYSCORE key min max：按照score排序后，获取指定score范围内的元素</li>
+<li>ZDIFF、ZINTER、ZUNION：求差集、交集、并集</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">注意：所有的排名默认都是升序，如果要降序则在命令的Z后面添加REV即可</p>
+</div>
 
 
 
