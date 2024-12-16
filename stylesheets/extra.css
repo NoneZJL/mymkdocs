@@ -1,3 +1,9 @@
+/* :root {
+    --md-primary-fg-color: #FFC2F5;
+    --md-primary-fg-color--light: #FFC2F5;
+    --md-primary-fg-color--dark: #FFC2F5;
+} */
+
 body {
     font-family: "LXGW WenKai", sans-serif;
     /* Lite version */
