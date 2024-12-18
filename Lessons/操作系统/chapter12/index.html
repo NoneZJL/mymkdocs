@@ -1256,24 +1256,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      磁盘附件
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      稳定的存储器实现
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1663,24 +1645,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      磁盘附件
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      稳定的存储器实现
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1701,7 +1665,7 @@
 
 <h1 id="mass-storage-systems">Mass-Storage Systems</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 572 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11l-3.54-4.71Z"/></svg></span> 4 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 4 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 2241 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11l-3.54-4.71Z"/></svg></span> 13 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 15 分钟</p>
 </div>
 <h2 id="_1">海量存储结构概述</h2>
 <ul>
@@ -1734,6 +1698,9 @@
 </ol>
 </li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">磁盘最外侧的编号为0，越往里编号越大</p>
+</div>
 <h2 id="_3">磁盘附件</h2>
 <p><strong>Network-Attached Storage</strong></p>
 <p>网络附加存储(NAS)是通过网络而不是通过本地连接提供的存储。</p>
@@ -1756,11 +1723,116 @@
 <p>硬件提高方式：将磁头臂分开，从而可以实现同时访问不同的磁道，也可以一个在访问的时候另一个在寻址，从而提高访问的效率</p>
 </div>
 <h2 id="_4">磁盘调度</h2>
+<div class="admonition tip">
+<p class="admonition-title">磁盘调度的目的是降低平均调度寻道时间</p>
+</div>
+<ul>
+<li>访问时间有两个主要组成部分<ol>
+<li>寻道时间(seek time)是磁盘将磁头移动到包含所需扇区的圆柱体的时间。</li>
+<li>旋转延迟(rotational latency)是等待磁盘将所需扇区旋转到磁盘磁头的额外时间。</li>
+</ol>
+</li>
+<li>磁盘带宽是传输的总字节数，除以第一次服务请求和最后一次传输完成之间的总时间。</li>
+<li>计算的时候可以近似使用Seek time ≈ seek distance</li>
+</ul>
+<p>假设现在有一个调度情况，当前的指针指向53号块，接下里的调度流程是98, 183, 37, 122, 14, 124, 65, 67</p>
+<p><strong>First-come-first-serve(FCFS)</strong></p>
+<p><img alt="a" src="../images/20241218115354.png" width="400px" /></p>
+<p>根据图中的这种调度方式可以看出，磁盘头总计移动了640个柱面。</p>
+<p><strong>Shortest-seek-time-first(SSTF)</strong></p>
+<p>从当前头部位置选择具有最小寻道时间的请求</p>
+<p>SSTF调度是SJF调度的一种形式，但是可能导致某些请求无法响应(饥饿问题)</p>
+<p><img alt="a" src="../images/20241218140441.png" width="400px" /></p>
+<p>根据图中的这种调度方式可以看出，磁盘头总计移动了236个柱面。</p>
+<p><strong>SCAN</strong></p>
+<p>也被称作电梯算法(elevator algorithm)：磁盘臂从磁盘的一端开始向另一端移动，并且为请求提供服务，到达另一端后移动的方式逆转然后继续服务。</p>
+<p><img alt="a" src="../images/20241218140833.png" width="400px" /></p>
+<p><strong>Circular-SCAN(C-SCAN)</strong></p>
+<ul>
+<li>提供比SCAN更统一的等待时间</li>
+<li>磁头从磁盘的一端移动到另一端，一边移动一边处理请求。但是，当它到达另一端时，它立即返回到磁盘的起点，在返回过程中不处理任何请求。</li>
+</ul>
+<p><img alt="a" src="../images/20241218143255.png" width="400px" /></p>
+<div class="admonition danger">
+<p class="admonition-title">考试的时候如果考察seek time或者seek distance，需要加上返回的这个距离</p>
+</div>
+<p><strong>C-LOOK</strong></p>
+<p>C-SCAN的一个版本：磁盘臂只执行目前方向上的最后一个请求，然后立即反转方向，而不执行到磁盘的末端。</p>
+<p><img alt="a" src="../images/20241218143518.png" width="400px" /></p>
+<div class="admonition note">
+<p class="admonition-title">磁盘调度算法的选择</p>
+<ul>
+<li>SCAN和C-SCAN对于在重负载磁盘的系统性能更好。</li>
+<li>性能取决于请求的数量和类型，并且对磁盘服务的请求可能受到文件分配方法的影响。</li>
+<li>磁盘调度算法应该作为操作系统的一个独立模块编写，允许在必要时用不同的算法替换它。</li>
+<li>默认算法可以使用SSTF或LOOK。</li>
+</ul>
+<details class="question">
+<summary>问：什么样的调度算法适合SSD？</summary>
+<p>默认采用FCFS调度算法，因为SSD本身访问性能很高，而FCFS可以对等的对待每一个请求。</p>
+</details>
+</div>
 <h2 id="_5">磁盘管理</h2>
+<ul>
+<li>低级格式化或物理格式化 — 将磁盘划分为磁盘控制器可以读写的扇区(并且添加校验码等信息)</li>
+<li>要使用磁盘保存文件，操作系统仍然需要在磁盘上记录自己的数据结构<ol>
+<li>将磁盘划分为一组或多组柱面</li>
+<li>逻辑格式化或“创建文件系统”</li>
+</ol>
+</li>
+<li>引导块初始化系统<ol>
+<li>引导程序存储在ROM中</li>
+<li>引导加载程序(Bootstrap只用来找到磁盘第一个扇区中的bootstrap loader)</li>
+</ol>
+</li>
+<li>使用扇区保留方式来处理坏块</li>
+</ul>
+<p><strong>Master Boot Record(MBR)</strong></p>
+<p><img alt="a" src="../images/20241218151438.png" width="300px" /></p>
+<p>MBR中包含启动代码(用来启动实际的操作系统)以及分区信息</p>
 <h2 id="_6">交换空间管理</h2>
+<ul>
+<li>交换空间 - 虚拟内存使用磁盘空间作为主内存的扩展</li>
+<li>交换空间可以从普通文件系统中分割出来，或者更常见的是交换空间可以在单独的磁盘分区中(效率更高)</li>
+</ul>
+<p><img alt="a" src="../images/20241218151805.png" width="400px" /></p>
 <h2 id="raid">RAID结构</h2>
-<h2 id="_7">磁盘附件</h2>
-<h2 id="_8">稳定的存储器实现</h2>
+<p>RAID(Redundant Arrays of Independent Disks)指冗余磁盘阵列</p>
+<p>可以实现文件的并行化读写，从而提高效率(对单个文件进行分割，从而存储到不同的磁盘上，最小的细分单位为1bit，但是通常的细分单位为block，因为是以block为单位进行读取的)</p>
+<p>Mirroring：可以将一份数据重复存储在不同盘上防止丢失</p>
+<p>Block interleaved parity：可以实现纠错，进而降低冗余的空间要求</p>
+<p><strong>RAID等级</strong></p>
+<p><img alt="a" src="../images/20241218152207.png" width="250px" /></p>
+<div class="admonition tip">
+<p class="admonition-title">目前常用的等级为：RAID0, RAID1以及RAID5</p>
+<ul>
+<li>RAID0 是没有冗余的，速度最快但是不够安全</li>
+<li>RAID1 备份存储，每一位都做了mirror</li>
+<li>RAID2 使用纠错码，纠错码在数据准备写入磁盘的时候计算并且写到纠错磁盘中(校验码计算比较复杂)，存储纠错码的空降需求较大并且读写开销较大</li>
+<li>RAID3 采用奇偶校验方式进行校验码计算，但是bit级的计算，P盘的读写的压力较大，并且一旦出错容易全部无法正常运行</li>
+<li>RAID4 块层面的检验码，P盘的压力有所降低</li>
+<li>RAID5 原数据存储与校验码存储混用，校验码交错放在不同的磁盘中，这样计算的压力就分散开来，不会让某一个磁盘的计算压力过大，并且其中任意单个盘出错还是可以纠错的</li>
+<li>RAID6 添加一个新的磁盘，同时采用两个不同的纠错算法</li>
+</ul>
+</div>
+<p><strong>组合使用</strong></p>
+<ul>
+<li>RAID 0+1：Stripe and then mirror<ol>
+<li>一块磁盘坏了，仍然可以数据恢复 </li>
+</ol>
+</li>
+<li>RAID 1+0：Mirror and then stripe</li>
+</ul>
+<p><img alt="a" src="../images/20241218153717.png" width="300px" /></p>
+<div class="admonition danger">
+<p class="admonition-title">此时如果坏了多块磁盘</p>
+<p>第一种方式不能坏两块磁盘，但是第二种方式允许不是一个镜像组中的磁盘损坏多块，或者说此时只要不是损坏了一个完整的镜像组，就依然能够获得正确的数据。</p>
+<p>出现这种情况的原因是磁盘的镜像是需要整体镜像的，也就是说，对于一个单镜像组包含了两个磁盘的情况来说，如果想要将内容镜像到另外的两个磁盘中，需要同时将两个磁盘的所有数据镜像过去，而不能够仅仅只是镜像其中的一个磁盘。在这种情况下，如果是RAID01(假设此时共有4个磁盘，并且一开始的数据存放在其中的两个磁盘中)，并且第一个镜像组中的第一个磁盘损坏了，那么第二个镜像组中，无论是哪一个磁盘发生了损坏的情况，都会导致最终无法获得正确的数据</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">目前磁盘的转速并没有提高，为什么可以容纳的数据量却提高了？</p>
+<p>磁盘中的数据密度提高了，但是数据出口的大小没有发生变换，所以此时数据的出口就已经变成了瓶颈</p>
+</div>
 
 
 
