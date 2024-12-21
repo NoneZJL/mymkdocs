@@ -987,9 +987,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#opsf-" class="md-nav__link">
+  <a href="#ospf-" class="md-nav__link">
     <span class="md-ellipsis">
-      OPSF-内部网关路由协议
+      OSPF-内部网关路由协议
     </span>
   </a>
   
@@ -2106,9 +2106,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#opsf-" class="md-nav__link">
+  <a href="#ospf-" class="md-nav__link">
     <span class="md-ellipsis">
-      OPSF-内部网关路由协议
+      OSPF-内部网关路由协议
     </span>
   </a>
   
@@ -2920,12 +2920,12 @@ $D_x(y) ← min_v{c(x,v) + D_v(y)}~for~each~node~y ∊ N $</li>
 <p class="admonition-title">一些注意点</p>
 <p>DV的元素个数就是网络中节点的个数</p>
 <p>一直都在动态更新，不一定是瞬时最优的</p>
-<p>每个节点都会发送所有几点的路径长度，但是发送范围是小范围的</p>
+<p>每个节点都会发送所有节点的路径长度，但是发送范围是小范围的</p>
 </div>
 <p><strong>DV的缺点</strong></p>
 <ul>
 <li>对好消息反应很快，但是对坏消息反应迟钝<ol>
-<li>好消息：假设一开始五个节点都不工作，之后A开始工作，那么只需要5次交换就能完成所有的路由更新</li>
+<li>好消息：假设一开始五个节点都不工作，之后A开始工作，那么只需要N=5次交换就能完成所有的路由更新</li>
 <li>坏消息：假设A突然不工作，那么B以为C有更短路径，于是更新；C也以为B有更短路径，于是更新；这导致数据出错<font color="red">(count-to-infinity)</font></li>
 </ol>
 </li>
@@ -2938,7 +2938,7 @@ $D_x(y) ← min_v{c(x,v) + D_v(y)}~for~each~node~y ∊ N $</li>
 <p class="admonition-title">但是并没有完全解决问题。仍然可能出现这个问题</p>
 <p>考虑一种情况</p>
 <p><img alt="a" src="../photos/20241122121329.png" width="300px" /></p>
-<p>此时在正常情况下，A到达D的距离为2(经过C)，B到达D的距离为2(经过C)，C到达D的距离为2(直达)。</p>
+<p>此时在正常情况下，A到达D的距离为2(经过C)，B到达D的距离为2(经过C)，C到达D的距离为1(直达)。</p>
 <p>如果此时C和D之间的路径断开了，那么C就会向A和B发送信息，告诉它们现在自己到达D的路径长度是∞。但是因为信息发送到A和B的时间是不一样的，所以会产生问题。</p>
 <p>假设A首先收到C发送过来的消息，此时它已知的信息是从C到达D的距离为∞，从B到达D的距离为2，于是它更新自己的信息为通过B到达D，并且距离为3，然后将这个消息发送给B和C。</p>
 <p>C接收到这个消息之后，此时有的信息是通过B到达D的距离为∞(因为此时B还是通过C到达D的，根据毒性逆转要求，此时告知C的信息为自己到D的距离为∞)，通过A到达D的距离为3，于是更新自己的信息为通过A到达D，距离为4，然后将这个消息发送给A和B。</p>
@@ -3211,7 +3211,7 @@ $D_x(y) ← min_v{c(x,v) + D_v(y)}~for~each~node~y ∊ N $</li>
 </ul>
 </div>
 <h2 id="internet_1">Internet路由协议</h2>
-<h3 id="opsf-">OPSF-内部网关路由协议</h3>
+<h3 id="ospf-">OSPF-内部网关路由协议</h3>
 <p>OSPF(Open Shortest Path First)开放最短路径优先协议，采用<font color="red">分布式的链路状态</font>算法</p>
 <p><strong>基本思想</strong></p>
 <ul>
@@ -3523,7 +3523,7 @@ $D_x(y) ← min_v{c(x,v) + D_v(y)}~for~each~node~y ∊ N $</li>
 <li>简化后地址，2001:DA8:0000:0000:200C::A5</li>
 </ul>
 <p><strong>IPv6头部</strong></p>
-<p><img alt="a" src="../photos/2024111418.png" width="500px" /></p>
+<p><img alt="a" src="../photos/2024111418.png" width="400px" /></p>
 <ul>
 <li>版本：4bit，协议版本号，值为6</li>
 <li>流量类型：8bit，区分数据包的服务类别或优先级</li>

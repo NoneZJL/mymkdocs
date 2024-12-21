@@ -907,6 +907,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#transport-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transport Layer
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1627,6 +1636,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#transport-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transport Layer
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1647,7 +1665,7 @@
 
 <h1 id="_1">复习碎碎念</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 5967 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11l-3.54-4.71Z"/></svg></span> 30 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 40 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 13133 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11l-3.54-4.71Z"/></svg></span> 41 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 88 分钟</p>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">丢一些自己在复习的时候觉得可能有用的东西</p>
@@ -1715,10 +1733,23 @@
 </details>
 <details class="tip">
 <summary>一些中英文对应关系(网络层)</summary>
+<p>聚合 aggregation</p>
+</details>
+<details class="warning">
+<summary>一些UDP/TCP协议的使用以及工作的端口</summary>
+<p>DHCP 使用UDP 服务器端口67 客户端端口68</p>
+<p>RIP 使用UDP 使用端口520</p>
+<p>BGP 使用TCP 使用端口179</p>
 </details>
 <details class="warning">
 <summary>一些东西的长度</summary>
-<p>MAC地址 48位</p>
+<p>MAC地址 48bit</p>
+<p>IP地址 32bit</p>
+<p>IPv6地址 128bit</p>
+<p>IP数据报最短长度 20byte</p>
+<p>IPv6头部长度 固定为40byte</p>
+<p>首部长度、总长度、片偏移的基本单位分别是4B、1B、8B</p>
+<p>端口号长度 16bit</p>
 </details>
 <h2 id="introduction">Introduction</h2>
 <p><strong>网络分类</strong></p>
@@ -2054,15 +2085,15 @@ I = propagation delay + processor service time (second)   <br />
 </div>
 <p>停等协议的问题：只能有一个没有被确认的帧在发送中</p>
 <div class="admonition note">
-<p class="admonition-title">长肥网络(LFN, Long Fat Network)：如果一个网络的带宽-延迟乘积(bandwidth-delay product)很明显的大于<span class="arithmatex">\(10^5\)</span>bits(~12kB)，则可以被认为时长肥网络</p>
+<p class="admonition-title">长肥网络(LFN, Long Fat Network)：如果一个网络的带宽-延迟乘积(bandwidth-delay product)很明显的大于 <span class="arithmatex">\(10^5\)</span> bits(~12kB)，则可以被认为时长肥网络</p>
 </div>
 <p>停等协议的信道利用率很低：传播时延较长。可以通过使用更大的帧来提高效率，但是使用更大的帧会提高在传输中出错的概率，进而导致更多的重传。</p>
 <p><strong>滑动窗口协议 Sliding Window Protocol</strong></p>
 <p>窗口机制：发送方和接收方都具有一定容量的缓冲区(即窗口)，发送端在收到确认之前可以发送多个帧</p>
 <p>目的：对可以连续发出的最多帧数(已发出但未收到确认的帧)作限制</p>
 <p>序号使用：循环重复使用有限的帧序号</p>
-<p>发送窗口：其大小记作<span class="arithmatex">\(W_T\)</span>，表示发送方在收到对方确认的信息之前，可以连续发出的最多数据帧数</p>
-<p>接收窗口：其大小记作<span class="arithmatex">\(W_R\)</span>，表示接收方可以连续接收的最多数据帧数</p>
+<p>发送窗口：其大小记作 <span class="arithmatex">\(W_T\)</span>，表示发送方在收到对方确认的信息之前，可以连续发出的最多数据帧数</p>
+<p>接收窗口：其大小记作 <span class="arithmatex">\(W_R\)</span>，表示接收方可以连续接收的最多数据帧数</p>
 <p>累计确认：不必对收到的分组逐个发送确认，而是对按序到达的最后一个分组发送确认</p>
 <p><strong>回退N协议 GBN Go Back N</strong></p>
 <p>出错全部重发：当接收端收到一个出错帧或乱序帧时，丢弃所有的后继帧，并且不为这些帧发送确认；发送端超时后，重传所有未被确认的帧。</p>
@@ -2070,14 +2101,14 @@ I = propagation delay + processor service time (second)   <br />
 <p>优点：连续发送提高了信道利用率</p>
 <p>缺点：按序接收，出错后即便有正确帧到达也丢弃重传</p>
 <p>基本原理：当发送方发送了N个帧后，若发现该N帧的前一个帧在计时器超时后仍未返回其确认信息，则该帧被判为出错或丢失，此时发送方就重新发送出错帧及其后的N帧。</p>
-<p>滑动窗口长度：若帧序号为n位，接收窗口<span class="arithmatex">\(W_R\)</span>=1，发送窗口<span class="arithmatex">\(W_T\le 2^n-1\)</span></p>
+<p>滑动窗口长度：若帧序号为n位，接收窗口 <span class="arithmatex">\(W_R\)</span>=1，发送窗口 <span class="arithmatex">\(W_T\le 2^n-1\)</span></p>
 <p><strong>选择重传协议 SR Selective Repeat Protocol</strong></p>
 <p>设计思想：若发送方发出连续的若干帧后，收到对其中某一帧的否认帧，或某一帧的定时器超时，则只重传该出错帧或计时器超时的数据帧</p>
 <p>适用于接收窗口大于1的情况，即暂存接收窗口中序号在出错帧之后的数据帧</p>
 <p>优点：避免重传已正确传送的帧</p>
 <p>缺点：在接收端需要占用一定容量的缓存</p>
 <p>基本原理：(1)在发送过程中，如果一个数据帧计时器超时，就认为该帧丢失或者被破坏；接收端只把出错的的帧丢弃，其后面的数据帧保存在缓存中，并向发送端回复NAK；发送端接收到NAK时，只重传出错的帧。 (2)如果落在窗口内的帧从未接受过，那么存储起来，等比它序列号小的所有帧都正确接收后，按次序交付给网络层。 (3)接收端收到的数据包的顺序可能和发送的数据包顺序不一样，因此在数据包里必须含有顺序号来帮助接收端进行排序。</p>
-<p>滑动窗口长度：发送窗口的尺寸<span class="arithmatex">\(W_T\le 2^{n-1}\)</span>，发送窗口应等于或小于序号空间的一半。接收窗口尺寸<span class="arithmatex">\(W_R\le 2^{n-1}\)</span></p>
+<p>滑动窗口长度：发送窗口的尺寸 <span class="arithmatex">\(W_T\le 2^{n-1}\)</span>，发送窗口应等于或小于序号空间的一半。接收窗口尺寸<span class="arithmatex">\(W_R\le 2^{n-1}\)</span></p>
 <div class="admonition warning">
 <p class="admonition-title">GBN只设置一个定时器，每次收到ACK就会将定时器刷新。SR给每一个PDU(Protocol Data unit)设置一个定时器，定时器超时时只会重传这一个帧。</p>
 </div>
@@ -2149,8 +2180,8 @@ I = propagation delay + processor service time (second)   <br />
 <p>静态分配方法：TDM(Time Division Multiplexing)、FDM(Frequency Division Multiplexing)</p>
 <p><strong>静态分配的排队论分析</strong></p>
 <p>M/M/1排队系统模型</p>
-<p>第一个M(顾客到达时间间隔分布)：帧到达时间间隔服从指数分布，平均到达率(输入率)为<span class="arithmatex">\(\lambda\)</span>帧/秒</p>
-<p>第二个M(服务时间分布)：帧长度服从指数分布，平均长度<span class="arithmatex">\(1/\mu\)</span>位/帧。信道容量位C位/秒，则信道服务率为<span class="arithmatex">\(\mu C\)</span> 帧/秒</p>
+<p>第一个M(顾客到达时间间隔分布)：帧到达时间间隔服从指数分布，平均到达率(输入率)为 <span class="arithmatex">\(\lambda\)</span> 帧/秒</p>
+<p>第二个M(服务时间分布)：帧长度服从指数分布，平均长度 <span class="arithmatex">\(1/\mu\)</span> 位/帧。信道容量位C位/秒，则信道服务率为 <span class="arithmatex">\(\mu C\)</span> 帧/秒</p>
 <p>1(并列服务台个数)</p>
 <p>单信道平均延迟时间T(顾客在服务系统中的逗留时间)为：<span class="arithmatex">\(T=\frac{1}{\mu C-\lambda}\)</span></p>
 <p>信道N等分后每个子信道的平均延迟时间：<span class="arithmatex">\(T_{FDM}=NT\)</span></p>
@@ -2193,10 +2224,10 @@ I = propagation delay + processor service time (second)   <br />
 <p>性能分析：      <br />
   (1) 吞吐量(Throughout) S 表示在发送时间T内成功发送的平均帧数，显然满足 0&lt;S&lt;1    <br />
   (2) 运载负载(Carried load) G 又称网络负载，表示时间T内所有通信站总共发送的帧平均值(包括原发和重发的分组)，显然满足 G≥S      <br />
-  (3) <span class="arithmatex">\(P_0\)</span>：<span class="arithmatex">\(P_0\)</span>是一帧发送成功的概率，就是发送成功的分组在已发送分组的总数中所占的比例，因而满足<span class="arithmatex">\(S=G\times P_0\)</span></p>
+  (3) <span class="arithmatex">\(P_0\)</span>：<span class="arithmatex">\(P_0\)</span>是一帧发送成功的概率，就是发送成功的分组在已发送分组的总数中所占的比例，因而满足 <span class="arithmatex">\(S=G\times P_0\)</span></p>
 </li>
 </ul>
-<p>纯ALOHA协议的冲突危险期为2D，因而生成帧均值为2G，不遭受冲突的概率为<span class="arithmatex">\(P_0=e^{-2G}\)</span></p>
+<p>纯ALOHA协议的冲突危险期为2D，因而生成帧均值为2G，不遭受冲突的概率为 <span class="arithmatex">\(P_0=e^{-2G}\)</span></p>
 <p>纯ALOHA信道的利用率最高为18.4%</p>
 <p><strong>分隙ALOHA(Slotted ALOHA)</strong></p>
 <p>分隙ALOHA是把时间分成时隙，时隙的长度对应一帧的传输时间，帧的发送必须在时隙的起点，冲突也只发生在时隙的起点。因而分隙ALOHA的冲突危险期大小为D。</p>
@@ -2240,8 +2271,8 @@ I = propagation delay + processor service time (second)   <br />
 rd/(rd+N)
 \]</div>
 <ul>
-<li>在低负载的情况下，r=1，那么信道利用率为<span class="arithmatex">\(d/(d+N)\)</span></li>
-<li>在高负载的情况下，r=N，那么信道利用率为<span class="arithmatex">\(d/(d+1)\)</span>，接近100%</li>
+<li>在低负载的情况下，r=1，那么信道利用率为 <span class="arithmatex">\(d/(d+N)\)</span></li>
+<li>在高负载的情况下，r=N，那么信道利用率为 <span class="arithmatex">\(d/(d+1)\)</span>，接近100%</li>
 </ul>
 <p>缺点：位图协议无法考虑优先级</p>
 <p><strong>令牌传递(Token Passing)</strong></p>
@@ -2251,7 +2282,7 @@ rd/(rd+N)
 <p><strong>二进制倒计数协议 Binary Exponential Backoff Protocol</strong></p>
 <p>每一个站点都有一个序号，并且序号的长度相同。在竞争期的时候，需要发送数据的站点从高序号到低序号排队，高者得到发送权。</p>
 <p>特点：高序号站点优先(可能会导致饥饿问题)</p>
-<p>信道利用率：N个站的二进制编码所需位数是<span class="arithmatex">\(log_2N\)</span>位，因而信道的利用率为<span class="arithmatex">\(d/(d+log_2N)\)</span></p>
+<p>信道利用率：N个站的二进制编码所需位数是 <span class="arithmatex">\(log_2N\)</span> 位，因而信道的利用率为 <span class="arithmatex">\(d/(d+log_2N)\)</span></p>
 <div class="admonition warning">
 <p class="admonition-title">如果每个帧的帧头为发送地址，即竞争的同时也在发送，则效率为100%</p>
 </div>
@@ -2284,7 +2315,7 @@ rd/(rd+N)
 <p><strong>二进制指数后退(Binary exponential backoff)的CSMA/CD</strong></p>
 <p>确定基本退避时间槽，其长度为以太介质上往返传播时间(<span class="arithmatex">\(2\tau\)</span>)，以太网中设为512比特时间。</p>
 <p>定义重传次数k，k≤10，即 k=min[重传次数, 10]。</p>
-<p>从整数集合[0, 1, ..., (<span class="arithmatex">\(2^k\)</span>-1)]中随机取出一个数，记为r。重传所需的时延就是r倍的时间槽<span class="arithmatex">\(2\tau\)</span>。当重传达16次仍不能成功时即丢弃该帧，并向高层报告。</p>
+<p>从整数集合[0, 1, ..., (<span class="arithmatex">\(2^k\)</span>-1)]中随机取出一个数，记为r。重传所需的时延就是r倍的时间槽 <span class="arithmatex">\(2\tau\)</span>。当重传达16次仍不能成功时即丢弃该帧，并向高层报告。</p>
 <p>性能分析：在给定帧长的情况下，增加带宽或距离会降低网络效率。同时电缆的长度越长，信道的效率也会越低。</p>
 <p><strong>交换式以太网 Switched Ethernet</strong></p>
 <p>使用集线器(Hub)组建以太网。Hub所有端口内部都是连通的，使用同一根总线。集线器是物理层设备。</p>
@@ -2527,6 +2558,352 @@ RTS和CTS中的持续时间(Duration)中指明传输所需时间(数据+控制)<
 <p>采用OFDMA频分复用技术，对单个时间片中频率的划分更加细致</p>
 <p><img alt="a" src="../photos/20241220164002.png" width="400px" /></p>
 <h2 id="network-layer">Network Layer</h2>
+<p>网络层传输的数据单位是数据报datagram</p>
+<p>网络层关键功能是路由(控制面)和转发(数据面)</p>
+<p><strong>无连接服务的实现</strong></p>
+<p>网络层向上只提供简单灵活无连接的、尽最大努力交付的数据报服务。发送分组时不需要先建立连接，每个分组独立发送。并且数据报独立转发，相同源-目的数据报可能经过不同的路径。</p>
+<p>可能会导致丢包、乱序、错误等问题。</p>
+<p>优点：网络的造价大大降低，运行方式灵活，能够适应多种应用</p>
+<p>数据报地转发就是无连接的方法。</p>
+<div class="admonition warning">
+<p class="admonition-title">一般来说，为了避免增加额外的开销进行数据排序，网络并不会随意地发送数据，在大多数情况下，仍然是会尽量沿着某一条路径发送</p>
+</div>
+<p><strong>面向连接服务的实现</strong></p>
+<p>通信之间先建立逻辑连接(如有需要可以预留网络资源)，结合使用可靠传输的网络协议，保证所发送的分组无差错按序到达终点。</p>
+<p>虚电路(viryual circuit)是逻辑连接，但是虚电路表示这只是一条逻辑上的连接，分组都沿着这条逻辑连接按照存储转发方式传送，而并不是真正建立了一条物理连接。但是电路交换的电话通信是先建立了一条真正的连接。</p>
+<p>虚电路的转发策略：虚电路转发基于分组标签，也就是虚电路号(标签和端口之间有着对应关系，而且指定的标签输入会有对应的标签输出，。也就是说这要知道输入端口以及标签，就可以知道输出的端口以及输出时候的标签)</p>
+<div class="admonition note">
+<p class="admonition-title">虚电路与数据报网络的比较</p>
+<p><img alt="a" src="../photos/20241220234426.png" width="550px" /></p>
+</div>
+<p><strong>虚电路与数据报网络的性能比较</strong></p>
+<ul>
+<li>从性能的角度比较，当网络中存在突发的流量时，使用虚电路服务可能会丢掉一部分的数据，也有可能会造成一定的延迟(网络流量的过载)；但是使用数据报的话就完全不会影响网络的性能，也不会使得网路过载。</li>
+<li>从效率角度比较，虚电路在数据传输时首先需要建立连接，会有一个时延，但是数据报网络就没有这个时延。</li>
+</ul>
+<p><strong>IPv4协议</strong></p>
+<p>internet协议执行两个基本功能：(1)寻址addressing (2)分片fragementation</p>
+<p><strong>IPv4数据报格式</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">IP数据报的前20字节需要记住(前5行)</p>
+</div>
+<p><img alt="a" src="../photos/20241221095953.png" width="300px" /></p>
+<ul>
+<li>首部长度：表示整个IP数据报首部的长度</li>
+<li>区分服务：该字段一般情况下不使用</li>
+<li>总长度：表示整个IP报文的长度，能表示的最大字节为2^16-1=65535字节(因而也就限制了数据部分的最大长度)</li>
+<li>标识(Identification)：IP软件通过计数器自动产生，没产生1个数据报计数器加1；在IP分片以后，用来标识同一分片</li>
+<li>标志(Flags)：MF置1表示后面还有分片，置0表示这是最后一个；DF是不能分片标志，只有置0时才允许分片</li>
+<li>片偏移(Fragement Offset)：表示IP分片后，相应的IP片在总的IP片的相对位置</li>
+<li>首部校验和(Header checksum)：对数据报首部进行校验，不包括数据部分</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">需要记住</p>
+<p>首部长度、总长度、片偏移的基本单位分别是4B、1B、8B</p>
+</div>
+<p><strong>数据报分片</strong></p>
+<p>最大传输单元MTU(Maximum Transmission Uint)</p>
+<p>分片策略包括：(1)允许途中分片，也就是根据下一跳链路的MTU实施分片 (2)不允许途中分片，发出的数据报长度小于路径MTU[一般来说不允许途中分片]</p>
+<p>重组策略：一般选择目的端重组，但是也有途中重组(IPv4分片只在目的IP对应的目的端系统进行重组)</p>
+<div class="admonition warning">
+<p class="admonition-title">片偏移的基本单位是8字节</p>
+</div>
+<p><strong>IP地址</strong></p>
+<p>IP地址的长度为32bit，地址高位为网络号(网络前缀)，低位为主机号</p>
+<p><img alt="a" src="../photos/20241221101627.png" width="500px" /></p>
+<p><strong>子网(subnet)</strong></p>
+<p>子网划分(subnetting)：在网络内部将一个网络块进行划分以供多个内部网络使用，对外仍然是一个网络</p>
+<p>子网掩码(subnet mask)：与IP地址一一对应，是32bit的二进制数，置1表示网络位，置0表示主机位</p>
+<div class="admonition warning">
+<p class="admonition-title">注意：子网的主机数量需不需要减去2需要视题目二点情况决定</p>
+</div>
+<p><strong>无类域间路由CIDR(Classless Inter-Domain Routing)</strong></p>
+<p>将32位的IP地址划分为前后两个部分，并采用斜线记法，即在IP地址后加上“/”，然后再写上网络前缀所占位数</p>
+<p>一个 CIDR 地址块可以表示很多地址，这种地址的聚合常称为路由聚合(route aggregation)，也称为构成超网(supernet)</p>
+<p><strong>最长前缀匹配(Longest prefix match)</strong></p>
+<p>IP地址与IP前缀匹配时，总是选取子网掩码最长的匹配项，主要用于路由器转发表项的匹配</p>
+<p><strong>CIDR之前的分类的IP地址</strong></p>
+<p><img alt="a" src="../photos/20241221102802.png" width="350px" /></p>
+<p><strong>IPv4地址的获取</strong></p>
+<ul>
+<li>静态设定：申请固定的IP地址，手工设定，如路由器、服务器</li>
+<li>动态获取：使用DHCP协议或其他动态配置协议，当主机加入IP网络，允许主机从DHCP服务器动态获取IP地址</li>
+</ul>
+<p><strong>DHCP</strong></p>
+<p>动态主机配置协议DHCP(Dynamic Host Configuration Protocol)</p>
+<p>采用C/S工作模式，基于UDP工作，服务器运行在67号端口，客户端运行在68号端口</p>
+<p><strong>DHCP工作过程</strong></p>
+<ol>
+<li>DHCP 客户从UDP端口68以广播形式向服务器发送发现报文（DHCPDISCOVER）</li>
+<li>DHCP 服务器单播发出提供报文（DHCPOFFER）</li>
+<li>DHCP 客户从多个DHCP服务器中选择一个，并向其以广播形式发送DHCP请求报文（DHCPREQUEST）</li>
+<li>被选择的DHCP服务器单播发送确认报文（DHCPACK）</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">一般来说，DHCP的广播过程是广播 - 单播 - 广播 - 单播。但是如果客户机不支持单播，第二次的数据传输也会采用广播的方式。</p>
+</div>
+<p><img alt="a" src="../photos/20241221104212.png" width="450px" /></p>
+<p><strong>IP地址与MAC地址</strong></p>
+<p>IP数据报经过不同链路时，IP 数据报中封装的IP地址不发生改变，而Mac帧中的硬件地址是发生改变的。MAC的地址是指具体到这一跳的地址</p>
+<p><strong>ARP地址解析协议(Address Resolution Protocol)</strong></p>
+<p>ARP表：存储IP地址与MAC地址对应关系的表格</p>
+<p>ARP协议工作过程(A想要获取B的MAC地址)：则A广播包含B的IP地址的ARP query分组，B接收到ARP query分组后，将自己的MAC地址发送给A(单播)，A在ARP表中缓存B的IP地址和MAC地址的映射关系，超时后就删除。</p>
+<p><strong>IP包转发</strong></p>
+<ul>
+<li>当与目的主机在同一个IP子网内时，直接交付</li>
+<li>与目的主机不在同一个IP子网内时，通过路由发送到另一个局域网(先发送到路由器，由路由器发送到对应子网的路由器，再由对应路由器转发到对应的主机)</li>
+</ul>
+<p><strong>网络地址转换NAT(Network Address Translation)</strong></p>
+<p>NAT用于解决IPv4地址不足的问题，是一种将私有地址转化为公有IP地址的转换技术</p>
+<div class="admonition warning">
+<p class="admonition-title">私有IP地址</p>
+<p>A类地址：10.0.0.0 - 10.255.255.255    <br />
+B类地址：172.16.0.0 - 172.31.255.255      <br />
+C类地址：192.168.0.0 - 192.168.255.255</p>
+</div>
+<p><strong>NAT工作机制</strong></p>
+<p>所有的在本地网络中的主机发出的报文都是通过连接内网和外网的路由器发出到互联网中的，这些从这个NAT路由器中发出的报文具有相同的源IP地址。也就是说，内网中的所有数据首先发送到NAT路由器，然后再由路由器转发到外网中。当这些报文在内网中传输时，地址是各个主机在内网中的地址，但是当它们通过了NAT路由器后，会变成这个内网在整个互联网上唯一的IP地址。</p>
+<div class="admonition tip">
+<p class="admonition-title">使用路由器的端口号来区分到底是内网上的哪个主机的哪个端口</p>
+</div>
+<p>NAT转化表中存储内网源IP地址和端口与NAT IP地址和端口的对应关系。</p>
+<p>NAT根据不同的IP上层协议进行NAT表项管理，传输层TCP/UDP拥有16bit端口号字段</p>
+<div class="admonition success">
+<p class="admonition-title">NAT中的端口号是动态的，使用时会有动态的删减</p>
+</div>
+<p><strong>NAT传输问题</strong></p>
+<p>一个处于外网中的主机想要连接到一个内网中的某个主机(10.0.0.1)，但是它只能获得整个子网的IP地址，无法连接到子网内部的哪一个具体的主机。</p>
+<p>此时可以通过外网的一个中间路由器实现连接，需要让内网的主机主动去连接这个路由器，使得路由器保存这个内网中的主机的通信地址及端口，然后两者通过这一个路由器实现通信。</p>
+<p><strong>互联网控制报文协议ICMP(Internet Control Message Protocol)</strong></p>
+<p>ICMP允许主机或路由器报告差错情况和提供有关异常情况的报告。ICMP报文携带在IP数据报中：IP上层协议号为1。</p>
+<p>ICMP报文类型：    <br />
+(1)ICMP差错报告报文：终点不可达[不可达主机、不可达网络、无效端口、协议]     <br />
+(2)ICMP询问报文：回答请求(ping使用)</p>
+<p><img alt="a" src="../photos/20241221111523.png" width="450px" /></p>
+<p><strong>Traceroute和ICMP</strong></p>
+<p>使用TraceRT命令可以知道整个路径上路由器的地址</p>
+<div class="admonition success">
+<p class="admonition-title">实现方式</p>
+<p>通过设置不同TTL的值来控制数据包可以传输的距离(TTL=1, 2, 3, ...)</p>
+<p>当第n个数据报到达第n和路由器：路由器丢弃数据报，并向源发送一个ICMP报文(类型 11, 编码0)，报文的源IP地址就是该路由器的IP地址</p>
+<p>但是路径可能是不准确的，因为现在<font color="red">互联网上的数据包都是独立被路由</font>的，它们走的可能是不同的路径</p>
+</div>
+<p>停止条件：    <br />
+(1) UDP段最终到达目的地主机       <br />
+(2) 目的地返回ICMP “端口不可达”分组(类型3, 编码3)     <br />
+(3) 当源得到该ICMP，停止</p>
+<p><strong>路由算法优化原则 - 汇集树 Sink Tree</strong></p>
+<p>所有的源节点到一个指定目标节点的最优路径的集合构成一棵以目标节点为根的树</p>
+<div class="admonition note">
+<p class="admonition-title">汇集树不是唯一的</p>
+</div>
+<p><strong>最短路径算法</strong></p>
+<p>采用Dijkstra算法</p>
+<p><strong>距离向量路由DV(Distance Vector)</strong></p>
+<div class="admonition tip">
+<p class="admonition-title">DV是将全局信息(自己到所有节点的距离)传递到局部</p>
+</div>
+<p>距离向量路由基本算法：每个节点周期性地向邻居发送它自己到某些节点地距离向量，当节点收到来自邻居地新DV估计，会更新自己地DV</p>
+<div class="arithmatex">\[
+D_x(y) ← min_v{c(x,y)+D_v(y)}~for~each~node~y\in N
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">一些注意点</p>
+<p>DV的元素个数就是网络中节点的个数      <br />
+一直都在动态更新，不一定是瞬时最优的      <br />
+每个节点都会发送所有节点的路径长度，但是发送范围是小范围的</p>
+</div>
+<p>距离向量路由的特点：对好消息反应很快，但是对坏消息反应很慢(导致count-to-infinity)[count to infinity的解决采用毒性逆转(如果A是通过B到C的，那么A就告诉B自己到C的距离是无穷大)的方式，具体的内容查看第五章网络层中的内容]</p>
+<p><strong>链路状态路由(Link State)</strong></p>
+<div class="admonition tip">
+<p class="admonition-title">LS是将局部信息(自己到相邻节点的距离)传递到全局</p>
+</div>
+<p>链路状态路由基本算法：    <br />
+(1) 发现邻居并且了解他们的网络地址，然后设置到每个邻居的成本度量(常用度量为链路带宽的反比，也能给用延迟情况RTT)。     <br />
+(2) 接着构造一个分组，分组中包含刚收到的所有信息(包括发送方标识、序列号、年龄以及邻居列表[邻居标识和到邻居的距离])。    <br />
+(3) 最后将LS分组发送给其他的路由器(每个LS分组的序列号是递增的，路由器会记录收到的所有(源路由器、序列号)对，当一个新分组到达时，如果是重复分组就丢弃，如果是过时分组就拒绝，否则泛洪广播这个分组)。    <br />
+(4) 最后使用Dijkstra算法计算到其他路由器的最短路径</p>
+<p><strong>层次路由</strong></p>
+<p>通过地址聚合(address aggregation)来缩减路由条目，从而减小路由表存储空间。</p>
+<p>基本思路：互联网由大量不同的网络互联，每个管理机构控制的网络是自治的</p>
+<p>自治系统(AS, Autonomous System)是一个管理机构控制之下的网络，一个AS内部通常使用相同的路由算法/路由协议。</p>
+<p>自治系统内部使用内部网关路由协议(IGP, Interior Gateway Protocols)，自治系统之间使用外部网关路由协议(EGP, Exterior Gateway Protocols)[典型的EGP协议：BGP]</p>
+<p><strong>广播路由(Broadcasting)</strong></p>
+<p>方法1：给每个主机单独发送一个数据包(效率低、浪费带宽，并且服务器需要知道每个目的地址)     <br />
+方法2：多目标路由(multi-destination routing)，在需要转发的路由器线路复制一次该数据报(网络利用率高，但是服务器依然需要知道所有目的地址)    <br />
+方法3：泛洪(flooding)，将每个进入数据包发送到除了进入线路外的每条出去线路(此时环路可能导致广播风暴，并且路由器可能收到多个副本，此时节点需要跟踪泛洪的数据包来组织洪泛)   <br />
+方法4：生成树(spanning tree)，源节点向所有属于该生成树的特定链路发送分组，此时没有环路并且使用最佳带宽，路由器只需要知道在一棵树中的邻居即可(但是需要维护比较多的树)</p>
+<p>泛洪中的洪泛的解决方法：      <br />
+(1) 序号控制泛洪(sequence-number-controlled flooding)：路由器会记录自己曾经收到的泛洪的数据包的序号以及来源，如果后续再次收到相同的数据包就会丢弃     <br />
+(2) 逆向路径转发(reverse path forwarding, RPF)：路由器的路由表中记录到到达各网络的最优路径，当数据包到来时，判断是否是从最优路径来的，如果是就转发，否则就表示是重复包，直接丢弃(也就是说完全遵顼最优路径进行转发)</p>
+<p><strong>组播路由(Multicasting)</strong></p>
+<p>组播：源主机给网络中的小部分目标用户发送数据包</p>
+<p>组播实现的步骤：      <br />
+(1) 确定组成员：边缘路由器通过与主主机交互，了解到它的某个端口可以到达哪些组的成员 - 主机与路由器之间的组成员关系协议(IGMP Internet Group Management Protocol)
+(2) 生成树(路由器和路由器之间的协议)：数据包沿生成树发送</p>
+<div class="admonition warning">
+<p class="admonition-title">常用组播地址段：224.0.0.0/24</p>
+<p>224.0.0.1 LAN上所有设备   <br />
+224.0.0.2 LAN上所有路由器     <br />
+224.0.0.5 LAN上所有OSPF路由器     <br />
+224.0.0.251 LAN上所有DNS服务器</p>
+<p>组播地址都是D类地址 (1110 | 组播地址BIT位)</p>
+</div>
+<p>最佳生成树的使用取决于组的密度分布：</p>
+<ul>
+<li>密集分布，基于源点树(source-based tree)</li>
+</ul>
+<p>链路状态路由算法：每个路由器针对组内的每个发送者构造一棵独立树    <br />
+距离向量路由算法：逆向路径转发，修剪没有组成员的路由器</p>
+<p>存在的问题：大型网络中，组播源很多时，路由器需生成多棵树，工作量大。并且路由器需要大量空间来存储多棵树</p>
+<ul>
+<li>稀疏分布，基于核心树(core-based tree)</li>
+</ul>
+<p>多个组播源共享树，可以大大节省存储开销、消息发送和计算，并且每个路由器只需要保存一棵树</p>
+<p>存在的问题：可能无法达到最优(如果只有一个发送者，将发送者作为核心是最优的)</p>
+<p><strong>选播路由(Anycast)</strong></p>
+<p>选播：将数据包传送给最近的一个组成员。在有多个服务器的情况下，用户希望快速获得正确信息，而不在乎从哪个服务器获得。</p>
+<div class="admonition tip">
+<p class="admonition-title">选播的典型应用：DNS</p>
+</div>
+<p><strong>OPSF - 内部网关路由协议</strong></p>
+<p>开放最短路径优先协议OSPF(Open Shortest Path First)采用分布式的链路状态算法，只有当链路状态发生变化时路由器才会泛洪发送与本路由器相邻的所有路由器的链路状态的信息。</p>
+<p>链路状态就是说明本路由器和哪些路由器相邻，以及该链路的度量(metric)，这个度量值一般包括费用、距离、时延、带宽等。</p>
+<p>由于各路由器之间频繁地交换链路状态信息，因此所有的路由器最终都能建立一个链路状态数据库LSDB</p>
+<p><strong>OSPF的区域</strong></p>
+<p>OSPF支持将一组网段组合在一起，称为一个区域。详细的描述拓扑结构的链路状态信息仅在区域内传递，区域间传递的是抽象的路由信息。</p>
+<p>使用层次结构的区域划分，上层的区域叫做主干区域(backbone area)，其他区域都必须与主干区域相连，称为非主干区域。非主干区域之间不允许直接发布区域间路由信息。</p>
+<p>路由器角色：(1)内部路由器IR, Internal Router (2)区域边界路由器ABR, Area Bounder Router (3)自治系统边界路由器ASBR, AS Bounder Router</p>
+<div class="admonition note">
+<p class="admonition-title">OSPF支持无类域间路由CIDR，使用IP组播收发协议数据，支持协议报文的认证</p>
+</div>
+<p><strong>RIP - 内部网关路由协议</strong></p>
+<p>路由选择协议RIP(Routing Information Protocol)是基于距离矢量算法的协议，固定使用跳数衡量到达目的网络的距离</p>
+<p>基本思想：仅和相邻路由器交换信息，交换的信息是路由器的路由表，每30s周期性更新一次</p>
+<p><strong>BGP - 外部网关路由协议</strong></p>
+<p>边界网关协议BGP(Border Gateway Protocol)是目前互联网中唯一实际运行的自治域间的路由协议</p>
+<p>BGP功能：     <br />
+(1) eBGP: 从相邻的AS获得网络可达信息      <br />
+(2) iBGP: 将网络可达信息传播给AS内的路由器    <br />
+(3) 基于网络可达信息和策略决定到其他网络的最优路由</p>
+<p><img alt="a" src="../photos/20241221153433.png" width="500px" /></p>
+<p><strong>BGP基础</strong></p>
+<p>BGP会话：两个BGP路由器通过TCP连接交换BGP报文，通告到不同网络前缀的路径，即路径向量协议。</p>
+<p>BGP路径通告：BGP路径通告的是完整的路径(比如AS2, AS3, X表示可以通过AS2和AS3将信息传输到主机X)      <br />
+路由器可能学到多条到目的网络的路径，此时路由器会通过政治政策以及其他一系列的规则等进行取舍</p>
+<p><strong>BGP特点</strong></p>
+<p>BGP协议交换路由信息的结点数量级是自治系统数量级，每一个自治系统边界路由器的数目是很少的。</p>
+<p>在BGP刚刚运行时，BGP的邻站是交换整个的BGP路由表，以后只需要在发生变化时更新有变化的部分。</p>
+<p><strong>BGP报文</strong></p>
+<p>BGP通过TCP的179端口交换报文</p>
+<p><strong>BGP路径属性</strong></p>
+<p>发布的前缀信息包括BGP属性(BGP attributes)[路由 route=prefix+attributes]</p>
+<p>两个重要属性      <br />
+(1) AS路径(AS-PATH)：IP前缀通过经过的所有AS号     <br />
+(2) 下一跳(NEXT-HOP)：说明路由信息对应的下一跳IP地址</p>
+<p><strong>BGP路由选择</strong></p>
+<p>路由器可能从多个对等体收到针对同一目的IP的路由，此时需要选择一条最佳路由。</p>
+<p>选择规则：    <br />
+(1) 本地偏好值属性：政策决策      <br />
+(2) 最短的AS-PATH         <br />
+(3) 最近的NEXT-HOP路由器      <br />
+(4) 附加标准...   <br />
+(5) 最低路由器ID</p>
+<p><strong>BGP路由策略</strong></p>
+<p>路由器使用策略决定接受或者拒绝收到的路由通告，同时也会基于决策决定是否向其他相邻AS通告路径信息(通常是由政策决定的)</p>
+<p><strong>标签交换和MPLS</strong></p>
+<p>多协议标签交换MPLS(MultiProtocol Label Switching)，多协议表示在MPLS的上层可以采用多种协议(IP、IPv6、IPX)，标签是指每个分组被分配一个标签，路由器根据该标签对分组进行转发。交换是指标签的交换，MPLS报文交换和转发是基于标签的。</p>
+<p>标签交换路由器LSR(Label Switching Router)是支持MPLS的路由器，具备标签交换和路由选择两种功能。</p>
+<p>MPLS域指所有相邻的支持MPLS技术的路由器构成的区域。</p>
+<p>标签分配协议LDP(Label Distributed Protocol)用来在LSR之前建立LDP会话并交换Label/FEC(Forwarding Equivalence Class 转发等价类)映射信息</p>
+<p><strong>标签交换和MPLS工作过程</strong></p>
+<ol>
+<li>加标签：在MPLS域的入口处，给每一个IP数据报加上标签，然后对加上标记的IP数据报用硬件进行转发</li>
+<li>标签交换：采用硬件技术对加上标记的IP数据报进行转发称为标签交换</li>
+<li>去标签：当分组离开MPLS域时，MPLS出口路由器把分组的标签去除。后续按照一般IP分组的转发方法进行转发。</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">路由器内部存在一张标签表，根据这张标签表实现标签的交换</p>
+</div>
+<p><strong>路由器概述</strong></p>
+<p>路由器是互联网最主要的网络设备，包含2个核心功能   <br />
+(1) 控制层：运行各种路由协议(BGP、OSPF、RIP)，学习去往不同目的的转发路径(路由表)[路由器可以同时运行多个路由协议，也可以不运行任何路由协议，只使用静态路由和直连路由。路由管理根据路由优先级，选择最佳路由，形成核心路由表，控制层将最佳路由表下发到数据层，形成转发表FIB(Forwarding Information Base)]      <br />
+(2) 数据层：根据上述路由表，将收到的IP分组转发到正确的下一条链路</p>
+<p>路由器优先级(数值越小，优先级越高)</p>
+<p><img alt="a" src="../photos/20241221213246.png" width="400px" /></p>
+<p><strong>路由器数据层</strong></p>
+<p>路由器中IP报文转发核心功能：      <br />
+链路层解封装，IP头部校验      <br />
+获取报文目的IP地址    <br />
+用目的IP地址，基于最长前缀匹配规则查询转发表      <br />
+查询失败就丢弃报文，查询成功则获取转发出接口和下一跳IP地址，并加IP头部TTL字段值建议，重新计算校验和，最后进行链路层封装，发送报文</p>
+<p>数据包在不同硬件单元的处理：(1)报文输入的接口卡(转发表的查询在这一步处理) (2)交换结构 (3)报文输出的接口卡</p>
+<p><strong>3种典型的交换结构</strong></p>
+<p><img alt="a" src="../photos/20241221214640.png" width="450px" /></p>
+<p><strong>拥塞控制(congestion control) - 流量调节</strong></p>
+<ul>
+<li>抑制包(Choke Packets)：用于通知发送方减小发送量，路由器选择一个被拥塞的数据包，给该数据包的源主机返回一个抑制包，抑制包中的目的地址取自该拥塞数据包。源主机收到抑制包后，减少发向特定目的地址的流量</li>
+<li>逐跳的抑制包(Hop-by-Hop Choke Packets)：在高速或长距离网络中，由于源主机响应太慢，抑制包算法对拥塞控制的效果并不好，可采用逐跳抑制方法；其核心思想是抑制包对它经过的每个路由器都起作用，能够迅速缓解发生拥塞处的拥塞，但要求上游路由器有更大的缓冲区</li>
+<li>显式拥塞通告(ECN，Explicit Congestion Notification)，在IP包头中记录数据包是否经历了拥塞。在数据包转发过程中，路由器可以在包头中标记为经历拥塞，然后接收方在它的下一个应答数据包里回显该标记作为显式拥塞信号</li>
+</ul>
+<p><strong>服务质量</strong></p>
+<ul>
+<li>综合服务(IntServ：Integrated Services)<ol>
+<li>综合服务特点是：需要所有的路由器在控制路径上处理每个流的消息，维护每个流的路径状态和资源预留状态，在路径上执行基于流的分类、调度、管理</li>
+<li>综合服务基于资源预留协议RSVP，逐节点建立或拆除流的状态和资源预留状态，根据流的状态进行QoS路由</li>
+<li>综合服务的特征：资源预分配、全局流状态、传输控制</li>
+</ol>
+</li>
+<li>区分服务(DiffServ：Differentiated services)<ol>
+<li>区分服务(DiffServ)是一种计算机网络体系结构，它指定了一种简单且可扩展的机制，用于在IP网络上分类和管理网络流量并提供服务质量(QoS)</li>
+<li>DiffServ可用于向诸如语音或流媒体之类的关键网络流量提供低延迟服务，同时向诸如web流量或文件传输之类的非关键服务提供简单的尽力而为服务</li>
+<li>DiffServ在IP报头的8位区分服务字段(DS字段)中使用6位区分服务码点(DSCP)进行分组分类。换言之，DS字段替换过时的IPv4 TOS字段</li>
+</ol>
+</li>
+</ul>
+<p><strong>虚拟专用网VPN(Virtual Private Network)</strong></p>
+<p>VPN通过隧道技术在公共网络上模拟出一条点到点的逻辑专线，从而达到安全数据传输的目的</p>
+<p><img alt="a" src="../photos/20241221220157.png" width="500px" /></p>
+<p><strong>IPv6地址</strong></p>
+<p>IPv6地址长度为128bit，地址表示采用冒分十六进制(x:x:x:x:x:x:x:x)</p>
+<p>简化方法：每个x前面的0可省略，可把连续的值为0的x表示为“::”, 且“::”只能出现1次     <br />
+简化前地址，2001:0DA8:0000:0000:200C:0000:0000:00A5   <br />
+简化后地址，2001:DA8:0000:0000:200C::A5</p>
+<p><strong>IPv6头部</strong></p>
+<p><img alt="a" src="../photos/2024111418.png" width="400px" /></p>
+<ul>
+<li>版本：4bit，协议版本号，值为6</li>
+<li>流量类型：8bit，区分数据包的服务类别或优先级</li>
+<li>流标签：20bit，标识同一个数据流</li>
+<li>有效载荷长度：16bit ，IPv6报头之后载荷的字节数(含扩展头)，最大值64K</li>
+<li>下一个首部：8bit ，IPv6报头后的协议类型，可能是TCP/UDP/ICMP等，也可能是扩展头</li>
+<li>跳数限制：8bit ，类似IPv4的TTL，每次转发跳数减1，值为0时包将会被丢弃</li>
+</ul>
+<p>IPv6头部长度固定40字节，所有“选项”字段都在IPv6扩展头部分</p>
+<div class="admonition tip">
+<p class="admonition-title">IPv6不能在传输途中分片，只能在源端分片</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">IPv6首部格式的改变提升转发处理速度</p>
+</div>
+<p><strong>IPv6拓展头</strong></p>
+<p>IPv6报文可承载多个扩展头，且每个扩展头都包含“下一个首部”字段(可能是下一个拓展头的类型，也可能是商城协议的类型)</p>
+<p><strong>IPv6地址</strong></p>
+<ul>
+<li>未指定地址（::/128），不能分配给任何节点</li>
+<li>回环地址（::1/128），表示节点自己，不分配，类似IPv4中的127.0.0.1</li>
+<li>组播地址（FF00::/8）</li>
+<li>链路本地地址（FE80::/10），也称为Link-local地址，仅在本地链路上使用，网络设备根据接口MAC地址自动生成</li>
+<li>全局单播地址，其它地址</li>
+</ul>
+<p>IPv6地址配置方式：(1)手动配置 (2)DHCPv6(IPv6动态主机配置协议) (3)无状态地址自动配置，基于ND协议的RS报文的IPv6前缀信息，结合自己的链路层地址生成IPv6地址</p>
+<p><strong>IPv4和IPv6的过渡技术</strong></p>
+<ul>
+<li>双栈技术</li>
+<li>隧道技术：部分使用IPv6通信，其余仍然使用IPv4通信</li>
+<li>翻译技术：涉及IPv4报头和IPv6报头翻译及上层协议的翻译</li>
+</ul>
+<h2 id="transport-layer">Transport Layer</h2>
 
 
 
