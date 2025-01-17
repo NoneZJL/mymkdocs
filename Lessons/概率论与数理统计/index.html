@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://example.com/Lessons/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter11/">
+        <link rel="canonical" href="https://example.com/Lessons/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/">
       
       
-        <link rel="prev" href="../chapter10/">
+        <link rel="prev" href="../..">
       
       
-        <link rel="next" href="../chapter12/">
+        <link rel="next" href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/">
       
       
-      <link rel="icon" href="../../../images/下雪.svg">
+      <link rel="icon" href="../../images/下雪.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.30">
     
     
       
-        <title>chapter11 | 文件系统实现 - NoneZJL的个人笔记</title>
+        <title>课程介绍 - NoneZJL的个人笔记</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -61,9 +61,9 @@
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#file-system-implementation" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -103,9 +103,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../.." title="NoneZJL的个人笔记" class="md-header__button md-logo" aria-label="NoneZJL的个人笔记" data-md-component="logo">
+    <a href="../.." title="NoneZJL的个人笔记" class="md-header__button md-logo" aria-label="NoneZJL的个人笔记" data-md-component="logo">
       
-  <img src="../../../images/logo.jpg" alt="logo">
+  <img src="../../images/logo.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              chapter11 | 文件系统实现
+              课程介绍
             
           </span>
         </div>
@@ -231,7 +231,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -260,7 +260,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link">
           
   
     
@@ -283,7 +283,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../Tools/mkdocs%E4%BD%BF%E7%94%A8/" class="md-tabs__link">
+        <a href="../../Tools/mkdocs%E4%BD%BF%E7%94%A8/" class="md-tabs__link">
           
   
     
@@ -301,7 +301,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../about/" class="md-tabs__link">
+      <a href="../../about/" class="md-tabs__link">
         
   
     
@@ -335,9 +335,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="NoneZJL的个人笔记" class="md-nav__button md-logo" aria-label="NoneZJL的个人笔记" data-md-component="logo">
+    <a href="../.." title="NoneZJL的个人笔记" class="md-nav__button md-logo" aria-label="NoneZJL的个人笔记" data-md-component="logo">
       
-  <img src="../../../images/logo.jpg" alt="logo">
+  <img src="../../images/logo.jpg" alt="logo">
 
     </a>
     NoneZJL的个人笔记
@@ -364,7 +364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -434,6 +434,8 @@
                 
   
   
+    
+  
   
   
     
@@ -449,16 +451,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/" class="md-nav__link ">
+            <a href="./" class="md-nav__link md-nav__link--active">
               
   
   <span class="md-ellipsis">
@@ -470,7 +472,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             概率论与数理统计
@@ -521,7 +523,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/" class="md-nav__link ">
+            <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -554,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/chapter1/" class="md-nav__link">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/chapter1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -575,7 +577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/chapter2/" class="md-nav__link">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/chapter2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -596,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/chapter3/" class="md-nav__link">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/chapter3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -664,7 +666,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="md-nav__link ">
+            <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -697,7 +699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter01/" class="md-nav__link">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -718,7 +720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter02/" class="md-nav__link">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -739,7 +741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter03/" class="md-nav__link">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -760,7 +762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter04/" class="md-nav__link">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -781,7 +783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter05/" class="md-nav__link">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter05/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -802,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter06/" class="md-nav__link">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter06/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -823,7 +825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter07/" class="md-nav__link">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -844,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter08/" class="md-nav__link">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/chapter08/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -865,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/review/" class="md-nav__link">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/review/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -891,8 +893,6 @@
                 
   
   
-    
-  
   
   
     
@@ -936,16 +936,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -962,7 +962,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             操作系统
@@ -978,7 +978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter1/" class="md-nav__link">
+      <a href="../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -999,7 +999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter2/" class="md-nav__link">
+      <a href="../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1020,7 +1020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter3/" class="md-nav__link">
+      <a href="../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1041,7 +1041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter4/" class="md-nav__link">
+      <a href="../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1062,7 +1062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter5/" class="md-nav__link">
+      <a href="../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1083,7 +1083,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter6/" class="md-nav__link">
+      <a href="../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1104,7 +1104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter7/" class="md-nav__link">
+      <a href="../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1125,7 +1125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter8/" class="md-nav__link">
+      <a href="../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1146,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter9/" class="md-nav__link">
+      <a href="../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1167,7 +1167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter10/" class="md-nav__link">
+      <a href="../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1185,30 +1185,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    chapter11 | 文件系统实现
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1217,128 +1197,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      文件系统结构
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      文件系统实现
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="文件系统实现">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      虚拟文件系统
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      目录实现
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      分配方式(重点)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="分配方式(重点)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#contiguous-allocation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contiguous allocation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#linked-allocation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Linked allocation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#indexed-allocation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Indexed allocation
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      空闲空间管理(重点)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      效率与表现
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1351,7 +1209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter12/" class="md-nav__link">
+      <a href="../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter12/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1372,7 +1230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter13/" class="md-nav__link">
+      <a href="../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/chapter13/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1393,7 +1251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../review/" class="md-nav__link">
+      <a href="../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/review/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1479,7 +1337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/mkdocs%E4%BD%BF%E7%94%A8/" class="md-nav__link">
+      <a href="../../Tools/mkdocs%E4%BD%BF%E7%94%A8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1500,7 +1358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/docker/" class="md-nav__link">
+      <a href="../../Tools/docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1521,7 +1379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/elasticsearch/" class="md-nav__link">
+      <a href="../../Tools/elasticsearch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1542,7 +1400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/Latex/" class="md-nav__link">
+      <a href="../../Tools/Latex/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1607,7 +1465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/Redis/install/" class="md-nav__link">
+      <a href="../../Tools/Redis/install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1628,7 +1486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tools/Redis/chapter01/" class="md-nav__link">
+      <a href="../../Tools/Redis/chapter01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1664,7 +1522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1697,116 +1555,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      文件系统结构
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      文件系统实现
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="文件系统实现">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      虚拟文件系统
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      目录实现
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      分配方式(重点)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="分配方式(重点)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#contiguous-allocation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Contiguous allocation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#linked-allocation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Linked allocation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#indexed-allocation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Indexed allocation
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      空闲空间管理(重点)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      效率与表现
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1823,234 +1571,15 @@
   
 
 
-<h1 id="file-system-implementation">File-System Implementation</h1>
+<h1 id="_1">课程介绍</h1>
 <div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 2816 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3l89.3 89.4-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg></span> 3 行代码 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11l-3.54-4.71Z"/></svg></span> 23 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间 19 分钟</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8V2m6.78 1a.69.69 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38-2.5-2.5Z"/></svg></span> 约 33 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3L12.5 13Z"/></svg></span> 预计阅读时间不到 1 分钟</p>
 </div>
-<div class="admonition abstract">
-<p class="admonition-title">UNIX文件系统</p>
-<ul>
-<li>Tmpfs，内存中的临时文件系统，速度快，但不持久</li>
-<li>Ext4， Linux主日志文件系统，可靠</li>
-<li>Ceph，一个开源的分布式可扩展文件系统</li>
-<li>FAT，因为兼容性好而被广泛使用简单而鲁棒的文件系统(现在使用的大多数是这个)</li>
-</ul>
-</div>
-<h2 id="_1">文件系统结构</h2>
-<ul>
-<li>文件结构<ol>
-<li>逻辑存储单元</li>
-<li>收集相关信息</li>
-</ol>
-</li>
-<li>文件系统驻留在辅助存储(磁盘)上</li>
-<li>文件系统通过层结构组织起来      <br />
-<img alt="a" src="../images/20241209110507.png" width="450px" /></li>
-</ul>
-<p>I/O层上有设备驱动程序以及设备终端程序，主要用于将用户抽象出来的指令转化成设备层可以实现的具体操作。</p>
-<p>basic file sysytem用于将具体的文件操作转化成对应的物理块的读写等命令，需要实现I/O的调度以及buffer的管理。</p>
-<div class="admonition tip">
-<p class="admonition-title">分层可以实现更好的模块化，更好的实现功能的封装，从而降低用户使用的难度(下层结构对用户透明)</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">FTL(Flash Translation Layer)负责坏块管理，读写均衡，在file-organization层面实现</p>
-</div>
-<h2 id="_2">文件系统实现</h2>
-<p><strong>数据结构</strong></p>
-<ul>
-<li>磁盘结构<ol>
-<li>引导控制块Boot control block(每卷)：用于启动操作系统的结构，通常放在磁盘的第一个扇区中</li>
-<li>每个卷的卷控制块Volume control block(Unix中的超级块)：存储每个卷的metadata(卷的大小、卷中的目录项的位置等信息)</li>
-<li>每个文件系统的目录结构：也是维护在卷控制块中的</li>
-<li>每个文件FCB(Unix中的inode)：大概128或者256字节的记录(除了文件名之外的和文件相关的属性[文件大小、位于物理存储中的位置、控制权限等])</li>
-</ol>
-</li>
-<li>内存结构<ol>
-<li>每个挂载卷的内存中挂载表：每次操作系统启动的时候都可能需要重新挂载</li>
-<li>目录缓存：降低每次重新load时的开销(Linux中叫dentry)，提高用户使用体感</li>
-<li>系统范围的打开文件表(包含重要信息打开文件的进程数count)</li>
-<li>每个进程打开文件表</li>
-</ol>
-</li>
-</ul>
-<p><strong>一个典型的FCB</strong></p>
-<p>存储文件的相关控制信息</p>
-<p><img alt="a" src="../images/20241209112056.png" width="300px" /></p>
-<p><strong>文件的打开与读操作</strong></p>
-<p><img alt="a" src="../images/20241209112441.png" width="350px" /></p>
-<p>打开文件的时候，可能会有一个目录cache来加速操作。如果此时系统层面的打开文件表已经有了对应的文件，那么此时的用户打开文件表可以直接指向系统层面的打开文件表中的对应内容。打开文件后系统会给用户返回一个文件标识符。</p>
-<p><img alt="a" src="../images/20241209112641.png" width="600px" /></p>
-<p>用户在实际对文件进行读写操作的时候，是通过文件描述符(文件句柄)来操作的。</p>
-<div class="admonition warning">
-<p class="admonition-title">外存中同时存在文件和目录，但是内存中只会存在目录</p>
-</div>
-<h3 id="_3">虚拟文件系统</h3>
-<ul>
-<li>虚拟文件系统(VFS)提供了一种面向对象的实现文件系统的方法。</li>
-<li>VFS允许将相同的系统调用接口(API)用于不同类型的文件系统。</li>
-<li>API是针对VFS接口的，而不是针对任何特定类型的文件系统。</li>
-<li>定义一个称为vnode的网络范围唯一结构。</li>
-</ul>
-<p><strong>整体实现</strong></p>
-<p><img alt="a" src="../images/20241209113202.png" width="400px" /></p>
-<p>主要就是封装实现，然后将封装后的函数提供给更上层，此时无论底层的实现方式是怎样的，对于上层来说都是一样的，上层调用的是下层自己实现的统一的接口。</p>
-<p><strong>VFS的对象</strong></p>
-<p>VFS的四种主要对象类型：</p>
-<ul>
-<li>superblock对象：一个特定的挂载文件系统，对应于(但不等于)磁盘结构中的超级块</li>
-<li>inode对象：一个特定的文件，对应于(但不等于)磁盘结构中的FCB</li>
-<li>dentry对象(目录缓存)：一个单独的目录条目</li>
-<li>file对象：与进程关联的打开的文件，只要文件被打开就存在</li>
-</ul>
-<h2 id="_4">目录实现</h2>
-<p>目录本质上是inode或者FCB的有序组合。</p>
-<ul>
-<li>带有指向数据块指针的文件名线性列表：编程简单但是执行(遍历、搜索等)时间长</li>
-<li>哈希表(对文件名的哈希)：具有哈希数据结构的线性列表<ol>
-<li>减少目录搜索时间</li>
-<li>碰撞：两个文件名哈希到同一位置的情况</li>
-<li>固定大小：可以使用链溢出哈希表或者重新哈希到另一个更大的哈希表</li>
-</ol>
-</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">除了上述的这些内容之外，还能够通过文件访问的热点图来实现多级缓存，加快文件访问的效率</p>
-</div>
-<h2 id="_5"><font color="red">分配方式(重点)</font></h2>
-<h3 id="contiguous-allocation">Contiguous allocation</h3>
-<p>每一个文件使用磁盘中的连续的块，这样使用起来比较简单，因为只需要知道起始位置(块号)和长度(块数量)就可以了，但是这种情况下会造成空间的浪费，并且不方便文件的拓展(需要磁盘空间的回收与重新分配)。</p>
-<p><img alt="a" src="../images/20241211144025.png" width="300px" /></p>
-<p>用户使用时的计算方式：</p>
-<ul>
-<li>访问的块号 = 起始块号 + 文件内部的块号(逻辑地址 / 块的大小)</li>
-<li>偏移量 = 逻辑地址 % 块的大小</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">也就是说这种分配方式下支持随机访问</p>
-</div>
-<p><strong>Extent-Based Systems</strong></p>
-<p>一种新的连续分配方式，文件分配是以extent为单位进行分配的，在每一个extent内部，文件是连续的，此时如果文件需要拓展并且原来的extent内部的空间不够用了，可以分配一个新的extent给这个文件，并且链接到以前的extent的后面来实现。</p>
-<h3 id="linked-allocation">Linked allocation</h3>
-<p>每一个块的内部都包含一个指针，指向这个文件的下一个块，此时空间的分配可以是不连续的，此时问价的拓展，也就是新块的添加只需要分配一个新的块，然后修改链接指向即可。</p>
-<p><img alt="a" src="../images/20241211144917.png" width="300px" /></p>
-<p>用户使用时的计算方式：</p>
-<ul>
-<li>访问的块号 = 起始块号 + 文件内部的块号(逻辑地址 / (块的大小 - 1))</li>
-<li>偏移量 = 逻辑地址 % (块的大小 - 1) + 1</li>
-<li>指针的大小为1</li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">计算的方式和连续分配是相似的，但是访问需要从链表头开始一个一个访问，需要大量的磁盘I/O</p>
-</div>
-<div class="admonition danger">
-<p class="admonition-title">但是这种方案的可靠性是较低的，因为只要一个块坏了，那么这个文件就基本访问不了了</p>
-</div>
-<div class="admonition success">
-<p class="admonition-title">一种改进方式FAT</p>
-<p>一种显示的链接方式</p>
-<p>在内存中建立特殊的数据结构来维护文件在磁盘中的信息，这样在访问的时候可以现在内存中进行操作，这样速度会比直接在磁盘中快很多</p>
-<p><img alt="a" src="../images/20241211145450.png" width="300px" /></p>
-<div class="admonition danger">
-<p class="admonition-title">但是如果此时文件的目录结构较大，那么占用的内存的空间会较大。而且此时FAT表需要持久化，那么系统每次启动时都需要从磁盘加载到内存中，而且需要冗余的备份来防止一个FAT出错的情况</p>
-</div>
-</div>
-<h3 id="indexed-allocation">Indexed allocation</h3>
-<p><img alt="" src="../images/20241216100541.png" width="350px" /></p>
-<p>将一个文件的所有指针统一存储到index block中，这样访问文件的时候先访问index blocck来获取具体的磁盘位置信息，再进一步访问磁盘获取文件信息</p>
-<p><img alt="a" src="../images/20241211150052.png" width="300px" /></p>
-<p>19号块中存储的是整个文件的指针信息</p>
-<p>优势：支持随机访问，并且不会出现文件碎片的问题(文件拓展的时候只需要对index block进行插入或者修改即可)</p>
-<div class="admonition tip">
-<p class="admonition-title">对于一个长度为256K的文件，如果块的大小为512 words，那么只需要一个块就可以存储所有的指针信息。但是如果文件非常大，那么一个index block可能就无法存储所有的指针信息，那么此时就需要多个index block来存储指针信息，此时每个index block之间就需要通过指针进行连接。除了这种方式之外，也可以对index table再建立index table，这样也就可以建立多级表了。</p>
-</div>
-<p><strong>链接表方式</strong></p>
-<p>用户访问</p>
-<p><img alt="a" src="../images/20241211150603.png" width="250px" /></p>
-<div class="admonition abstract">
-<p class="admonition-title">一个栗子</p>
-<p><img alt="a" src="../images/20241211150659.png" width="400px" /></p>
-</div>
-<p><strong>两级索引方式</strong></p>
-<p>用户访问</p>
-<p><img alt="a" src="../images/20241211150951.png" width="300px" /></p>
-<div class="admonition abstract">
-<p class="admonition-title">一个栗子</p>
-<p><img alt="a" src="../images/20241211151030.png" width="400px" /></p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">缺点：如果文件较小，那么使用二级索引就会造成较大的浪费</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">链接表和两级索引的比较</p>
-<p><img alt="a" src="../images/20241211151258.png" width="400px" /></p>
-</div>
-<p><strong>Combined Scheme</strong></p>
-<p>混合使用索引方式</p>
-<p><img alt="a" src="../images/20241211151420.png" width="400px" /></p>
-<div class="admonition abstract">
-<p class="admonition-title">三种分配方式总结</p>
-<p><img alt="a" src="../images/20241211151601.png" width="500px" /></p>
-</div>
-<h2 id="_6"><font color="red">空闲空间管理(重点)</font></h2>
-<p><strong>Bit vector 位视图法</strong></p>
-<p><img alt="a" src="../images/20241216091006.png" width="300px" /></p>
-<p>bit[i] 为1，表示 block[i] 是空闲的；bit[i] 为0，表示 block[i] 已经被占用了。</p>
-<p>空闲块的物理位置的确定：(number of bits per word) * (number of 0-value words) + offset of first 1 bit</p>
-<div class="admonition note">
-<p class="admonition-title">bit map存储在超级块中</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Bit map需要额外的空间占用</p>
-<p>如果块的大小是 <span class="arithmatex">\(2^{12}\)</span> bytes，磁盘的大小为 <span class="arithmatex">\(2^{30}\)</span> bytes，所以 bit map 的大小为 <span class="arithmatex">\(2^{30}/2^{12}=2^{18}\)</span> bits</p>
-</div>
-<p><strong>一些分配方式</strong></p>
-<ul>
-<li>Linked list：不容易分配连续的空间，但是通常是能够工作的(FAT)，并且不会造成空间的浪费 </li>
-<li>Grouping - a modifiacation of the Linked list：这 n 个块的地址存储在第一个块中。通常来说，一个块中指向的前 n-1 个块确实是空闲的，而最后一个块一般包含另外一组块的地址。     <br />
-<img alt="" src="../images/20241216101737.png" width="500px" /></li>
-<li>Counting：第一个空闲块的地址以及连续块的数目(记录的是第一个空闲块的地址以及连续的空闲块的个数)，比较适合管理连续空间的情况</li>
-</ul>
-<p><strong>Linked Free Space List on Disk</strong></p>
-<p><img alt="a" src="../images/20241216094300.png" width="300px" /></p>
-<ul>
-<li>优点：空闲块的分配与回收比较方便，并且不容易导致空间的浪费</li>
-<li>缺点：难以实现分配连续的块</li>
-</ul>
-<p>需要维护空闲链表的头指针，并且需要保证内存和磁盘中的 bit map 保持一致(先更新硬盘中的信息，再更新内存中的更新)</p>
-<div class="highlight"><span class="filename">一种保持一致的方法</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">Set</span><span class="w"> </span><span class="n">bit</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">disk</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">deallocate</span><span class="w"> </span><span class="n">block</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">Set</span><span class="w"> </span><span class="n">bit</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">memory</span>
-</code></pre></div>
-<div class="admonition danger">
-<p class="admonition-title">不能先更新内存中的信息，否则如果发生了crash，就可能导致数据的不一致性</p>
-</div>
-<h2 id="_7">效率与表现</h2>
-<ul>
-<li>Efficiency<ol>
-<li>效率取决于磁盘空间分配算法以及目录算法</li>
-<li>同时也会被保存在文件目录条目中的数据类型影响</li>
-</ol>
-</li>
-<li>Performance<ol>
-<li>磁盘缓存(disk cache) - 主存储器中用于经常使用的块的独立部分</li>
-<li>后释放和预读取(free-behind and read-ahead) - 优化顺序访问的技术</li>
-<li>通过将部分内存用作虚拟磁盘或RAM磁盘来提高PC性能</li>
-</ol>
-</li>
-</ul>
-<p><strong>Page Cache</strong></p>
-<ul>
-<li>页缓存缓存虚拟内存页而不是磁盘块实际页面</li>
-<li>内存映射I/O使用page cache</li>
-<li>通过文件系统的例程I/O使用缓冲区(磁盘)缓存</li>
-</ul>
-<p><img alt="" src="../images/20241216095213.png" width="300px" /></p>
-<p>page cache作为一个中间层，既可以就收buffer cache的数据，也可以向buffer cache传输数据</p>
-<p><strong>Unified Buffer Cache 统一缓冲缓存</strong></p>
-<p>统一缓冲缓存使用相同的页面缓存来缓存内存映射的页面和文件系统I/O，从而避免双重缓存。</p>
-<p><img alt="" src="../images/20241216095455.png" width="300px" /></p>
-<p><strong>NFS架构示意图</strong></p>
-<p><img alt="a" src="../images/20241216095614.png" width="400px" /></p>
+<p>课程名称：概率论与数理统计    <br />
+授课教师：吴国桢</p>
+<p>分数组成：    <br />
+①平时分   <br />
+②期末考     </p>
 
 
 
@@ -2159,10 +1688,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.tracking", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
